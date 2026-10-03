@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen14_NABL_Lab_Booking</title>
+</head>
+<body>
+
+<style>
+.ps14{width:340px;background:#1a1a2e;border-radius:36px;padding:12px;margin:0 auto;box-shadow:0 0 0 6px #0f0f1a}
+.ss14{background:#f9f8f4;border-radius:26px;overflow:hidden;min-height:660px;display:flex;flex-direction:column}
+.hdr14{background:#004d40;padding:12px 18px;display:flex;align-items:center;gap:8px}
+.body14{padding:12px 16px;flex:1;display:flex;flex-direction:column;gap:10px}
+.urgency-banner{background:#ff6f00;border-radius:8px;padding:8px 12px;display:flex;align-items:center;gap:7px;font-size:11px;color:#fff}
+.sl14{font-size:10px;font-weight:500;color:#004d40;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:3px}
+.timeline-box{background:#e0f2f1;border:0.5px solid #80cbc4;border-radius:10px;padding:10px 14px}
+.tl-title{font-size:11px;font-weight:500;color:#004d40;margin-bottom:6px}
+.tl-row{display:flex;align-items:center;gap:6px;font-size:11px;padding:3px 0;border-bottom:0.5px solid #b2dfdb}
+.tl-row:last-child{border-bottom:none}
+.tl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.tl-key{color:#555;flex:1}
+.tl-val{font-weight:500;color:#004d40}
+.tl-val.warn{color:#e65100}
+.lab-list{display:flex;flex-direction:column;gap:6px}
+.lab-card{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;padding:10px 14px;cursor:pointer}
+.lab-card.sel{border:1.5px solid #004d40;background:#e0f2f1}
+.lc-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px}
+.lc-name{font-size:12px;font-weight:500;color:#004d40}
+.lc-badge{background:#004d40;color:#fff;border-radius:10px;padding:2px 7px;font-size:9px}
+.lc-detail{font-size:10px;color:#666;line-height:1.5}
+.lc-meta{display:flex;gap:8px;margin-top:5px;flex-wrap:wrap}
+.lc-tag{background:#e0f2f1;border-radius:10px;padding:2px 7px;font-size:9px;color:#004d40}
+.lc-dist{font-size:10px;color:#e65100;font-weight:500}
+.commodity-panels{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;padding:10px 14px}
+.cp-title{font-size:11px;font-weight:500;color:#333;margin-bottom:6px}
+.panel-row{display:flex;align-items:flex-start;gap:6px;font-size:10px;margin-bottom:4px}
+.panel-dot{width:8px;height:8px;border-radius:50%;background:#004d40;flex-shrink:0;margin-top:3px}
+.panel-text{color:#444;line-height:1.4}
+.booking-form{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;padding:10px 14px;display:flex;flex-direction:column;gap:6px}
+.bf-label{font-size:11px;color:#666;margin-bottom:2px}
+.bf-input{background:#f5f5f5;border:0.5px solid #ddd;border-radius:7px;padding:8px 12px;font-size:12px;color:#222;display:flex;align-items:center;justify-content:space-between}
+.fee-box{background:#e0f2f1;border:0.5px solid #80cbc4;border-radius:8px;padding:7px 12px;display:flex;align-items:center;justify-content:space-between;font-size:11px}
+.cta14{background:#004d40;border-radius:12px;padding:12px;text-align:center;color:#fff;font-size:13px;font-weight:500}
+.cta14-te{font-size:10px;color:rgba(255,255,255,0.8);margin-top:2px}
+</style>
+
+<div style="padding:12px 0 8px">
+
+<div class="ps14">
+
+<div class="ss14">
+
+  <div style="background:#004d40;padding:10px 18px 6px;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.7)">
+    <span>Day 82 of harvest window</span>
+    <span>📶 2G 🔋</span>
+  </div>
+
+  <div class="hdr14">
+
+    <div style="color:rgba(255,255,255,0.8);font-size:16px">
+      ←
+    </div>
+
+    <div style="color:#fff;font-size:13px;font-weight:500;flex:1">
+      NABL Lab Booking (T-04)
+    </div>
+
+    <div style="background:rgba(255,255,255,0.2);border-radius:10px;padding:2px 8px;font-size:10px;color:#fff;font-weight:500">
+      Stage 4 · 1 of 3
+    </div>
+
+  </div>
+
+
+  <div class="body14">
+
+
+    <!-- Urgency banner -->
+    <div class="urgency-banner">
+
+      <span style="font-size:16px;flex-shrink:0">
+        ⏰
+      </span>
+
+      Book lab NOW — sample must be collected 14 days before harvest. మిస్ చేస్తే shipment 21 రోజులు ఆలస్యం అవుతుంది.
+
+    </div>
+
+
+    <!-- PHRT timeline -->
+    <div>
+
+      <div class="sl14">
+        PHRT Timeline · వేళాపట్టిక
+      </div>
+
+      <div class="timeline-box">
+
+        <div class="tl-title">
+          📅 Chilli S4 — Anantapur Plot ANP-001
+        </div>
+
+        <div class="tl-row">
+          <div class="tl-dot" style="background:#1b5e20"></div>
+          <span class="tl-key">Last spray on farm</span>
+          <span class="tl-val">18 Oct 2026</span>
+        </div>
+
+        <div class="tl-row">
+          <div class="tl-dot" style="background:#004d40"></div>
+          <span class="tl-key">PHI cleared (21 days)</span>
+          <span class="tl-val">08 Nov 2026</span>
+        </div>
+
+        <div class="tl-row">
+          <div class="tl-dot" style="background:#e65100"></div>
+          <span class="tl-key">PHRT sample collect BY</span>
+          <span class="tl-val warn">03 Nov 2026 ←</span>
+        </div>
+
+        <div class="tl-row">
+          <div class="tl-dot" style="background:#004d40"></div>
+          <span class="tl-key">Expected harvest</span>
+          <span class="tl-val">17 Nov 2026</span>
+        </div>
+
+        <div class="tl-row">
+          <div class="tl-dot" style="background:#ffd54f"></div>
+          <span class="tl-key">PHRT result expected</span>
+          <span class="tl-val">10–12 Nov 2026</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Select lab -->
+    <div>
+
+      <div class="sl14">
+        Select NABL Lab · ల్యాబ్ ఎంచుకోండి
+      </div>
+
+      <div class="lab-list">
+
+        <div class="lab-card sel">
+
+          <div class="lc-top">
+
+            <div class="lc-name">
+              Eurofins Analytical Services — Hyderabad
+            </div>
+
+            <div class="lc-badge">
+              PRIMARY ✓
+            </div>
+
+          </div>
+
+          <div class="lc-detail">
+            ETO + Aflatoxin + 500-panel MRL · NABL: TC-3218 · APEDA recognised
+          </div>
+
+          <div class="lc-meta">
+
+            <div class="lc-tag">
+              Chilli ETO panel ✓
+            </div>
+
+            <div class="lc-tag">
+              Aflatoxin B1/B2 ✓
+            </div>
+
+            <div class="lc-tag">
+              7-day turnaround
+            </div>
+
+            <div class="lc-dist">
+              ~200km · FCDA ships sample
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="lab-card">
+
+          <div class="lc-top">
+
+            <div class="lc-name">
+              ANGRAU Tirupati NABL Lab
+            </div>
+
+            <div class="lc-badge" style="background:#888">
+              BACKUP
+            </div>
+
+          </div>
+
+          <div class="lc-detail">
+            Basic MRL panel · Limited ETO scope · 10-day turnaround
+          </div>
+
+          <div class="lc-meta">
+
+            <div class="lc-tag">
+              General panel only
+            </div>
+
+            <div class="lc-dist">
+              ~280km
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Test panel breakdown -->
+    <div class="commodity-panels">
+
+      <div class="cp-title">
+        🔬 Chilli S4 — EU Test Panel (Eurofins)
+      </div>
+
+      <div class="panel-row">
+
+        <div class="panel-dot"></div>
+
+        <div class="panel-text">
+          500+ pesticide residue panel (GC-MS/MS + LC-MS/MS) vs EU MRL Reg 396/2005
+        </div>
+
+      </div>
+
+      <div class="panel-row">
+
+        <div class="panel-dot" style="background:#b71c1c"></div>
+
+        <div class="panel-text">
+          ETO (Ethylene Oxide) + 2-CE metabolite — EU zero tolerance (heightened control Reg 2019/1793)
+        </div>
+
+      </div>
+
+      <div class="panel-row">
+
+        <div class="panel-dot" style="background:#e65100"></div>
+
+        <div class="panel-text">
+          Aflatoxin B1+B2+G1+G2 — EU max 5μg/kg (B1 alone &lt;5ppb)
+        </div>
+
+      </div>
+
+      <div class="panel-row">
+
+        <div class="panel-dot"></div>
+
+        <div class="panel-text">
+          Acephate + Profenofos check — NOT registered EU (must be zero)
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Booking details -->
+    <div class="booking-form">
+
+      <div>
+
+        <div class="bf-label">
+          Lot ID · Consignment Reference
+        </div>
+
+        <div class="bf-input">
+          <span>
+            FEED-ANT-26-001 · Chilli S4 · 2.5 acres
+          </span>
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="bf-label">
+          Sample collection date
+        </div>
+
+        <div class="bf-input">
+          <span>
+            03 Nov 2026
+          </span>
+
+          <span style="font-size:14px;color:#888">
+            📅
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Fee -->
+    <div class="fee-box">
+
+      <span style="color:#555">
+        PHRT test fee (Eurofins)
+      </span>
+
+      
+
+    </div>
+
+
+    <div class="cta14">
+
+      Confirm Lab Booking · ల్యాబ్ బుకింగ్ నిర్ధారించండి
+
+      <div class="cta14-te">
+        FCDA will coordinate sample collection at farm → Screen 15
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

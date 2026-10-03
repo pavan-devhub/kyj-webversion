@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen24_Shipping_Bill_ICEGATE</title>
+</head>
+<body>
+<style>
+.ps24{width:340px;background:#1a1a2e;border-radius:36px;padding:12px;margin:0 auto;box-shadow:0 0 0 6px #0f0f1a}
+.ss24{background:#f9f8f4;border-radius:26px;overflow:hidden;min-height:700px;display:flex;flex-direction:column}
+.hdr24{background:#00695c;padding:12px 18px;display:flex;align-items:center;gap:8px}
+.star7b{background:linear-gradient(135deg,#bf360c,#e65100);color:#fff;border-radius:10px;padding:2px 8px;font-size:10px;font-weight:600;display:inline-flex;align-items:center;gap:3px}
+.body24{padding:12px 16px;flex:1;display:flex;flex-direction:column;gap:10px}
+.sl24{font-size:10px;font-weight:500;color:#00695c;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:3px}
+.icegate-banner{background:#00695c;color:#fff;border-radius:10px;padding:11px 14px;display:flex;align-items:center;gap:12px}
+.ib-logo{background:rgba(255,255,255,0.2);border-radius:8px;padding:6px 10px;font-weight:600;font-size:11px;letter-spacing:1px}
+.ib-info{flex:1}
+.ib-name{font-size:11px;font-weight:500}
+.ib-sb{font-size:10px;color:rgba(255,255,255,0.85);margin-top:1px;font-family:monospace}
+.ib-status{background:#1b5e20;border-radius:10px;padding:3px 8px;font-size:9px;font-weight:500}
+.timeline-block{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;padding:12px 14px}
+.tb-title{font-size:11px;font-weight:500;color:#00695c;margin-bottom:10px;display:flex;align-items:center;gap:5px}
+.tl-row{display:flex;gap:10px;padding-bottom:8px;position:relative}
+.tl-row:last-child{padding-bottom:0}
+.tl-line{position:absolute;left:11px;top:24px;bottom:0;width:2px;background:#e0e0e0}
+.tl-row:last-child .tl-line{display:none}
+.tl-line.done{background:#00695c}
+.tl-dot{width:24px;height:24px;border-radius:50%;background:#fff;border:2px solid #e0e0e0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:#bbb;flex-shrink:0;z-index:1}
+.tl-dot.done{background:#1b5e20;border-color:#1b5e20;color:#fff}
+.tl-dot.now{background:#ffd54f;border-color:#f57f17;color:#bf360c;box-shadow:0 0 0 3px rgba(245,127,23,0.25)}
+.tl-info{flex:1;padding-top:1px}
+.tl-stage{font-size:11px;font-weight:500;color:#222}
+.tl-detail{font-size:10px;color:#666;margin-top:1px;line-height:1.4}
+.tl-time{font-size:9px;color:#888;margin-top:2px;font-family:monospace}
+.leo-block{background:#e8f5e9;border:1.5px solid #1b5e20;border-radius:12px;padding:11px 14px}
+.leo-title{font-size:12px;font-weight:500;color:#1b5e20;margin-bottom:6px;display:flex;align-items:center;gap:5px}
+.leo-code{background:#1b5e20;color:#a5d6a7;border-radius:6px;padding:6px 10px;font-family:monospace;font-size:10px;line-height:1.5}
+.leo-detail{font-size:10px;color:#2e7d32;margin-top:6px;line-height:1.5}
+.ecgc-block{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;padding:10px 14px;display:flex;align-items:flex-start;gap:10px}
+.ec-icon{font-size:22px;flex-shrink:0}
+.ec-info{flex:1}
+.ec-title{font-size:11px;font-weight:500;color:#0d47a1;margin-bottom:3px}
+.ec-detail{font-size:10px;color:#555;line-height:1.4}
+.ec-ref{background:#e3f2fd;border-radius:6px;padding:3px 7px;font-family:monospace;font-size:9px;color:#0d47a1;display:inline-block;margin-top:4px}
+.stuffing-block{background:#fff3e0;border:0.5px solid #ffb74d;border-radius:10px;padding:9px 14px}
+.sb-title{font-size:11px;font-weight:500;color:#e65100;margin-bottom:5px;display:flex;align-items:center;gap:5px}
+.sb-row{display:flex;justify-content:space-between;font-size:10px;color:#bf360c;padding:2px 0}
+.sb-photo{margin-top:6px;background:linear-gradient(135deg,#bcaaa4,#8d6e63);border-radius:6px;padding:14px 10px;display:flex;align-items:center;justify-content:center;gap:6px;color:#fff;font-size:10px}
+.bl-block{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;padding:11px 14px}
+.bl-title{font-size:11px;font-weight:500;color:#333;margin-bottom:6px}
+.bl-row{display:flex;justify-content:space-between;padding:3px 0;font-size:11px;border-bottom:0.5px solid #f5f5f5}
+.bl-row:last-child{border-bottom:none}
+.bl-k{color:#666}
+.bl-v{color:#222;font-weight:500}
+.cta24{background:#00695c;border-radius:12px;padding:12px;text-align:center;color:#fff;font-size:13px;font-weight:500}
+.cta24-te{font-size:10px;color:#ffd54f;margin-top:2px;font-weight:500}
+</style>
+<div style="padding:12px 0 8px">
+<div class="ps24">
+<div class="ss24">
+  <div style="background:#00695c;padding:10px 18px 6px;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.7)"><span>07 Dec 2026 · 4:42 PM</span><span>📶 4G 🔋</span></div>
+  <div class="hdr24">
+    <div style="color:rgba(255,255,255,0.8);font-size:16px">←</div>
+    <div style="color:#fff;font-size:13px;font-weight:500;flex:1">Shipping Bill + ICEGATE</div>
+    <div class="star7b">★ 2 of 4</div>
+  </div>
+
+  <div class="body24">
+
+    <!-- ICEGATE banner -->
+    <div class="icegate-banner">
+      <div class="ib-logo">ICEGATE</div>
+      <div class="ib-info">
+        <div class="ib-name">Shipping Bill filed by Vizag Maritime</div>
+        <div class="ib-sb">SB No: 2026/VIZ/8842156 · CHA: TVPSU-XYZ-2018</div>
+      </div>
+      <div class="ib-status">✓ LEO</div>
+    </div>
+
+    <!-- 4-stage Shipping Bill Journey -->
+    <div>
+      <div class="sl24">Shipping Bill journey · ICEGATE flow</div>
+      <div class="timeline-block">
+        <div class="tb-title">🚢 4-stage customs flow</div>
+
+        <div class="tl-row">
+          <div class="tl-line done"></div>
+          <div class="tl-dot done">✓</div>
+          <div class="tl-info">
+            <div class="tl-stage">① Shipping Bill filed on ICEGATE</div>
+            <div class="tl-detail">CHA submitted SB 2026/VIZ/8842156 · 12-doc bundle attached · GR + EDPMS auto-filed</div>
+            <div class="tl-time">03 Dec 2026 · 02:18 PM IST</div>
+          </div>
+        </div>
+
+        <div class="tl-row">
+          <div class="tl-line done"></div>
+          <div class="tl-dot done">✓</div>
+          <div class="tl-info">
+            <div class="tl-stage">② Customs assessment · RMS facilitated</div>
+            <div class="tl-detail">Risk Management System — GREEN channel (PHRT PASS + APEDA TraceNet + Phyto = low risk) · No physical exam</div>
+            <div class="tl-time">04 Dec 2026 · 10:42 AM IST</div>
+          </div>
+        </div>
+
+        <div class="tl-row">
+          <div class="tl-line done"></div>
+          <div class="tl-dot done">✓</div>
+          <div class="tl-info">
+            <div class="tl-stage">③ LEO (Let Export Order) issued</div>
+            <div class="tl-detail">Customs OK to load · Container can move to vessel · No retention</div>
+            <div class="tl-time">04 Dec 2026 · 04:55 PM IST</div>
+          </div>
+        </div>
+
+        <div class="tl-row">
+          <div class="tl-dot now">⚓</div>
+          <div class="tl-info">
+            <div class="tl-stage">④ Vessel departed Vizag · LIVE</div>
+            <div class="tl-detail">MV Maersk Hamburg · VOY-2643W · Container TLLU-456789-2 stuffed and loaded</div>
+            <div class="tl-time">07 Dec 2026 · 03:20 PM IST · just now</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEO confirmation -->
+    <div class="leo-block">
+      <div class="leo-title">🟢 LEO Issued by Customs · Critical Milestone</div>
+      <div class="leo-code">LEO No: VIZ-LEO-2026-8842156<br>Date: 04-Dec-2026 · 16:55 IST<br>Status: CLEARED FOR EXPORT<br>Channel: GREEN (RMS facilitated)</div>
+      <div class="leo-detail">✓ ఈ LEO వల్ల ECGC యాక్టివేషన్, నౌకలో సరుకు ఎక్కించేందుకు అనుమతి, చివరికి FIRC అందుకోవడం సాధ్యమవుతుంది.</div>
+    </div>
+
+    <!-- ECGC activation -->
+    <div class="ecgc-block">
+      <div class="ec-icon">🛡️</div>
+      <div class="ec-info">
+        <div class="ec-title">ECGC ప్రతి సరుకు కోసం డిక్లరేషన్ · యాక్టివ్</div>
+        <div class="ec-detail">లోడింగ్‌కు 48 గంటల ముందు Anand Singh GM (+91-8373912942)కు సమర్పించబడింది. Whole Turnover Policy జత చేయబడింది. కొనుగోలుదారు చెల్లింపులో డిఫాల్ట్ చేస్తే Rs.9,59,000 FOB విలువపై 85% వరకు కవరేజ్ ఉంటుంది.</div>
+        <div class="ec-ref">రిఫరెన్స్: ECGC-WTP-FEED-2026-Q4-042</div>
+      </div>
+    </div>
+
+    <!-- Container stuffing -->
+    <div class="stuffing-block">
+      <div class="sb-title">📦 Container stuffing · Packhouse supervision</div>
+      <div class="sb-row"><span>Container No.</span><span style="font-weight:500">TLLU-456789-2 (20' Reefer)</span></div>
+      <div class="sb-row"><span>Stuffed at</span><span style="font-weight:500">Gorantla Packhouse · 02 Dec</span></div>
+      <div class="sb-row"><span>Cartons loaded</span><span style="font-weight:500">39 cartons · 980 kg net</span></div>
+      <div class="sb-row"><span>Pallets</span><span style="font-weight:500">Plastic Y2 (no ISPM-15 needed)</span></div>
+      <div class="sb-row"><span>Reefer set point</span><span style="font-weight:500">2°C · humidity 65%</span></div>
+      <div class="sb-row"><span>Seal No.</span><span style="font-weight:500">FEED-SEAL-2026-0087</span></div>
+      <div class="sb-photo">📷 Container stuffing photo · Time-stamped · GPS-tagged</div>
+    </div>
+
+    <!-- Bill of Lading -->
+    <div class="bl-block">
+      <div class="bl-title">📄 Bill of Lading · Just issued by Maersk</div>
+      <div class="bl-row"><span class="bl-k">BL Number</span><span class="bl-v">MAEU-2026-VIZHAM-2643</span></div>
+      <div class="bl-row"><span class="bl-k">Type</span><span class="bl-v">Original BL · Negotiable</span></div>
+      <div class="bl-row"><span class="bl-k">Shipper</span><span class="bl-v">FEED MSCS LTD </span></div>
+      <div class="bl-row"><span class="bl-k">Consignee</span><span class="bl-v">Hamburg Spice Imports GmbH</span></div>
+      <div class="bl-row"><span class="bl-k">Notify Party</span><span class="bl-v">Buyer's clearing agent</span></div>
+      <div class="bl-row"><span class="bl-k">ETA Hamburg</span><span class="bl-v">26 Dec 2026 (19 days transit)</span></div>
+    </div>
+
+    <div class="cta24">
+      Vessel Sailing · Track to Hamburg
+      <div class="cta24-te">★ Stage 7 step 3 of 4 · FIRC upload after buyer payment</div>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>

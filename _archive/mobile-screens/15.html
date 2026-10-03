@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen15_PHRT_Sample_Result</title>
+</head>
+
+<body>
+
+<style>
+.ps15{
+  width:340px;
+  background:#1a1a2e;
+  border-radius:36px;
+  padding:12px;
+  margin:0 auto;
+  box-shadow:0 0 0 6px #0f0f1a
+}
+
+.ss15{
+  background:#f9f8f4;
+  border-radius:26px;
+  overflow:hidden;
+  min-height:660px;
+  display:flex;
+  flex-direction:column
+}
+
+.hdr15{
+  background:#1b5e20;
+  padding:12px 18px;
+  display:flex;
+  align-items:center;
+  gap:8px
+}
+
+.body15{
+  padding:12px 16px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:10px
+}
+
+.pass-hero{
+  background:linear-gradient(135deg,#1b5e20,#2e7d32);
+  border-radius:12px;
+  padding:14px 16px;
+  text-align:center
+}
+
+.ph-icon{
+  font-size:32px;
+  margin-bottom:6px
+}
+
+.ph-title{
+  color:#fff;
+  font-size:15px;
+  font-weight:500;
+  margin-bottom:2px
+}
+
+.ph-te{
+  color:rgba(255,255,255,0.85);
+  font-size:10px
+}
+
+.ph-ref{
+  background:rgba(255,255,255,0.2);
+  border-radius:8px;
+  padding:3px 10px;
+  display:inline-block;
+  color:#fff;
+  font-size:10px;
+  font-family:monospace;
+  margin-top:5px
+}
+
+.sl15{
+  font-size:10px;
+  font-weight:500;
+  color:#1b5e20;
+  text-transform:uppercase;
+  letter-spacing:0.4px;
+  margin-bottom:3px
+}
+
+.residue-table{
+  background:#fff;
+  border:0.5px solid #e0e0e0;
+  border-radius:10px;
+  overflow:hidden
+}
+
+.rt-header{
+  background:#1b5e20;
+  padding:7px 14px;
+  display:flex;
+  justify-content:space-between;
+  font-size:11px;
+  color:#fff;
+  font-weight:500
+}
+
+.rt-row{
+  display:flex;
+  align-items:center;
+  padding:6px 14px;
+  border-bottom:0.5px solid #f5f5f5;
+  gap:6px
+}
+
+.rt-row:last-child{
+  border-bottom:none
+}
+
+.rt-compound{
+  flex:1;
+  font-size:10px;
+  color:#333
+}
+
+.rt-detected{
+  width:70px;
+  font-size:10px;
+  color:#333;
+  text-align:center
+}
+
+.rt-limit{
+  width:80px;
+  font-size:10px;
+  color:#555;
+  text-align:center
+}
+
+.rt-status{
+  width:40px;
+  font-size:10px;
+  text-align:right
+}
+
+.rt-status.ok{
+  color:#1b5e20;
+  font-weight:500
+}
+
+.rt-status.zero{
+  color:#0d47a1;
+  font-weight:500
+}
+
+.mysql-gate{
+  background:#fff;
+  border:1.5px solid #1b5e20;
+  border-radius:10px;
+  padding:10px 14px
+}
+
+.mg-title{
+  font-size:11px;
+  font-weight:500;
+  color:#1b5e20;
+  margin-bottom:6px;
+  text-align:center
+}
+
+.mg-code{
+  background:#1b5e20;
+  border-radius:6px;
+  padding:8px 12px;
+  font-family:monospace;
+  font-size:10px;
+  color:#a5d6a7;
+  line-height:1.6;
+  margin-bottom:6px
+}
+
+.mg-result{
+  text-align:center;
+  font-size:12px;
+  font-weight:500;
+  color:#1b5e20
+}
+
+.fail-note{
+  background:#ffebee;
+  border:0.5px solid #ef9a9a;
+  border-radius:10px;
+  padding:10px 14px;
+  display:none
+}
+
+.fn-title{
+  font-size:11px;
+  font-weight:500;
+  color:#b71c1c;
+  margin-bottom:4px
+}
+
+.fn-detail{
+  font-size:10px;
+  color:#c62828;
+  line-height:1.5
+}
+
+.next-checklist{
+  background:#e0f2f1;
+  border:0.5px solid #80cbc4;
+  border-radius:10px;
+  padding:10px 14px
+}
+
+.nc-title{
+  font-size:11px;
+  font-weight:500;
+  color:#004d40;
+  margin-bottom:5px
+}
+
+.nc-row{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:11px;
+  color:#004d40;
+  margin-bottom:3px
+}
+
+.nc-dot{
+  width:16px;
+  height:16px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:9px;
+  flex-shrink:0
+}
+
+.nc-dot.done{
+  background:#1b5e20;
+  color:#fff
+}
+
+.nc-dot.next{
+  background:#004d40;
+  color:#fff
+}
+
+.cta15{
+  background:#1b5e20;
+  border-radius:12px;
+  padding:12px;
+  text-align:center;
+  color:#fff;
+  font-size:13px;
+  font-weight:500
+}
+
+.cta15-te{
+  font-size:10px;
+  color:rgba(255,255,255,0.8);
+  margin-top:2px
+}
+</style>
+
+
+<div style="padding:12px 0 8px">
+
+<div class="ps15">
+
+<div class="ss15">
+
+  <div style="
+    background:#1b5e20;
+    padding:10px 18px 6px;
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+    color:rgba(255,255,255,0.7)
+  ">
+    <span>10 Nov 2026 · 11:42 AM</span>
+    <span>📶 2G 🔋</span>
+  </div>
+
+
+  <div class="hdr15">
+
+    <div style="
+      color:rgba(255,255,255,0.8);
+      font-size:16px
+    ">
+      ←
+    </div>
+
+    <div style="
+      color:#fff;
+      font-size:13px;
+      font-weight:500;
+      flex:1
+    ">
+      PHRT Result · Stage 4 Gate
+    </div>
+
+    <div style="
+      background:rgba(255,255,255,0.2);
+      border-radius:10px;
+      padding:2px 8px;
+      font-size:10px;
+      color:#fff;
+      font-weight:500
+    ">
+      Stage 4 · 2 of 3
+    </div>
+
+  </div>
+
+
+  <div class="body15">
+
+
+    <!-- PASS HERO -->
+
+    <div class="pass-hero">
+
+      <div class="ph-icon">
+        ✅
+      </div>
+
+      <div class="ph-title">
+        PHRT PASS — మీ పంట export సిద్ధం!
+      </div>
+
+      <div class="ph-te">
+        All residues within EU MRL limits · ETO: Zero · Aflatoxin B1: 1.8 μg/kg (&lt;5 limit)
+      </div>
+
+      <div class="ph-ref">
+        Eurofins Report: EF-HYD-2026-8821 · NABL: TC-3218
+      </div>
+
+    </div>
+
+
+    <!-- RESIDUE TABLE -->
+
+    <div>
+
+      <div class="sl15">
+        Residue Analysis Results — Chilli S4 · EU MRL
+      </div>
+
+      <div class="residue-table">
+
+        <div class="rt-header">
+          <span>Compound</span>
+          <span>Detected</span>
+          <span>EU Limit</span>
+          <span>Status</span>
+        </div>
+
+
+        <div class="rt-row">
+
+          <div class="rt-compound">
+            Chlorpyrifos
+          </div>
+
+          <div class="rt-detected">
+            &lt;LOD
+          </div>
+
+          <div class="rt-limit">
+            0.01 mg/kg
+          </div>
+
+          <div class="rt-status ok">
+            PASS ✓
+          </div>
+
+        </div>
+
+
+        <div class="rt-row">
+
+          <div class="rt-compound">
+            Acephate
+          </div>
+
+          <div class="rt-detected">
+            ND
+          </div>
+
+          <div class="rt-limit">
+            Not registered
+          </div>
+
+          <div class="rt-status zero">
+            ZERO ✓
+          </div>
+
+        </div>
+
+
+        <div class="rt-row">
+
+          <div class="rt-compound">
+            ETO + 2-CE metabolite
+          </div>
+
+          <div class="rt-detected">
+            ND
+          </div>
+
+          <div class="rt-limit">
+            ~zero (EU)
+          </div>
+
+          <div class="rt-status zero">
+            ZERO ✓
+          </div>
+
+        </div>
+
+
+        <div class="rt-row">
+
+          <div class="rt-compound">
+            Aflatoxin B1
+          </div>
+
+          <div class="rt-detected">
+            1.8 μg/kg
+          </div>
+
+          <div class="rt-limit">
+            &lt;5 μg/kg EU
+          </div>
+
+          <div class="rt-status ok">
+            PASS ✓
+          </div>
+
+        </div>
+
+
+        <div class="rt-row">
+
+          <div class="rt-compound">
+            Cypermethrin
+          </div>
+
+          <div class="rt-detected">
+            0.04 mg/kg
+          </div>
+
+          <div class="rt-limit">
+            0.07 mg/kg
+          </div>
+
+          <div class="rt-status ok">
+            PASS ✓
+          </div>
+
+        </div>
+
+
+        <div class="rt-row" style="background:#f9f9f9">
+
+          <div class="rt-compound" style="
+            font-weight:500;
+            color:#1b5e20
+          ">
+            All 500+ residues
+          </div>
+
+          <div class="rt-detected" style="color:#1b5e20">
+            Within MRL
+          </div>
+
+          <div class="rt-limit">
+            —
+          </div>
+
+          <div class="rt-status ok">
+            PASS ✓
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- STAGE 4 STATUS -->
+
+    <div class="mysql-gate">
+
+      <div class="mg-title">
+        మీరు Stage 4కి వెళ్లారు
+      </div>
+
+      <div class="mg-code">
+        phrt_result.status = 'PASS'<br>
+        → +1,500 KC credited<br>
+        → COA document generated<br>
+        → Stage 5 buyer match UNLOCKED
+      </div>
+
+      
+
+    </div>
+
+
+    <!-- WHAT'S NEXT -->
+
+    <div class="next-checklist">
+
+      <div class="nc-title">
+        📋 Completing Stage 4 — Next step
+      </div>
+
+      <div class="nc-row">
+        <div class="nc-dot done">✓</div>
+        NABL lab booked (Screen 14)
+      </div>
+
+      <div class="nc-row">
+        <div class="nc-dot done">✓</div>
+        PHRT result PASS (this screen)
+      </div>
+
+      <div class="nc-row">
+        <div class="nc-dot next">→</div>
+        COA + Phytosanitary certificate (Screen 16)
+      </div>
+
+    </div>
+
+
+    <!-- CTA -->
+
+    <div class="cta15">
+
+      Proceed to COA + Phytosanitary · Screen 16
+
+      <div class="cta15-te">
+        Stage 4 badge + +1,500 KC after COA uploaded
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

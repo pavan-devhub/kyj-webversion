@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen2_FEED_CARD_Basic_Issued</title>
+</head>
+
+<body>
+
+<style>
+
+.phone-shell2{
+  width:340px;
+  background:#1a1a2e;
+  border-radius:36px;
+  padding:12px;
+  margin:0 auto;
+  box-shadow:0 0 0 6px #0f0f1a;
+}
+
+.phone-screen2{
+  background:#fff;
+  border-radius:26px;
+  overflow:hidden;
+  min-height:620px;
+  display:flex;
+  flex-direction:column;
+}
+
+.status-bar2{
+  background:#1d6b3e;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 18px 6px;
+  font-size:11px;
+  color:rgba(255,255,255,0.8);
+}
+
+.celebrate-band{
+  background:linear-gradient(
+    180deg,
+    #1d6b3e 0%,
+    #2e7d32 100%
+  );
+  padding:18px 18px 22px;
+  text-align:center;
+}
+
+.celebrate-emoji{
+  font-size:28px;
+  margin-bottom:4px;
+}
+
+.celebrate-title{
+  color:#fff;
+  font-size:16px;
+  font-weight:500;
+  margin-bottom:2px;
+}
+
+.celebrate-te{
+  color:rgba(255,255,255,0.85);
+  font-size:11px;
+}
+
+.card-wrap{
+  padding:0 20px;
+  margin-top:14px;
+  margin-bottom:0;
+}
+
+.feed-card{
+  background:linear-gradient(
+    135deg,
+    #1b5e20 0%,
+    #2e7d32 60%,
+    #388e3c 100%
+  );
+  border-radius:16px;
+  padding:18px 20px 16px;
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+
+.card-shine{
+  position:absolute;
+  top:-30px;
+  right:-30px;
+  width:100px;
+  height:100px;
+  background:rgba(255,255,255,0.07);
+  border-radius:50%;
+}
+
+.card-brand{
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:1px;
+  opacity:0.85;
+  margin-bottom:12px;
+}
+
+.card-tier-badge{
+  display:inline-block;
+  background:rgba(255,255,255,0.2);
+  border:0.5px solid rgba(255,255,255,0.4);
+  border-radius:12px;
+  padding:2px 10px;
+  font-size:10px;
+  font-weight:500;
+  margin-bottom:14px;
+}
+
+.card-name{
+  font-size:15px;
+  font-weight:500;
+  margin-bottom:2px;
+}
+
+.card-number{
+  font-size:11px;
+  opacity:0.75;
+  font-family:monospace;
+  letter-spacing:1px;
+}
+
+.card-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  margin-top:14px;
+}
+
+.card-crop{
+  font-size:10px;
+  opacity:0.8;
+}
+
+.card-date{
+  font-size:10px;
+  opacity:0.7;
+}
+
+.coins-section{
+  margin:14px 18px 0;
+  background:#fff8e1;
+  border:0.5px solid #ffd54f;
+  border-radius:12px;
+  padding:14px 16px;
+}
+
+.coins-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:10px;
+}
+
+.coins-title{
+  font-size:12px;
+  font-weight:500;
+  color:#e65100;
+}
+
+.coins-value{
+  font-size:22px;
+  font-weight:500;
+  color:#bf360c;
+}
+
+.coins-row{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  margin-bottom:4px;
+  font-size:11px;
+  color:#f57f17;
+}
+
+.whatsapp-section{
+  margin:10px 18px 0;
+  background:#e8f5e9;
+  border:0.5px solid #a5d6a7;
+  border-radius:10px;
+  padding:10px 14px;
+}
+
+.wa-title{
+  font-size:11px;
+  font-weight:500;
+  color:#1b5e20;
+  margin-bottom:4px;
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+
+.wa-msg{
+  background:#fff;
+  border-radius:8px;
+  padding:8px 10px;
+  font-size:10px;
+  color:#333;
+  line-height:1.5;
+  border:0.5px solid #c8e6c9;
+}
+
+.next-action{
+  margin:12px 18px 4px;
+  background:#f3e5f5;
+  border:0.5px solid #ce93d8;
+  border-radius:10px;
+  padding:10px 14px;
+}
+
+.next-title{
+  font-size:11px;
+  font-weight:500;
+  color:#6a1b9a;
+  margin-bottom:4px;
+}
+
+.next-steps{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.next-step{
+  font-size:10px;
+  color:#7b1fa2;
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+
+.cta-home{
+  background:#1d6b3e;
+  margin:10px 18px 14px;
+  border-radius:12px;
+  padding:12px;
+  text-align:center;
+  color:#fff;
+  font-size:13px;
+  font-weight:500;
+}
+
+</style>
+
+
+<div style="padding:12px 0 8px">
+
+  <div class="phone-shell2">
+
+    <div class="phone-screen2">
+
+      <!-- Status Bar -->
+      <div class="status-bar2">
+
+        <span>9:43 AM</span>
+
+        <span>📶 2G  🔋</span>
+
+      </div>
+
+
+      <!-- Celebration Header -->
+      <div class="celebrate-band">
+
+        <div class="celebrate-emoji">
+          🎉
+        </div>
+
+        <div class="celebrate-title">
+          Welcome to FEED! · స్వాగతం!
+        </div>
+
+        <div class="celebrate-te">
+          You are now a FEED MSCS LTD cooperative member
+        </div>
+
+      </div>
+
+
+      <!-- FEED CARD -->
+      <div class="card-wrap">
+
+        <div class="feed-card">
+
+          <div class="card-shine"></div>
+
+          <div class="card-brand">
+            FEED MSCS LTD · కృషి యేవ జయతే
+          </div>
+
+          <div class="card-tier-badge">
+            BASIC MEMBER
+          </div>
+
+          <div class="card-name">
+            Ramu Naidu
+          </div>
+
+          <div class="card-number">
+            FEED-ANT-000042
+          </div>
+
+          <div class="card-bottom">
+
+            <div class="card-crop">
+              🌶 Chilli · Anantapur
+            </div>
+
+            <div class="card-date">
+              Valid: 2026–27
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- KRISHI COINS -->
+      <div class="coins-section">
+
+        <div class="coins-header">
+
+          <div class="coins-title">
+            🏅 KRISHI COINS Balance
+          </div>
+
+          <div class="coins-value">
+            150
+          </div>
+
+        </div>
+
+        <div class="coins-row">
+          ✅ +150 — EPM Welcome bonus
+        </div>
+
+        <div
+          class="coins-row"
+          style="color:#bbb"
+        >
+          ○ +500 — Stage 1 Farm Ready (upcoming)
+        </div>
+
+        <div style="font-size:10px;color:#999;margin-top:6px">
+          1 coin = Rs.0.10 toward subscription renewal
+        </div>
+
+      </div>
+
+
+      <!-- WhatsApp Confirmation -->
+      <div class="whatsapp-section">
+
+        <div class="wa-title">
+
+          <span
+            style="
+              width:12px;
+              height:12px;
+              background:#25d366;
+              border-radius:50%;
+              display:inline-block
+            "
+          ></span>
+
+          WhatsApp sent to +91 98765 43210
+
+        </div>
+
+
+        <div class="wa-msg">
+
+          🌾 <strong>స్వాగతం Ramu!</strong>
+          మీరు FEED MSCS LTD సభ్యులు అయ్యారు.<br>
+
+          మీ FEED కార్డ్:
+          <strong>FEED-ANT-000042</strong><br>
+
+          KRISHI COINS:
+          <strong>150 🏅</strong><br>
+
+          ప్రతి సోమవారం 9 AM మీకు updates వస్తాయి.
+
+        </div>
+
+      </div>
+
+
+      <!-- What Next -->
+      <div class="next-action">
+
+        <div class="next-title">
+          📋 Your next steps · తర్వాత ఏం చేయాలి?
+        </div>
+
+
+        <div class="next-steps">
+
+          <div class="next-step">
+
+            <span
+              style="
+                background:#6a1b9a;
+                color:#fff;
+                border-radius:50%;
+                width:14px;
+                height:14px;
+                text-align:center;
+                font-size:9px;
+                flex-shrink:0
+              "
+            >1</span>
+
+            Sign KYJ Farmer Consent Agreement (Screen 3)
+
+          </div>
+
+
+          <div class="next-step">
+
+            <span
+              style="
+                background:#6a1b9a;
+                color:#fff;
+                border-radius:50%;
+                width:14px;
+                height:14px;
+                text-align:center;
+                font-size:9px;
+                flex-shrink:0
+              "
+            >2</span>
+
+            Complete Export Readiness Score (Screen 4)
+
+          </div>
+
+
+          <div class="next-step">
+
+            <span
+              style="
+                background:#6a1b9a;
+                color:#fff;
+                border-radius:50%;
+                width:14px;
+                height:14px;
+                text-align:center;
+                font-size:9px;
+                flex-shrink:0
+              "
+            >3</span>
+
+            Start 90-day GAP Activity Log (Stage 1)
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Dashboard Button -->
+      <div class="cta-home">
+        Go to My Dashboard · నా Dashboard తెరవండి
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

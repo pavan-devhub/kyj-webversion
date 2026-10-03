@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen25_FIRC_Upload_TwoTrack</title>
+</head>
+<body>
+
+<style>
+.ps25{width:340px;background:#1a1a2e;border-radius:36px;padding:12px;margin:0 auto;box-shadow:0 0 0 6px #0f0f1a}
+.ss25{background:#f9f8f4;border-radius:26px;overflow:hidden;min-height:720px;display:flex;flex-direction:column}
+.hdr25{background:#1b5e20;padding:12px 18px;display:flex;align-items:center;gap:8px}
+.star7c{background:linear-gradient(135deg,#bf360c,#e65100);color:#fff;border-radius:10px;padding:2px 8px;font-size:10px;font-weight:600;display:inline-flex;align-items:center;gap:3px}
+.body25{padding:12px 16px;flex:1;display:flex;flex-direction:column;gap:10px}
+.sl25{font-size:10px;font-weight:500;color:#1b5e20;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:3px}
+.payment-banner{background:linear-gradient(135deg,#1b5e20,#2e7d32);color:#fff;border-radius:12px;padding:12px 14px;text-align:center;position:relative;overflow:hidden}
+.pb-icon{font-size:30px;margin-bottom:4px}
+.pb-title{font-size:14px;font-weight:500}
+.pb-amount{font-size:20px;font-weight:600;color:#ffd54f;margin:4px 0}
+.pb-sub{font-size:10px;color:rgba(255,255,255,0.85)}
+.bank-flow{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;padding:12px 14px}
+.bf-title{font-size:11px;font-weight:500;color:#1b5e20;margin-bottom:10px;display:flex;align-items:center;gap:5px}
+.bf-chain{display:flex;align-items:center;justify-content:space-between;gap:4px}
+.bf-node{flex:1;background:#e8f5e9;border:0.5px solid #81c784;border-radius:7px;padding:7px 5px;text-align:center}
+.bf-flag{font-size:14px}
+.bf-node-name{font-size:9px;font-weight:500;color:#1b5e20;margin-top:2px;line-height:1.2}
+.bf-node-detail{font-size:8px;color:#2e7d32;margin-top:1px}
+.bf-arrow{color:#1b5e20;font-size:14px;flex-shrink:0;font-weight:600}
+.twotrack{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;padding:12px 14px}
+.tt-title{font-size:11px;font-weight:500;color:#1b5e20;margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.tt-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tt-card{border-radius:8px;padding:10px;border:1.5px solid}
+.tt-card.primary{background:#e8f5e9;border-color:#1b5e20}
+.tt-card.copy{background:#e3f2fd;border-color:#0d47a1}
+.tt-header{font-size:9px;font-weight:600;letter-spacing:0.4px;text-transform:uppercase;margin-bottom:4px}
+.tt-card.primary .tt-header{color:#1b5e20}
+.tt-card.copy .tt-header{color:#0d47a1}
+.tt-bank{font-size:11px;font-weight:500;color:#222;margin-bottom:1px}
+.tt-acc{font-size:9px;color:#666;font-family:monospace;margin-bottom:5px}
+.tt-amt{font-size:13px;font-weight:600;margin:3px 0}
+.tt-card.primary .tt-amt{color:#1b5e20}
+.tt-card.copy .tt-amt{color:#0d47a1}
+.tt-status{display:inline-block;border-radius:8px;padding:2px 6px;font-size:8px;font-weight:500;margin-top:3px}
+.tt-card.primary .tt-status{background:#1b5e20;color:#fff}
+.tt-card.copy .tt-status{background:#0d47a1;color:#fff}
+.tt-eta{font-size:9px;color:#666;margin-top:3px}
+.firc-doc{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;overflow:hidden}
+.fd-header{background:#1b5e20;color:#fff;padding:9px 14px;font-size:11px;font-weight:500;display:flex;justify-content:space-between;align-items:center}
+.fd-body{padding:10px 14px}
+.fd-row{display:flex;justify-content:space-between;padding:4px 0;border-bottom:0.5px solid #f5f5f5;font-size:11px}
+.fd-row:last-child{border-bottom:none}
+.fd-k{color:#666}
+.fd-v{color:#222;font-weight:500}
+.fd-v.green{color:#1b5e20}
+.upload-block{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;padding:10px 14px}
+.ub-title{font-size:11px;font-weight:500;color:#333;margin-bottom:7px}
+.ub-row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:0.5px solid #f5f5f5;font-size:11px}
+.ub-row:last-child{border-bottom:none}
+.ub-check{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:500;color:#fff;flex-shrink:0}
+.ub-done{background:#1b5e20}
+.ub-pend{background:#f57f17}
+.ub-name{flex:1;color:#222}
+.ub-detail{font-size:9px;color:#888}
+.cta25{background:linear-gradient(135deg,#1b5e20,#2e7d32);border-radius:12px;padding:13px;text-align:center;color:#fff;font-size:13px;font-weight:600;box-shadow:0 4px 12px rgba(27,94,32,0.3)}
+.cta25-te{font-size:10px;color:#ffd54f;margin-top:3px;font-weight:500}
+</style>
+
+<div style="padding:12px 0 8px">
+
+<div class="ps25">
+
+<div class="ss25">
+
+  <div style="background:#1b5e20;padding:10px 18px 6px;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.7)">
+    <span>28 Dec 2026 · 11:14 AM</span>
+    <span>📶 4G 🔋</span>
+  </div>
+
+  <div class="hdr25">
+
+    <div style="color:rgba(255,255,255,0.8);font-size:16px">
+      ←
+    </div>
+
+    <div style="color:#fff;font-size:13px;font-weight:500;flex:1">
+      FIRC Upload
+    </div>
+
+    <div class="star7c">
+      ★ 3 of 4
+    </div>
+
+  </div>
+
+  <div class="body25">
+
+    <!-- Payment received banner -->
+    <div class="payment-banner">
+
+      <div class="pb-icon">
+        💰
+      </div>
+
+      <div class="pb-title">
+        LC Payment Received from Hamburg!
+      </div>
+
+      <div class="pb-amount">
+        €10,550 · Rs.9,59,000
+      </div>
+
+      <div class="pb-sub">
+        Vessel arrived Hamburg 26 Dec · LC released 27 Dec · Funds landed 28 Dec
+      </div>
+
+    </div>
+
+    <!-- Bank flow visualization -->
+    <div>
+
+      <div class="sl25">
+        Payment route · 5-bank flow
+      </div>
+
+      <div class="bank-flow">
+
+        <div class="bf-title">
+          🌐 SWIFT · UCP 600 · International LC at sight
+        </div>
+
+        <div class="bf-chain">
+
+          <div class="bf-node">
+            <div class="bf-flag">🇩🇪</div>
+            <div class="bf-node-name">Hamburg Spice</div>
+            <div class="bf-node-detail">Buyer</div>
+          </div>
+
+          <div class="bf-arrow">
+            →
+          </div>
+
+          <div class="bf-node">
+            <div class="bf-flag">🏦</div>
+            <div class="bf-node-name">Deutsche Bank</div>
+            <div class="bf-node-detail">Issuing</div>
+          </div>
+
+          <div class="bf-arrow">
+            →
+          </div>
+
+          <div class="bf-node">
+            <div class="bf-flag">🏦</div>
+            <div class="bf-node-name">HDFC Bank</div>
+            <div class="bf-node-detail">AD Bank</div>
+          </div>
+
+          <div class="bf-arrow">
+            →
+          </div>
+
+          <div class="bf-node">
+            <div class="bf-flag">🏦</div>
+            <div class="bf-node-name">APGVB Anantapur</div>
+            <div class="bf-node-detail">Farmer's bank</div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- TWO-TRACK FIRC -->
+    <div>
+
+      <div class="sl25">
+        🔄 Two-track FIRC architecture
+      </div>
+
+      <div class="twotrack">
+
+        <div class="tt-title">
+          Track A is Primary · Track B is Mandatory Copy
+        </div>
+
+        <div class="tt-grid">
+
+          <div class="tt-card primary">
+
+            <div class="tt-header">
+              ★ Track A · PRIMARY
+            </div>
+
+            <div class="tt-bank">
+              Ramu Naidu
+            </div>
+
+            <div class="tt-acc">
+              APGVB · A/C ****4521
+            </div>
+
+            <div class="tt-amt">
+              Rs.8,91,870
+            </div>
+
+            <div class="tt-eta">
+              93% of FOB · Net to farmer
+            </div>
+
+            <div class="tt-status">
+              ✓ CREDITED 28 Dec
+            </div>
+
+            <div class="tt-eta" style="margin-top:5px">
+              FIRC No: HDFC-FIRC-2026-78421
+            </div>
+
+          </div>
+
+          <div class="tt-card copy">
+
+            <div class="tt-header">
+              Track B · PACS COPY
+            </div>
+
+            <div class="tt-bank">
+              PACS Anantapur
+            </div>
+
+            <div class="tt-acc">
+              PACS-ANT-2024-0387
+            </div>
+
+            <div class="tt-amt">
+              copy register
+            </div>
+
+            <div class="tt-eta">
+              7-day mandatory copy
+            </div>
+
+            <div class="tt-status">
+              📋 PENDING — by 04 Jan
+            </div>
+
+            <div class="tt-eta" style="margin-top:5px">
+              FCDA to file at PACS office
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- FIRC document -->
+    <div class="firc-doc">
+
+      <div class="fd-header">
+
+        <span>
+          📄 FIRC from AD Bank · HDFC
+        </span>
+
+        <span style="background:#a5d6a7;color:#1b5e20;border-radius:6px;padding:2px 6px;font-size:9px">
+          VERIFIED
+        </span>
+
+      </div>
+
+      <div class="fd-body">
+
+        <div class="fd-row">
+          <span class="fd-k">FIRC No.</span>
+          <span class="fd-v">HDFC-FIRC-2026-78421</span>
+        </div>
+
+        <div class="fd-row">
+          <span class="fd-k">Date</span>
+          <span class="fd-v">28 Dec 2026</span>
+        </div>
+
+        <div class="fd-row">
+          <span class="fd-k">Beneficiary</span>
+          <span class="fd-v">Ramu Naidu · FEED Member 042</span>
+        </div>
+
+        <div class="fd-row">
+          <span class="fd-k">Remitter</span>
+          <span class="fd-v">Hamburg Spice Imports GmbH</span>
+        </div>
+
+        <div class="fd-row">
+          <span class="fd-k">Foreign currency</span>
+          <span class="fd-v">EUR 10,550.00</span>
+        </div>
+
+        <div class="fd-row">
+          <span class="fd-k">INR equivalent</span>
+          <span class="fd-v green">Rs.9,59,000 @ €1 = Rs.90.90</span>
+        </div>
+
+        <div class="fd-row">
+          <span class="fd-k">Purpose code</span>
+          <span class="fd-v">P0103 · Export of goods</span>
+        </div>
+
+        <div class="fd-row">
+          <span class="fd-k">EDPMS reference</span>
+          <span class="fd-v">EDPMS-26-VIZ-8842156</span>
+        </div>
+
+        <div class="fd-row">
+          <span class="fd-k">AD Bank confirmation</span>
+          <span class="fd-v green">firc_register.status='CONFIRMED' ✓</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Upload checklist -->
+    <div>
+
+      <div class="sl25">
+        Required uploads before CASCADE 1
+      </div>
+
+      <div class="upload-block">
+
+        <div class="ub-title">
+          📤 4-document upload bundle
+        </div>
+
+        <div class="ub-row">
+
+          <div class="ub-check ub-done">
+            ✓
+          </div>
+
+          <div class="ub-name">
+            ① Bill of Lading PDF
+          </div>
+
+          <div class="ub-detail">
+            MAEU-2026-VIZHAM-2643
+          </div>
+
+        </div>
+
+        <div class="ub-row">
+
+          <div class="ub-check ub-done">
+            ✓
+          </div>
+
+          <div class="ub-name">
+            ② FIRC PDF from HDFC
+          </div>
+
+          <div class="ub-detail">
+            HDFC-FIRC-2026-78421
+          </div>
+
+        </div>
+
+        <div class="ub-row">
+
+          <div class="ub-check ub-done">
+            ✓
+          </div>
+
+          <div class="ub-name">
+            ③ EDPMS reference auto-pulled
+          </div>
+
+          <div class="ub-detail">
+            RBI portal API
+          </div>
+
+        </div>
+
+        <div class="ub-row">
+
+          <div class="ub-check ub-pend">
+            ○
+          </div>
+
+          <div class="ub-name">
+            ④ PACS 7-day register copy
+          </div>
+
+          <div class="ub-detail">
+            FCDA files by 04 Jan
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Submit FIRC + Stage 7 completion in the same green box -->
+    <div class="cta25">
+      Submit FIRC
+
+      <div class="cta25-te">
+        Stage 7 complete → upgrade to GOLD card
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

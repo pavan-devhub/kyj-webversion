@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen22_Sample_Dispatch</title>
+</head>
+<body>
+
+<style>
+.ps22{width:340px;background:#1a1a2e;border-radius:36px;padding:12px;margin:0 auto;box-shadow:0 0 0 6px #0f0f1a}
+.ss22{background:#f9f8f4;border-radius:26px;overflow:hidden;min-height:680px;display:flex;flex-direction:column}
+.hdr22{background:#01579b;padding:12px 18px;display:flex;align-items:center;gap:8px}
+.body22{padding:12px 16px;flex:1;display:flex;flex-direction:column;gap:10px}
+.sl22{font-size:10px;font-weight:500;color:#01579b;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:3px}
+.dhl-banner{background:#fc0;border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:10px}
+.dhl-logo{background:#d40511;color:#fff;font-weight:600;font-size:12px;padding:4px 10px;border-radius:4px;letter-spacing:1px}
+.dhl-info{flex:1}
+.dhl-awb{font-size:11px;font-weight:500;color:#222;font-family:monospace}
+.dhl-detail{font-size:10px;color:#5d4037;margin-top:1px}
+.sample-pack{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;padding:10px 14px}
+.sp-title{font-size:11px;font-weight:500;color:#333;margin-bottom:7px}
+.sp-row{display:flex;align-items:center;gap:6px;font-size:11px;padding:4px 0;border-bottom:0.5px solid #f5f5f5}
+.sp-row:last-child{border-bottom:none}
+.sp-check{width:18px;height:18px;border-radius:50%;background:#1b5e20;color:#fff;text-align:center;line-height:18px;font-size:10px;flex-shrink:0}
+.sp-name{flex:1;color:#222}
+.sp-detail{font-size:9px;color:#888}
+.tracker{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;padding:10px 14px}
+.tr-title{font-size:11px;font-weight:500;color:#01579b;margin-bottom:8px}
+.tr-step{display:flex;gap:10px;padding-bottom:8px;position:relative}
+.tr-step:last-child{padding-bottom:0}
+.tr-line{position:absolute;left:11px;top:24px;bottom:0;width:2px;background:#e0e0e0}
+.tr-step:last-child .tr-line{display:none}
+.tr-dot{width:24px;height:24px;border-radius:50%;background:#fff;border:2px solid #e0e0e0;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;flex-shrink:0;z-index:1}
+.tr-dot.done{background:#01579b;border-color:#01579b;color:#fff}
+.tr-dot.active{background:#fc0;border-color:#fc0;color:#222;box-shadow:0 0 0 3px rgba(252,204,0,0.3)}
+.tr-info{flex:1;padding-top:1px}
+.tr-stage{font-size:11px;font-weight:500;color:#222}
+.tr-loc{font-size:10px;color:#666;margin-top:1px}
+.tr-time{font-size:9px;color:#888;margin-top:1px;font-family:monospace}
+.buyer-block{background:#e8eaf6;border:0.5px solid #9fa8da;border-radius:10px;padding:9px 14px}
+.bb-title{font-size:11px;font-weight:500;color:#1a237e;margin-bottom:5px;display:flex;align-items:center;gap:5px}
+.bb-row{display:flex;justify-content:space-between;font-size:10px;color:#3949ab;padding:2px 0}
+.gate-block{background:#fff8e1;border:0.5px solid #ffd54f;border-radius:10px;padding:9px 14px}
+.gate-title{font-size:11px;font-weight:500;color:#f57f17;margin-bottom:5px}
+.gate-detail{font-size:10px;color:#bf360c;line-height:1.5}
+.badge-preview{background:linear-gradient(135deg,#1b5e20,#2e7d32);border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:12px}
+.bp-icon{font-size:30px}
+.bp-info{flex:1;color:#fff}
+.bp-name{font-size:14px;font-weight:500}
+.bp-sub{font-size:10px;color:rgba(255,255,255,0.85);margin-top:1px}
+.bp-coins{background:rgba(255,255,255,0.2);border-radius:14px;padding:3px 10px;font-size:10px;font-weight:500;margin-top:5px;display:inline-block}
+.coins22{background:#fff8e1;border:0.5px solid #ffd54f;border-radius:8px;padding:7px 12px;display:flex;justify-content:space-between;align-items:center}
+.cta22{background:#01579b;border-radius:12px;padding:12px;text-align:center;color:#fff;font-size:13px;font-weight:500}
+.cta22-te{font-size:10px;color:rgba(255,255,255,0.8);margin-top:2px}
+</style>
+
+<div style="padding:12px 0 8px">
+
+<div class="ps22">
+
+<div class="ss22">
+
+  <div style="background:#01579b;padding:10px 18px 6px;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.7)">
+    <span>20 Nov 2026 · 2:15 PM</span>
+    <span>📶 4G 🔋</span>
+  </div>
+
+  <div class="hdr22">
+
+    <div style="color:rgba(255,255,255,0.8);font-size:16px">
+      ←
+    </div>
+
+    <div style="color:#fff;font-size:13px;font-weight:500;flex:1">
+      Sample Dispatch Tracker
+    </div>
+
+    <div style="background:rgba(255,255,255,0.2);border-radius:10px;padding:2px 8px;font-size:10px;color:#fff;font-weight:500">
+      Stage 6 · 3 of 3
+    </div>
+
+  </div>
+
+  <div class="body22">
+
+    <!-- DHL banner -->
+    <div class="dhl-banner">
+
+      <div class="dhl-logo">
+        DHL
+      </div>
+
+      <div class="dhl-info">
+
+        <div class="dhl-awb">
+          AWB: 1234 5678 9012
+        </div>
+
+        <div class="dhl-detail">
+          Express Worldwide · Temperature-controlled (D07-13) · 5–7 working days
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Sample contents -->
+    <div>
+
+      <div class="sl22">
+        Commercial Sample Pack · 2 kg
+      </div>
+
+      <div class="sample-pack">
+
+        <div class="sp-title">
+          📦 What's in the buyer sample
+        </div>
+
+        <div class="sp-row">
+          <div class="sp-check">✓</div>
+          <div class="sp-name">2 kg sealed sample — Grade A Chilli S4</div>
+          <div class="sp-detail">980 kg lot</div>
+        </div>
+
+        <div class="sp-row">
+          <div class="sp-check">✓</div>
+          <div class="sp-name">COA — Eurofins NABL TC-3218</div>
+          <div class="sp-detail">EF-HYD-2026-8821</div>
+        </div>
+
+        <div class="sp-row">
+          <div class="sp-check">✓</div>
+          <div class="sp-name">PHRT certificate (full residue report)</div>
+          <div class="sp-detail">500+ panel</div>
+        </div>
+
+        <div class="sp-row">
+          <div class="sp-check">✓</div>
+          <div class="sp-name">Phytosanitary cert · SPQO Anantapur</div>
+          <div class="sp-detail">Govt issued</div>
+        </div>
+
+        <div class="sp-row">
+          <div class="sp-check">✓</div>
+          <div class="sp-name">TraceX QR card (scan → full chain)</div>
+          <div class="sp-detail">Provenance</div>
+        </div>
+
+        <div class="sp-row">
+          <div class="sp-check">✓</div>
+          <div class="sp-name">Lot card — ANP-001 · 1,425 kg · Ramu Naidu</div>
+          <div class="sp-detail">Farmer story</div>
+        </div>
+
+        <div class="sp-row">
+          <div class="sp-check">✓</div>
+          <div class="sp-name">Proforma Invoice copy — FEED/ANT/PI/2026/042</div>
+          <div class="sp-detail">Rs.685/kg FOB</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- DHL Tracker -->
+    <div>
+
+      <div class="sl22">
+        Live DHL Tracking · ట్రాకింగ్
+      </div>
+
+      <div class="tracker">
+
+        <div class="tr-title">
+          📍 Tracking AWB 1234 5678 9012
+        </div>
+
+        <div class="tr-step">
+
+          <div class="tr-line" style="background:#01579b"></div>
+
+          <div class="tr-dot done">
+            ✓
+          </div>
+
+          <div class="tr-info">
+
+            <div class="tr-stage">
+              Picked up · Gorantla Packhouse
+            </div>
+
+            <div class="tr-loc">
+              📍 Gorantla, Anantapur AP
+            </div>
+
+            <div class="tr-time">
+              19 Nov 2026 · 04:30 PM IST
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="tr-step">
+
+          <div class="tr-line" style="background:#01579b"></div>
+
+          <div class="tr-dot done">
+            ✓
+          </div>
+
+          <div class="tr-info">
+
+            <div class="tr-stage">
+              DHL Hyderabad Hub
+            </div>
+
+            <div class="tr-loc">
+              📍 Shamshabad RGIA
+            </div>
+
+            <div class="tr-time">
+              19 Nov 2026 · 10:45 PM IST
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="tr-step">
+
+          <div class="tr-line" style="background:#01579b"></div>
+
+          <div class="tr-dot done">
+            ✓
+          </div>
+
+          <div class="tr-info">
+
+            <div class="tr-stage">
+              Departed India · DHL Express flight
+            </div>
+
+            <div class="tr-loc">
+              ✈️ HYD → DXB → FRA
+            </div>
+
+            <div class="tr-time">
+              20 Nov 2026 · 06:12 AM IST
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="tr-step">
+
+          <div class="tr-line"></div>
+
+          <div class="tr-dot active">
+            →
+          </div>
+
+          <div class="tr-info">
+
+            <div class="tr-stage">
+              In transit · Frankfurt customs
+            </div>
+
+            <div class="tr-loc">
+              📍 Frankfurt · EU customs clearance
+            </div>
+
+            <div class="tr-time">
+              20 Nov 2026 · 02:00 PM IST · Live now
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="tr-step">
+
+          <div class="tr-line"></div>
+
+          <div class="tr-dot">
+            5
+          </div>
+
+          <div class="tr-info">
+
+            <div class="tr-stage">
+              Out for delivery · Hamburg
+            </div>
+
+            <div class="tr-loc">
+              📍 Hamburg buyer warehouse
+            </div>
+
+            <div class="tr-time" style="color:#bbb">
+              ETA: 22 Nov 2026 · 11:00 AM CET
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="tr-step">
+
+          <div class="tr-dot">
+            6
+          </div>
+
+          <div class="tr-info">
+
+            <div class="tr-stage" style="color:#888">
+              Buyer acknowledgment
+            </div>
+
+            <div class="tr-loc" style="color:#bbb">
+              Expected 5–7 working days from delivery
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Buyer notification -->
+    <div class="buyer-block">
+
+      <div class="bb-title">
+        📧 Hamburg Spice Imports notified
+      </div>
+
+      <div class="bb-row">
+        <span>Email sent</span>
+        <span style="font-weight:500">19 Nov 06:15 PM IST</span>
+      </div>
+
+      <div class="bb-row">
+        <span>Buyer contact</span>
+        <span style="font-weight:500">procurement@hamburgspice.de</span>
+      </div>
+
+      <div class="bb-row">
+        <span>Includes</span>
+        <span style="font-weight:500">DHL link + dossier + lot card</span>
+      </div>
+
+      <div class="bb-row">
+        <span>Response expected</span>
+        <span style="font-weight:500">By 28 Nov 2026</span>
+      </div>
+
+    </div>
+
+    <!-- Stage 6 Gate -->
+    <div class="gate-block">
+
+      <div class="gate-title">
+        Stage 6 Retain rest
+      </div>
+
+      <div class="gate-detail">
+        Hamburg కొనుగోలుదారు నమూనా ఆమోదాన్ని డిజిటల్‌గా లేదా FCDA ద్వారా నమోదు చేసిన తర్వాత,
+        Stage 6 ముందుకు వెళ్తుంది → <strong>నమూనా</strong> Badge + <strong>+2,000 KC</strong>
+        జమ అవుతాయి → Stage 7 ★ CHA + Shipping Bill ప్రారంభమవుతుంది.
+        ఇది ఎగుమతి ప్రక్రియలో అత్యంత ముఖ్యమైన దశ.
+      </div>
+
+    </div>
+
+    <!-- Badge preview -->
+    <div class="badge-preview">
+
+      <div class="bp-icon">
+        📦
+      </div>
+
+      <div class="bp-info">
+
+        <div class="bp-name">
+          నమూనా Badge — Coming!
+        </div>
+
+        <div class="bp-sub">
+          Stage 6 — Sample Sent · Hamburg Spice approval
+        </div>
+
+        <div class="bp-coins">
+          🏅 +2,000 KC · Total: 9,100
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Running total -->
+    <div class="coins22">
+
+      <span style="font-size:11px;color:#f57f17">
+        🏅 Current KRISHI COINS
+      </span>
+
+      <span style="font-size:13px;font-weight:500;color:#bf360c">
+        7,100 / 12,500
+      </span>
+
+    </div>
+
+    <div class="cta22">
+
+      Track Live · DHL.com Track AWB
+
+      <div class="cta22-te">
+        Auto-notification when buyer approves → Stage 7 
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

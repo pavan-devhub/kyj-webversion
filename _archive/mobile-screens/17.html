@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen17_VISWARUPAM_Buyer_Match</title>
+</head>
+
+<body>
+
+<style>
+.ps17{
+  width:340px;
+  background:#1a1a2e;
+  border-radius:36px;
+  padding:12px;
+  margin:0 auto;
+  box-shadow:0 0 0 6px #0f0f1a
+}
+
+.ss17{
+  background:#f9f8f4;
+  border-radius:26px;
+  overflow:hidden;
+  min-height:670px;
+  display:flex;
+  flex-direction:column
+}
+
+.hdr17{
+  background:#1a237e;
+  padding:12px 18px;
+  display:flex;
+  align-items:center;
+  gap:8px
+}
+
+.body17{
+  padding:12px 16px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:10px
+}
+
+.filter-bar{
+  background:#fff;
+  border:0.5px solid #e0e0e0;
+  border-radius:10px;
+  padding:8px 12px;
+  display:flex;
+  gap:6px;
+  align-items:center;
+  flex-wrap:wrap
+}
+
+.fb-label{
+  font-size:10px;
+  color:#666;
+  font-weight:500
+}
+
+.fb-pill{
+  background:#e8eaf6;
+  border-radius:14px;
+  padding:3px 9px;
+  font-size:10px;
+  color:#1a237e;
+  font-weight:500
+}
+
+.sl17{
+  font-size:10px;
+  font-weight:500;
+  color:#1a237e;
+  text-transform:uppercase;
+  letter-spacing:0.4px;
+  margin-bottom:4px
+}
+
+.buyer-card{
+  background:#fff;
+  border:0.5px solid #e0e0e0;
+  border-radius:12px;
+  overflow:hidden;
+  cursor:pointer
+}
+
+.buyer-card.primary{
+  border:1.5px solid #1a237e
+}
+
+.bc17-header{
+  background:#1a237e;
+  padding:9px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+
+.bc17-name{
+  color:#fff;
+  font-size:12px;
+  font-weight:500
+}
+
+.bc17-country{
+  color:rgba(255,255,255,0.85);
+  font-size:11px
+}
+
+.trust-badge{
+  background:#ffd54f;
+  color:#1a237e;
+  border-radius:10px;
+  padding:2px 8px;
+  font-size:10px;
+  font-weight:500
+}
+
+.bc17-body{
+  padding:10px 14px;
+  display:flex;
+  flex-direction:column;
+  gap:5px
+}
+
+.bc17-row{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:11px
+}
+
+.bc17-icon{
+  width:16px;
+  font-size:12px;
+  text-align:center;
+  flex-shrink:0
+}
+
+.bc17-key{
+  color:#666;
+  min-width:85px
+}
+
+.bc17-val{
+  color:#222;
+  font-weight:500;
+  flex:1
+}
+
+.bc17-val.good{
+  color:#1b5e20
+}
+
+.trust-bar-section{
+  padding:8px 14px 10px;
+  border-top:0.5px solid #f0f0f0
+}
+
+.ts-label{
+  font-size:10px;
+  color:#1a237e;
+  font-weight:500;
+  margin-bottom:4px;
+  display:flex;
+  justify-content:space-between
+}
+
+.ts-bg{
+  height:6px;
+  background:#e8eaf6;
+  border-radius:3px
+}
+
+.ts-fill{
+  height:6px;
+  background:#1a237e;
+  border-radius:3px
+}
+
+.dossier-note{
+  background:#e8eaf6;
+  border:0.5px solid #9fa8da;
+  border-radius:8px;
+  padding:7px 12px;
+  font-size:10px;
+  color:#1a237e;
+  line-height:1.5
+}
+
+.buyer-card2{
+  background:#fff;
+  border:0.5px solid #e0e0e0;
+  border-radius:10px;
+  padding:8px 14px
+}
+
+.bc2-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  font-size:11px
+}
+
+.bc2-name{
+  font-weight:500;
+  color:#333
+}
+
+.bc2-country{
+  color:#666;
+  font-size:10px
+}
+
+.bc2-ts{
+  display:flex;
+  align-items:center;
+  gap:4px
+}
+
+.ts-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%
+}
+
+.bc2-ts-val{
+  font-size:10px;
+  color:#f57f17;
+  font-weight:500
+}
+
+.gate-note{
+  background:#fff8e1;
+  border:0.5px solid #ffe082;
+  border-radius:8px;
+  padding:7px 12px;
+  font-size:10px;
+  color:#f57f17;
+  line-height:1.5
+}
+
+.cta17{
+  background:#1a237e;
+  border-radius:12px;
+  padding:12px;
+  text-align:center;
+  color:#fff;
+  font-size:13px;
+  font-weight:500
+}
+
+.cta17-te{
+  font-size:10px;
+  color:rgba(255,255,255,0.8);
+  margin-top:2px
+}
+</style>
+
+
+<div style="padding:12px 0 8px">
+
+<div class="ps17">
+
+<div class="ss17">
+
+  <div style="
+    background:#1a237e;
+    padding:10px 18px 6px;
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+    color:rgba(255,255,255,0.7)
+  ">
+    <span>18 Nov 2026 · 10:30 AM</span>
+    <span>📶 4G 🔋</span>
+  </div>
+
+
+  <div class="hdr17">
+
+    <div style="
+      color:rgba(255,255,255,0.8);
+      font-size:16px
+    ">
+      ←
+    </div>
+
+    <div style="
+      color:#fff;
+      font-size:13px;
+      font-weight:500;
+      flex:1
+    ">
+      VISWARUPAM · Buyer Match
+    </div>
+
+    <div style="
+      background:rgba(255,255,255,0.2);
+      border-radius:10px;
+      padding:2px 8px;
+      font-size:10px;
+      color:#fff;
+      font-weight:500
+    ">
+      Stage 5 · 1 of 3
+    </div>
+
+  </div>
+
+
+  <div class="body17">
+
+
+    <!-- Filter bar -->
+
+    <div class="filter-bar">
+
+      <span class="fb-label">
+        Filtered for:
+      </span>
+
+      <span class="fb-pill">
+        🌶 Chilli S4
+      </span>
+
+      <span class="fb-pill">
+        1.4 MT lot
+      </span>
+
+      <span class="fb-pill">
+        🇪🇺 EU preferred
+      </span>
+
+      <span class="fb-pill">
+        PHRT: PASS ✓
+      </span>
+
+    </div>
+
+
+    <!-- Primary match -->
+
+    <div>
+
+      <div class="sl17">
+        Best Match · సరిపోయిన కొనుగోలుదారు
+      </div>
+
+      <div class="buyer-card primary">
+
+        <div class="bc17-header">
+
+          <div>
+
+            <div class="bc17-name">
+              Hamburg Spice Imports GmbH
+            </div>
+
+            <div class="bc17-country">
+              🇩🇪 Hamburg, Germany · EU
+            </div>
+
+          </div>
+
+          <div class="trust-badge">
+            Trust 8.7/10
+          </div>
+
+        </div>
+
+
+        <div class="bc17-body">
+
+          <div class="bc17-row">
+            <span class="bc17-icon">📦</span>
+            <span class="bc17-key">Annual import</span>
+            <span class="bc17-val">
+              200 MT Indian Chilli/yr
+            </span>
+          </div>
+
+
+          <div class="bc17-row">
+            <span class="bc17-icon">💰</span>
+            <span class="bc17-key">Price range</span>
+            <span class="bc17-val good">
+              €8.50–9.20/kg FOB (Rs.760–820/kg)
+            </span>
+          </div>
+
+
+          <div class="bc17-row">
+            <span class="bc17-icon">💳</span>
+            <span class="bc17-key">Payment</span>
+            <span class="bc17-val">
+              LC at sight (UCP 600) ✓
+            </span>
+          </div>
+
+
+          <div class="bc17-row">
+            <span class="bc17-icon">📋</span>
+            <span class="bc17-key">Requirements</span>
+            <span class="bc17-val">
+              ETO-free ✓ · Aflatoxin B1&lt;5ppb ✓ · PHRT COA
+            </span>
+          </div>
+
+
+          <div class="bc17-row">
+            <span class="bc17-icon">📅</span>
+            <span class="bc17-key">Next buying window</span>
+            <span class="bc17-val good">
+              Dec 2026 – Jan 2027 ✓
+            </span>
+          </div>
+
+
+          <div class="bc17-row">
+            <span class="bc17-icon">🏦</span>
+            <span class="bc17-key">ECGC status</span>
+            <span class="bc17-val good">
+              Green · Low risk country
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="trust-bar-section">
+
+          <div class="ts-label">
+
+            <span>
+              Trust Score — 10 parameters
+            </span>
+
+            <span style="color:#1a237e;font-weight:500">
+              8.7 / 10
+            </span>
+
+          </div>
+
+          <div class="ts-bg">
+
+            <div class="ts-fill" style="width:87%"></div>
+
+          </div>
+
+          <div style="
+            font-size:9px;
+            color:#888;
+            margin-top:3px
+          ">
+            Payment history ✓ · Import volume verified ✓ · ECGC Green ✓ · Bank reference ✓ · RASFF clean record ✓
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Dossier note -->
+
+    <div class="dossier-note">
+
+      📤 <strong>కొనుగోలుదారు కోసం సిద్ధం చేసిన ఎగుమతి పత్రం:</strong>
+      Farm GPS (ANP-001) · TraceX QR · PHRT COA (Eurofins) · BharatGAP cert · ASTA color grade · Capsaicin % · Lot 1.4 MT · Price request Rs.700/kg FOB. Sent to buyer email before meeting.
+
+    </div>
+
+
+    <!-- Other matches -->
+
+    <div>
+
+      <div class="sl17">
+        Other matches · ఇతర కొనుగోలుదారులు
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:5px">
+
+
+        <div class="buyer-card2">
+
+          <div class="bc2-row">
+
+            <div>
+
+              <div class="bc2-name">
+                Al Fares Spice Trading LLC
+              </div>
+
+              <div class="bc2-country">
+                🇦🇪 Dubai, UAE · Gulf
+              </div>
+
+            </div>
+
+            <div class="bc2-ts">
+
+              <div
+                class="ts-dot"
+                style="background:#f9a825">
+              </div>
+
+              <div class="bc2-ts-val">
+                6.2/10 ✓ Gulf gate
+              </div>
+
+            </div>
+
+          </div>
+
+          <div style="
+            font-size:10px;
+            color:#888;
+            margin-top:3px
+          ">
+            150 MT/yr · LC 30 days · SFDA halal cert preferred
+          </div>
+
+        </div>
+
+
+        <div class="buyer-card2" style="opacity:0.7">
+
+          <div class="bc2-row">
+
+            <div>
+
+              <div class="bc2-name">
+                Euro Spice BV
+              </div>
+
+              <div class="bc2-country">
+                🇳🇱 Rotterdam, Netherlands
+              </div>
+
+            </div>
+
+            <div class="bc2-ts">
+
+              <div
+                class="ts-dot"
+                style="background:#e0e0e0">
+              </div>
+
+              <div
+                class="bc2-ts-val"
+                style="color:#bbb">
+                5.8/10 ✗
+              </div>
+
+            </div>
+
+          </div>
+
+          <div style="
+            font-size:10px;
+            color:#bbb;
+            margin-top:3px
+          ">
+            Below EU Trust Score threshold (≥8.0 required) · BSM blocked
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- BSM BOOKING CONDITION -->
+
+    <div class="gate-note">
+
+      BSM బుకింగ్‌కు షరతు:
+      కొనుగోలుదారు Trust Score ≥ 8.0 (EU) లేదా ≥ 6.0 (Gulf) ఉన్నప్పుడే BSM బుక్ చేసుకోవచ్చు.
+
+      <br><br>
+
+      తక్కువ Trust Score ఉన్న కొనుగోలుదారులు కనిపిస్తారు,
+      కానీ BSM బుకింగ్ నిలిపివేయబడుతుంది.
+
+      <br><br>
+
+      🎯 ఉద్దేశ్యం:
+      చెల్లింపుల డిఫాల్ట్ ప్రమాదం నుంచి రైతులను రక్షించడం.
+
+    </div>
+
+
+    <!-- CTA -->
+
+    <div class="cta17">
+
+      Book BSM with Hamburg Spice Imports · Screen 18
+
+      <div class="cta17-te">
+        Buyer-Seller Meet scheduled → price confirmed → MoA signing
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen25_FIRC_Upload_TwoTrack</title>
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=JetBrains+Mono:wght@400..700&family=Noto+Sans+Telugu:wght@400..700&family=Plus+Jakarta+Sans:wght@500..800&display=swap">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/pages/screen-25.css">
+<script src="../assets/js/data/screens.js" defer></script>
+<script src="../assets/js/components/app-shell.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body class="screen" data-screen="25">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app">
+  <aside class="sidebar" data-sidebar></aside>
+  <div class="app__main">
+    <header class="topbar" data-topbar></header>
+
+    <main class="page" id="main">
+
+      <!-- Page header + payment received -->
+      <section class="page-head">
+        <div class="page-head__top">
+          <a class="back-btn" href="24.html" aria-label="Back">←</a>
+          <div class="page-head__meta">
+            <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>28 Dec 2026 · 11:14 AM</span>
+            <span class="meta-chip">📶 4G 🔋</span>
+          </div>
+          <div class="page-head__top-end">
+            <span class="stage-pill stage-pill--star">★ 3 of 4</span>
+          </div>
+        </div>
+
+        <div class="page-head__body">
+          <div class="page-head__titles">
+            <h1 class="page-title">FIRC Upload</h1>
+          </div>
+
+          <div class="page-head__visual">
+            <div class="payment">
+              <div class="payment__icon">💰</div>
+              <div class="payment__body">
+                <div class="payment__title">LC Payment Received from Hamburg!</div>
+                <div class="payment__amount">€10,550 · Rs.9,59,000</div>
+                <div class="payment__sub">Vessel arrived Hamburg 26 Dec · LC released 27 Dec · Funds landed 28 Dec</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Payment route -->
+      <div class="block">
+        <div class="section-label">Payment route · 5-bank flow</div>
+        <section class="card route-card">
+          <div class="card__head">
+            <h2 class="card__title">🌐 SWIFT · UCP 600 · International LC at sight</h2>
+          </div>
+          <div class="route">
+            <div class="route__node is-origin">
+              <div class="route__flag">🇩🇪</div>
+              <div class="route__name">Hamburg Spice</div>
+              <div class="route__role">Buyer</div>
+            </div>
+            <div class="route__arrow">→</div>
+            <div class="route__node">
+              <div class="route__flag">🏦</div>
+              <div class="route__name">Deutsche Bank</div>
+              <div class="route__role">Issuing</div>
+            </div>
+            <div class="route__arrow">→</div>
+            <div class="route__node">
+              <div class="route__flag">🏦</div>
+              <div class="route__name">HDFC Bank</div>
+              <div class="route__role">AD Bank</div>
+            </div>
+            <div class="route__arrow">→</div>
+            <div class="route__node is-dest">
+              <div class="route__flag">🏦</div>
+              <div class="route__name">APGVB Anantapur</div>
+              <div class="route__role">Farmer's bank</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Two-track FIRC -->
+      <div class="block">
+        <div class="section-label">🔄 Two-track FIRC architecture</div>
+        <section class="card twotrack">
+          <div class="card__head">
+            <h2 class="card__title">Track A is Primary · Track B is Mandatory Copy</h2>
+          </div>
+
+          <div class="tracks">
+            <article class="track tone-green">
+              <div class="track__grid">
+                <h3 class="track__header">★ Track A · PRIMARY</h3>
+                <div class="track__bank">Ramu Naidu</div>
+                <div class="track__acc">APGVB · A/C ****4521</div>
+                <div class="track__amt">Rs.8,91,870</div>
+                <div class="track__eta">93% of FOB · Net to farmer</div>
+                <div class="track__status">✓ CREDITED 28 Dec</div>
+                <div class="track__eta track__ref">FIRC No: HDFC-FIRC-2026-78421</div>
+              </div>
+            </article>
+
+            <article class="track tone-blue">
+              <div class="track__grid">
+                <h3 class="track__header">Track B · PACS COPY</h3>
+                <div class="track__bank">PACS Anantapur</div>
+                <div class="track__acc">PACS-ANT-2024-0387</div>
+                <div class="track__amt">copy register</div>
+                <div class="track__eta">7-day mandatory copy</div>
+                <div class="track__status">📋 PENDING — by 04 Jan</div>
+                <div class="track__eta track__ref">FCDA to file at PACS office</div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <div class="grid">
+
+        <!-- FIRC document -->
+        <section class="span-7 card card--flush tone-accent firc-doc">
+          <div class="card__strip">
+            <h2 class="card__strip-title">📄 FIRC from AD Bank · HDFC</h2>
+            <span class="verified-tag">VERIFIED</span>
+          </div>
+          <div class="card__body">
+            <div class="kv">
+              <div class="kv__row"><span class="kv__key">FIRC No.</span><span class="kv__val mono">HDFC-FIRC-2026-78421</span></div>
+              <div class="kv__row"><span class="kv__key">Date</span><span class="kv__val">28 Dec 2026</span></div>
+              <div class="kv__row"><span class="kv__key">Beneficiary</span><span class="kv__val">Ramu Naidu · FEED Member 042</span></div>
+              <div class="kv__row"><span class="kv__key">Remitter</span><span class="kv__val">Hamburg Spice Imports GmbH</span></div>
+              <div class="kv__row"><span class="kv__key">Foreign currency</span><span class="kv__val">EUR 10,550.00</span></div>
+              <div class="kv__row"><span class="kv__key">INR equivalent</span><span class="kv__val is-ok">Rs.9,59,000 @ €1 = Rs.90.90</span></div>
+              <div class="kv__row"><span class="kv__key">Purpose code</span><span class="kv__val">P0103 · Export of goods</span></div>
+              <div class="kv__row"><span class="kv__key">EDPMS reference</span><span class="kv__val mono">EDPMS-26-VIZ-8842156</span></div>
+              <div class="kv__row"><span class="kv__key">AD Bank confirmation</span><span class="kv__val is-ok mono">firc_register.status='CONFIRMED' ✓</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Upload checklist -->
+        <div class="span-5 block">
+          <div class="section-label">Required uploads before CASCADE 1</div>
+          <section class="card uploads">
+            <div class="card__head">
+              <h2 class="card__title">📤 4-document upload bundle</h2>
+            </div>
+            <ul class="list" role="list">
+              <li class="list__item tone-green">
+                <span class="list__icon list__icon--sm list__icon--solid">✓</span>
+                <div class="list__body">
+                  <div class="list__title">① Bill of Lading PDF</div>
+                  <div class="list__meta mono">MAEU-2026-VIZHAM-2643</div>
+                </div>
+              </li>
+              <li class="list__item tone-green">
+                <span class="list__icon list__icon--sm list__icon--solid">✓</span>
+                <div class="list__body">
+                  <div class="list__title">② FIRC PDF from HDFC</div>
+                  <div class="list__meta mono">HDFC-FIRC-2026-78421</div>
+                </div>
+              </li>
+              <li class="list__item tone-green">
+                <span class="list__icon list__icon--sm list__icon--solid">✓</span>
+                <div class="list__body">
+                  <div class="list__title">③ EDPMS reference auto-pulled</div>
+                  <div class="list__meta">RBI portal API</div>
+                </div>
+              </li>
+              <li class="list__item tone-orange is-pending">
+                <span class="list__icon list__icon--sm list__icon--solid">○</span>
+                <div class="list__body">
+                  <div class="list__title">④ PACS 7-day register copy</div>
+                  <div class="list__meta">FCDA files by 04 Jan</div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </div>
+
+      </div>
+
+      <!-- Primary action -->
+      <div class="action-bar">
+        <div class="action-bar__text"><strong class="gold-note">Stage 7 complete → upgrade to GOLD card</strong></div>
+        <div class="action-bar__actions">
+          <a class="btn btn--primary btn--lg" href="27.html">Submit FIRC<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+    </main>
+
+    <nav class="pager" data-pager aria-label="Screen navigation"></nav>
+  </div>
+</div>
+</body>
+</html>

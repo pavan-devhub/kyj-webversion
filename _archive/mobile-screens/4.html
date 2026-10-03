@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen4_Export_Readiness_Score</title>
+</head>
+
+<body>
+
+<style>
+
+.ps4{
+  width:340px;
+  background:#1a1a2e;
+  border-radius:36px;
+  padding:12px;
+  margin:0 auto;
+  box-shadow:0 0 0 6px #0f0f1a;
+}
+
+.ss4{
+  background:#f9f8f4;
+  border-radius:26px;
+  overflow:hidden;
+  min-height:680px;
+  display:flex;
+  flex-direction:column;
+}
+
+.hdr4{
+  background:#4a148c;
+  padding:12px 18px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.hdr4-title{
+  color:#fff;
+  font-size:13px;
+  font-weight:500;
+  flex:1;
+}
+
+.hdr4-step{
+  background:rgba(255,255,255,0.2);
+  border-radius:10px;
+  padding:2px 8px;
+  font-size:10px;
+  color:#fff;
+}
+
+.progress-bar4{
+  height:3px;
+  background:#e1bee7;
+}
+
+.progress-fill4{
+  height:3px;
+  background:#4a148c;
+  width:50%;
+}
+
+.score-hero{
+  background:#4a148c;
+  padding:14px 18px 18px;
+  text-align:center;
+}
+
+.score-circle{
+  width:80px;
+  height:80px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.15);
+  border:3px solid #ce93d8;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 8px;
+}
+
+.score-num{
+  color:#fff;
+  font-size:24px;
+  font-weight:500;
+  line-height:1;
+}
+
+.score-denom{
+  color:rgba(255,255,255,0.7);
+  font-size:10px;
+}
+
+.score-label{
+  color:#e1bee7;
+  font-size:11px;
+}
+
+.score-status{
+  display:inline-block;
+  background:#2e7d32;
+  color:#fff;
+  border-radius:12px;
+  padding:3px 12px;
+  font-size:11px;
+  font-weight:500;
+  margin-top:4px;
+}
+
+.body4{
+  padding:12px 16px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.cat-row{
+  background:#fff;
+  border:0.5px solid #e0e0e0;
+  border-radius:10px;
+  padding:10px 12px;
+}
+
+.cat-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:5px;
+}
+
+.cat-name{
+  font-size:12px;
+  font-weight:500;
+  color:#222;
+}
+
+.cat-pts{
+  font-size:11px;
+  color:#666;
+}
+
+.cat-bar-bg{
+  height:5px;
+  background:#f0f0f0;
+  border-radius:3px;
+  overflow:hidden;
+}
+
+.cat-bar-fill{
+  height:5px;
+  border-radius:3px;
+}
+
+.cat-detail{
+  font-size:10px;
+  color:#888;
+  margin-top:4px;
+}
+
+.gate-box{
+  background:#e8f5e9;
+  border:0.5px solid #81c784;
+  border-radius:10px;
+  padding:10px 14px;
+  text-align:center;
+}
+
+.gate-title{
+  font-size:12px;
+  font-weight:500;
+  color:#1b5e20;
+  margin-bottom:3px;
+}
+
+.gate-sub{
+  font-size:10px;
+  color:#2e7d32;
+}
+
+.cta4{
+  background:#4a148c;
+  border-radius:12px;
+  padding:12px;
+  text-align:center;
+  color:#fff;
+  font-size:13px;
+  font-weight:500;
+  margin:4px 0 10px;
+}
+
+.cta4-te{
+  font-size:10px;
+  color:rgba(255,255,255,0.8);
+  margin-top:2px;
+}
+
+.fail-box{
+  background:#fff3e0;
+  border:0.5px solid #ffb74d;
+  border-radius:10px;
+  padding:10px 14px;
+  display:none;
+}
+
+</style>
+
+
+<div style="padding:12px 0 8px">
+
+  <div class="ps4">
+
+    <div class="ss4">
+
+      <!-- Status Bar -->
+      <div
+        style="
+          background:#4a148c;
+          padding:10px 18px 6px;
+          display:flex;
+          justify-content:space-between;
+          font-size:11px;
+          color:rgba(255,255,255,0.7)
+        "
+      >
+        <span>9:48 AM</span>
+        <span>📶 2G 🔋</span>
+      </div>
+
+
+      <!-- Header -->
+      <div class="hdr4">
+
+        <div
+          style="
+            color:rgba(255,255,255,0.8);
+            font-size:16px
+          "
+        >
+          ←
+        </div>
+
+        <div class="hdr4-title">
+          Export Readiness Score (ERS)
+        </div>
+
+        <div class="hdr4-step">
+          Step 3 of 4
+        </div>
+
+      </div>
+
+
+      <!-- Progress -->
+      <div class="progress-bar4">
+        <div class="progress-fill4"></div>
+      </div>
+
+
+      <!-- Score Hero -->
+      <div class="score-hero">
+
+        <div class="score-circle">
+
+          <div class="score-num">
+            72
+          </div>
+
+          <div class="score-denom">
+            / 100
+          </div>
+
+        </div>
+
+        <div class="score-label">
+          మీ ERS స్కోర్ · Your Readiness Score
+        </div>
+
+        <div class="score-status">
+          ✓ Stage 1 Eligible — Chilli minimum: 60
+        </div>
+
+      </div>
+
+
+      <div class="body4">
+
+
+        <!-- Category 1 -->
+        <div class="cat-row">
+
+          <div class="cat-top">
+
+            <div class="cat-name">
+              ① Legal & Compliance
+            </div>
+
+            <div
+              class="cat-pts"
+              style="color:#1b5e20;font-weight:500"
+            >
+              18 / 20
+            </div>
+
+          </div>
+
+          <div class="cat-bar-bg">
+
+            <div
+              class="cat-bar-fill"
+              style="width:90%;background:#2e7d32"
+            ></div>
+
+          </div>
+
+          <div class="cat-detail">
+            ✓ Aadhaar verified · ✓ PACS member ·
+            ✓ Consent signed · ◐ Land record pending
+          </div>
+
+        </div>
+
+
+        <!-- Category 2 -->
+        <div class="cat-row">
+
+          <div class="cat-top">
+
+            <div class="cat-name">
+              ② Product Certifications
+            </div>
+
+            <div
+              class="cat-pts"
+              style="color:#f57f17;font-weight:500"
+            >
+              12 / 20
+            </div>
+
+          </div>
+
+          <div class="cat-bar-bg">
+
+            <div
+              class="cat-bar-fill"
+              style="width:60%;background:#f9a825"
+            ></div>
+
+          </div>
+
+          <div class="cat-detail">
+            ◐ BharatGAP registration pending ·
+            ✗ GAP log not started yet ·
+            ✗ No PHRT history
+          </div>
+
+        </div>
+
+
+        <!-- Category 3 -->
+        <div class="cat-row">
+
+          <div class="cat-top">
+
+            <div class="cat-name">
+              ③ Packaging & Labelling
+            </div>
+
+            <div
+              class="cat-pts"
+              style="color:#f57f17;font-weight:500"
+            >
+              9 / 15
+            </div>
+
+          </div>
+
+          <div class="cat-bar-bg">
+
+            <div
+              class="cat-bar-fill"
+              style="width:60%;background:#f9a825"
+            ></div>
+
+          </div>
+
+          <div class="cat-detail">
+            ✓ Packhouse within 50km (38km) ·
+            ◐ EU carton spec awareness
+          </div>
+
+        </div>
+
+
+        <!-- Category 4 -->
+        <div class="cat-row">
+
+          <div class="cat-top">
+
+            <div class="cat-name">
+              ④ Financial Capacity
+            </div>
+
+            <div
+              class="cat-pts"
+              style="color:#1b5e20;font-weight:500"
+            >
+              17 / 20
+            </div>
+
+          </div>
+
+          <div class="cat-bar-bg">
+
+            <div
+              class="cat-bar-fill"
+              style="width:85%;background:#2e7d32"
+            ></div>
+
+          </div>
+
+          <div class="cat-detail">
+            ✓ PACS account linked ·
+            ✓ KCC Rs.1.5L available ·
+            ✓ Zero advance acknowledged
+          </div>
+
+        </div>
+
+
+        <!-- Category 5 -->
+        <div class="cat-row">
+
+          <div class="cat-top">
+
+            <div class="cat-name">
+              ⑤ Production Capacity
+            </div>
+
+            <div
+              class="cat-pts"
+              style="color:#1b5e20;font-weight:500"
+            >
+              10 / 15
+            </div>
+
+          </div>
+
+          <div class="cat-bar-bg">
+
+            <div
+              class="cat-bar-fill"
+              style="width:67%;background:#2e7d32"
+            ></div>
+
+          </div>
+
+          <div class="cat-detail">
+            ✓ 2.5 acres Chilli S4 ·
+            ◐ Soil Health Card upload pending
+          </div>
+
+        </div>
+
+
+        <!-- Category 6 -->
+        <div class="cat-row">
+
+          <div class="cat-top">
+
+            <div class="cat-name">
+              ⑥ Market Knowledge
+            </div>
+
+            <div
+              class="cat-pts"
+              style="color:#1b5e20;font-weight:500"
+            >
+              4 / 5
+            </div>
+
+          </div>
+
+          <div class="cat-bar-bg">
+
+            <div
+              class="cat-bar-fill"
+              style="width:80%;background:#2e7d32"
+            ></div>
+
+          </div>
+
+          <div class="cat-detail">
+            ✓ EPM attended ·
+            ✓ FOB vs mandi gap quiz: 4/5
+          </div>
+
+        </div>
+
+
+        <!-- Category 7 -->
+        <div class="cat-row">
+
+          <div class="cat-top">
+
+            <div class="cat-name">
+              ⑦ Logistics Knowledge
+            </div>
+
+            <div
+              class="cat-pts"
+              style="color:#1b5e20;font-weight:500"
+            >
+              2 / 5
+            </div>
+
+          </div>
+
+          <div class="cat-bar-bg">
+
+            <div
+              class="cat-bar-fill"
+              style="width:40%;background:#f9a825"
+            ></div>
+
+          </div>
+
+          <div class="cat-detail">
+            ✓ Vizag port awareness ·
+            ✗ CHA contact not confirmed yet
+          </div>
+
+        </div>
+
+
+        <!-- Gate Result -->
+        <div class="gate-box">
+
+          <div class="gate-title">
+            ✅ ERS 72 / 100 — Chilli minimum 60 cleared!
+          </div>
+
+          
+
+        </div>
+
+
+        <!-- CTA -->
+        <div class="cta4">
+
+          Proceed to Stage 1 · స్టేజ్ 1 కి వెళ్ళండి
+
+          <div class="cta4-te">
+            Register your farm plot next → Screen 5
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

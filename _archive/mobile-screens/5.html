@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen5_Farm_Plot_GPS_Registration</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.ps5 {
+    width: 340px;
+    background: #1a1a2e;
+    border-radius: 36px;
+    padding: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.ss5 {
+    background: #f9f8f4;
+    border-radius: 26px;
+    overflow: hidden;
+    min-height: 660px;
+    display: flex;
+    flex-direction: column;
+}
+
+.status5 {
+    height: 24px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 14px;
+    font-size: 10px;
+    color: #333;
+}
+
+.hdr5 {
+    background: #1b5e20;
+    color: white;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hdr5-title {
+    font-size: 13px;
+    font-weight: 700;
+    flex: 1;
+}
+
+.stage-pill {
+    background: rgba(255,255,255,0.16);
+    border-radius: 14px;
+    padding: 5px 8px;
+    font-size: 9px;
+    white-space: nowrap;
+}
+
+.map-area {
+    height: 160px;
+    position: relative;
+    background: #e8f5e9;
+    overflow: hidden;
+}
+
+.map-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(#c8e6c9 1px, transparent 1px),
+        linear-gradient(90deg, #c8e6c9 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+.map-plot {
+    position: absolute;
+    top: 32px;
+    left: 60px;
+    width: 140px;
+    height: 90px;
+    border: 3px solid #2e7d32;
+    background: rgba(76,175,80,0.22);
+    transform: rotate(-3deg);
+}
+
+.map-pin {
+    position: absolute;
+    top: 22px;
+    left: 118px;
+    font-size: 20px;
+}
+
+.map-label {
+    position: absolute;
+    top: 68px;
+    left: 68px;
+    font-size: 9px;
+    color: #1b5e20;
+    font-weight: 700;
+    background: rgba(255,255,255,0.75);
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+.map-controls {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.map-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    border: 1px solid #bdbdbd;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.map-source {
+    position: absolute;
+    right: 8px;
+    bottom: 7px;
+    font-size: 8px;
+    color: #555;
+    background: rgba(255,255,255,0.8);
+    padding: 3px 5px;
+    border-radius: 4px;
+}
+
+.body5 {
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.gps-capture {
+    background: #e8f5e9;
+    border: 1px solid #a5d6a7;
+    border-radius: 9px;
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gps-icon {
+    font-size: 20px;
+}
+
+.gps-info {
+    flex: 1;
+}
+
+.gps-coords {
+    font-size: 12px;
+    font-weight: 700;
+    color: #1b5e20;
+}
+
+.gps-sub {
+    font-size: 9px;
+    color: #555;
+    margin-top: 2px;
+}
+
+.gps-btn {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 8px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.field5 {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    padding: 9px;
+}
+
+.field5-label {
+    font-size: 9px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.field5-value {
+    font-size: 12px;
+    font-weight: 700;
+    color: #222;
+}
+
+.variety-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 6px;
+}
+
+.vchip {
+    border: 1px solid #bdbdbd;
+    border-radius: 14px;
+    padding: 5px 8px;
+    font-size: 9px;
+    background: #ffffff;
+}
+
+.vchip.sel {
+    background: #e8f5e9;
+    border-color: #2e7d32;
+    color: #1b5e20;
+    font-weight: 700;
+}
+
+.trace-note {
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 9px;
+    padding: 9px;
+    font-size: 9px;
+    line-height: 1.4;
+    color: #0d47a1;
+}
+
+.offline-tag {
+    background: #fff3e0;
+    border: 1px solid #ffcc80;
+    color: #e65100;
+    border-radius: 7px;
+    padding: 7px;
+    font-size: 9px;
+    text-align: center;
+}
+
+.cta5 {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    padding: 11px;
+    font-size: 12px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.cta5-te {
+    display: block;
+    font-size: 10px;
+    margin-top: 3px;
+    font-weight: 500;
+}
+</style>
+</head>
+
+<body>
+
+<div class="ps5">
+
+    <div class="ss5">
+
+        <div class="status5">
+            <span>9:52 AM</span>
+            <span>📶 2G 🔋</span>
+        </div>
+
+        <div class="hdr5">
+            <div>←</div>
+
+            <div class="hdr5-title">
+                Farm Plot Registration
+            </div>
+
+            <div class="stage-pill">
+                Stage 1 · +500 KC
+            </div>
+        </div>
+
+        <div class="map-area">
+
+            <div class="map-grid"></div>
+
+            <div class="map-plot"></div>
+
+            <div class="map-pin">
+                📍
+            </div>
+
+            <div class="map-label">
+                Plot ANP-001 · 2.5 ac
+            </div>
+
+            <div class="map-controls">
+                <div class="map-btn">+</div>
+                <div class="map-btn">−</div>
+            </div>
+
+            <div class="map-source">
+                Bhuvan ISRO · Satellite
+            </div>
+
+        </div>
+
+        <div class="body5">
+
+            <div class="gps-capture">
+
+                <div class="gps-icon">
+                    📍
+                </div>
+
+                <div class="gps-info">
+
+                    <div class="gps-coords">
+                        14.6789° N, 77.6012° E
+                    </div>
+
+                    <div class="gps-sub">
+                        ± 3m accuracy · GPS locked
+                    </div>
+
+                </div>
+
+                <button class="gps-btn">
+                    📍 Retap
+                </button>
+
+            </div>
+
+
+            <div class="field5">
+
+                <div class="field5-label">
+                    Plot Name · పొలం పేరు
+                </div>
+
+                <div class="field5-value">
+                    Home Field — Kalyandurgam
+                    ✓
+                </div>
+
+            </div>
+
+
+            <div class="field5">
+
+                <div class="field5-label">
+                    Crop · పంట
+                </div>
+
+                <div class="field5-value">
+                    🌶 Chilli (Red)
+                </div>
+
+                <div class="variety-chips">
+
+                    <div class="vchip sel">
+                        Sannam S4
+                    </div>
+
+                    <div class="vchip">
+                        Teja
+                    </div>
+
+                    <div class="vchip">
+                        334
+                    </div>
+
+                    <div class="vchip">
+                        LCA 334
+                    </div>
+
+                    <div class="vchip">
+                        + Other
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="field5">
+
+                <div class="field5-label">
+                    Area · విస్తీర్ణం (acres)
+                </div>
+
+                <div class="field5-value">
+                    2.5 acres
+                </div>
+
+                <div class="field5-label">
+                    ≈ 20 MT yield estimate
+                </div>
+
+            </div>
+
+
+            <div class="field5">
+
+                <div class="field5-label">
+                    Sowing Date · విత్తిన తేది
+                </div>
+
+                <div class="field5-value">
+                    14 Aug 2026
+                    📅
+                </div>
+
+            </div>
+
+
+            <div class="offline-tag">
+                ⚡ Offline-first — syncs to Bhuvan ISRO on reconnect
+            </div>
+
+
+            <div class="trace-note">
+
+                🔗 <strong>TraceX QR చైన్ ఇక్కడ ప్రారంభమవుతుంది:</strong>
+                మీ GPS coordinates, పంట రకం మరియు విత్తిన తేదీ ఆధారంగా
+                పంటకు సంబంధించిన మొదటి రికార్డు తయారవుతుంది.
+                ఇది మీ export consignment యొక్క QR traceability chain లో
+                <strong>"Farm GPS"</strong> node గా ఉంటుంది —
+                గమ్యస్థానంలో international buyers దీనిని scan చేయగలరు.
+
+            </div>
+
+
+            <button class="cta5">
+
+                Register Plot · పొలం నమోదు చేయండి
+
+                <span class="cta5-te">
+                    Plot ID: ANP-001
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

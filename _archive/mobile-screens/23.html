@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen23_CHA_Assignment_12Doc_Checklist</title>
+</head>
+<body>
+
+<style>
+.ps23{width:340px;background:#1a1a2e;border-radius:36px;padding:12px;margin:0 auto;box-shadow:0 0 0 6px #0f0f1a}
+.ss23{background:#f9f8f4;border-radius:26px;overflow:hidden;min-height:700px;display:flex;flex-direction:column}
+.hdr23{background:#0d2147;padding:12px 18px;display:flex;align-items:center;gap:8px}
+.star7{background:linear-gradient(135deg,#bf360c,#e65100);color:#fff;border-radius:10px;padding:2px 8px;font-size:10px;font-weight:600;display:inline-flex;align-items:center;gap:3px}
+.body23{padding:12px 16px;flex:1;display:flex;flex-direction:column;gap:10px}
+.sl23{font-size:10px;font-weight:500;color:#0d2147;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:3px}
+.stage7-hero{background:linear-gradient(135deg,#0d2147 0%,#1a237e 50%,#0d2147 100%);border-radius:12px;padding:14px 16px;color:#fff;text-align:center;position:relative;overflow:hidden}
+.s7h-bg{position:absolute;inset:0;background:radial-gradient(ellipse at top right,rgba(255,193,7,0.15) 0%,transparent 50%)}
+.s7h-star{font-size:24px;margin-bottom:4px}
+.s7h-title{font-size:14px;font-weight:500;margin-bottom:2px}
+.s7h-sub{font-size:10px;color:rgba(255,255,255,0.85);line-height:1.4}
+.s7h-pill{background:rgba(255,193,7,0.25);border:0.5px solid rgba(255,193,7,0.5);border-radius:14px;padding:3px 10px;font-size:10px;color:#ffd54f;display:inline-block;margin-top:6px}
+.cha-card{background:#fff;border:1.5px solid #0d2147;border-radius:12px;padding:11px 14px}
+.cha-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.cha-icon{width:42px;height:42px;background:linear-gradient(135deg,#0d2147,#1a237e);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff;flex-shrink:0}
+.cha-info{flex:1}
+.cha-name{font-size:12px;font-weight:500;color:#0d2147}
+.cha-status{font-size:10px;color:#1b5e20;font-weight:500;margin-top:1px}
+.cha-detail{font-size:11px;color:#555;line-height:1.5;padding-top:6px;border-top:0.5px solid #f0f0f0}
+.cha-meta{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+.cha-tag{background:#e8eaf6;border-radius:10px;padding:2px 7px;font-size:9px;color:#1a237e}
+.docs-block{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;overflow:hidden}
+.db-header{background:#0d2147;padding:8px 14px;display:flex;align-items:center;justify-content:space-between}
+.db-title{color:#fff;font-size:12px;font-weight:500}
+.db-counter{background:rgba(255,193,7,0.3);color:#ffd54f;border-radius:10px;padding:2px 8px;font-size:10px;font-weight:500}
+.db-section{background:#f5f5f5;padding:4px 14px;font-size:9px;color:#666;font-weight:600;text-transform:uppercase;letter-spacing:0.4px}
+.doc-row{display:flex;align-items:center;gap:8px;padding:7px 14px;border-bottom:0.5px solid #f5f5f5}
+.doc-row:last-child{border-bottom:none}
+.doc-status{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:500;flex-shrink:0;color:#fff}
+.ds-done{background:#1b5e20}
+.ds-prog{background:#0d47a1}
+.ds-wait{background:#f57f17}
+.ds-later{background:#bdbdbd}
+.doc-info{flex:1;min-width:0}
+.doc-name{font-size:11px;color:#222;font-weight:500}
+.doc-detail{font-size:9px;color:#888;margin-top:1px}
+.doc-action{font-size:9px;font-weight:500;text-align:right;flex-shrink:0}
+.da-done{color:#1b5e20}
+.da-prog{color:#0d47a1}
+.da-wait{color:#f57f17}
+.da-later{color:#888}
+.vessel-block{background:#e3f2fd;border:0.5px solid #90caf9;border-radius:10px;padding:10px 14px}
+.vb-title{font-size:11px;font-weight:500;color:#0d47a1;margin-bottom:7px;display:flex;align-items:center;gap:5px}
+.vb-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.vb-cell{background:#fff;border-radius:7px;padding:7px 10px;border:0.5px solid #bbdefb}
+.vb-k{font-size:9px;color:#1565c0;text-transform:uppercase;letter-spacing:0.3px}
+.vb-v{font-size:11px;font-weight:500;color:#0d47a1;margin-top:1px}
+.cutoff{background:#fff3e0;border:0.5px solid #ffb74d;border-radius:8px;padding:7px 12px;display:flex;align-items:center;gap:7px;font-size:10px;color:#e65100;margin-top:6px}
+.cta23{background:#0d2147;border-radius:12px;padding:12px;text-align:center;color:#fff;font-size:13px;font-weight:500}
+.cta23-te{font-size:10px;color:#ffd54f;margin-top:2px;font-weight:500}
+</style>
+
+<div style="padding:12px 0 8px">
+
+<div class="ps23">
+
+<div class="ss23">
+
+  <div style="background:#0d2147;padding:10px 18px 6px;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.7)">
+    <span>30 Nov 2026 · 10:15 AM</span>
+    <span>📶 4G 🔋</span>
+  </div>
+
+  <div class="hdr23">
+
+    <div style="color:rgba(255,255,255,0.8);font-size:16px">
+      ←
+    </div>
+
+    <div style="color:#fff;font-size:13px;font-weight:500;flex:1">
+      CHA Assignment &amp; Documents
+    </div>
+
+    <div class="star7">
+      ★ 1 of 4
+    </div>
+
+  </div>
+
+  <div class="body23">
+
+    <!-- CHA Partner -->
+    <div>
+
+      <div class="sl23">
+        Customs House Agent assigned
+      </div>
+
+      <div class="cha-card">
+
+        <div class="cha-top">
+
+          <div class="cha-icon">
+            ⚓
+          </div>
+
+          <div class="cha-info">
+
+            <div class="cha-name">
+              Vizag Maritime Logistics Pvt Ltd
+            </div>
+
+            <div class="cha-status">
+              ✓ FEED empanelled · CHA Licence: TVPSU-XYZ-2018
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="cha-detail">
+          📍 Office: Beach Road, Visakhapatnam · 📞 Sreedhar +91-99XX XX XX42 · 📧 docs@vizmaritime.in
+        </div>
+
+        <div class="cha-meta">
+
+          <div class="cha-tag">
+            Vizag Port specialist
+          </div>
+
+          <div class="cha-tag">
+            Chilli exports 8+ yrs
+          </div>
+
+          <div class="cha-tag">
+            ICEGATE auto-filer
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- 12-Doc Checklist -->
+    <div>
+
+      <div class="sl23">
+        12-Doc Export Checklist
+      </div>
+
+      <div class="docs-block">
+
+        <div class="db-header">
+
+          <div class="db-title">
+            📋 Documents required for Hamburg shipment
+          </div>
+
+          <div class="db-counter">
+            6 / 12 ✓
+          </div>
+
+        </div>
+
+        <div class="db-section">
+          Already complete · From earlier stages
+        </div>
+
+        <div class="doc-row">
+
+          <div class="doc-status ds-done">
+            ✓
+          </div>
+
+          <div class="doc-info">
+            <div class="doc-name">
+              ① Certificate of Analysis (COA)
+            </div>
+
+            <div class="doc-detail">
+              Eurofins NABL TC-3218 · EF-HYD-2026-8821
+            </div>
+          </div>
+
+          <div class="doc-action da-done">
+            Stage 4
+          </div>
+
+        </div>
+
+        <div class="doc-row">
+
+          <div class="doc-status ds-done">
+            ✓
+          </div>
+
+          <div class="doc-info">
+            <div class="doc-name">
+              ② Phytosanitary Certificate
+            </div>
+
+            <div class="doc-detail">
+              DPPQS SPQO Anantapur · PSC-AP-2026-1142
+            </div>
+          </div>
+
+          <div class="doc-action da-done">
+            Stage 4
+          </div>
+
+        </div>
+
+        <div class="doc-row">
+
+          <div class="doc-status ds-done">
+            ✓
+          </div>
+
+          <div class="doc-info">
+            <div class="doc-name">
+              ③ APEDA TraceNet Record
+            </div>
+
+            <div class="doc-detail">
+              TN-AP-2026-FEED-0087 · Govt visible
+            </div>
+          </div>
+
+          <div class="doc-action da-done">
+            Stage 6
+          </div>
+
+        </div>
+
+        <div class="doc-row">
+
+          <div class="doc-status ds-done">
+            ✓
+          </div>
+
+          <div class="doc-info">
+            <div class="doc-name">
+              ④ Sales Contract (MoA)
+            </div>
+
+            <div class="doc-detail">
+              FEED/ANT/MOA/2026/042 · UNCITRAL · LC at sight
+            </div>
+          </div>
+
+          <div class="doc-action da-done">
+            Stage 5
+          </div>
+
+        </div>
+
+        <div class="db-section">
+          FEED to file · 48 hours
+        </div>
+
+        <div class="doc-row">
+
+          <div class="doc-status ds-prog">
+            →
+          </div>
+
+          <div class="doc-info">
+            <div class="doc-name">
+              ⑤ Commercial Invoice
+            </div>
+
+            <div class="doc-detail">
+              FEED-CI-2026-042 · Rs.9,59,000 · drafting
+            </div>
+          </div>
+
+          <div class="doc-action da-prog">
+            In progress
+          </div>
+
+        </div>
+
+        <div class="doc-row">
+
+          <div class="doc-status ds-prog">
+            →
+          </div>
+
+          <div class="doc-info">
+            <div class="doc-name">
+              ⑥ Packing List
+            </div>
+
+            <div class="doc-detail">
+              39 cartons · 980 kg net · 1,066 kg gross w/ pallets
+            </div>
+          </div>
+
+          <div class="doc-action da-prog">
+            In progress
+          </div>
+
+        </div>
+
+        <div class="doc-row">
+
+          <div class="doc-status ds-done">
+            ✓
+          </div>
+
+          <div class="doc-info">
+            <div class="doc-name">
+              ⑦ APEDA Certificate of Origin
+            </div>
+
+            <div class="doc-detail">
+              CoO-APEDA-2026-08715
+            </div>
+          </div>
+
+          <div class="doc-action da-done">
+            Today
+          </div>
+
+        </div>
+
+        <div class="doc-row">
+
+          <div class="doc-status ds-done">
+            ✓
+          </div>
+
+          <div class="doc-info">
+            <div class="doc-name">
+              ⑧ LUT (Letter of Undertaking)
+            </div>
+
+            <div class="doc-detail">
+              FEED MSCS LTD · FY 2026-27 active
+            </div>
+          </div>
+
+          <div class="doc-action da-done">
+            Active
+          </div>
+
+        </div>
+
+        <div class="db-section">
+          CHA to file · ICEGATE
+        </div>
+
+        <div class="doc-row">
+
+          <div class="doc-status ds-wait">
+            ○
+          </div>
+
+          <div class="doc-info">
+            <div class="doc-name">
+              ⑨ Shipping Bill (free format)
+            </div>
+
+            <div class="doc-detail">
+              CHA files on ICEGATE → next screen
+            </div>
+          </div>
+
+          <div class="doc-action da-wait">
+            Authorize
+          </div>
+
+        </div>
+
+        <div class="doc-row">
+
+          <div class="doc-status ds-wait">
+            ○
+          </div>
+
+          <div class="doc-info">
+            <div class="doc-name">
+              ⑩ GR Form / EDPMS Declaration
+            </div>
+
+            <div class="doc-detail">
+              RBI export proceeds tracking
+            </div>
+          </div>
+
+          <div class="doc-action da-wait">
+            With Shipping Bill
+          </div>
+
+        </div>
+
+        <div class="doc-row">
+
+          <div class="doc-status ds-wait">
+            ○
+          </div>
+
+          <div class="doc-info">
+            <div class="doc-name">
+              ⑪ ECGC Per-Consignment Declaration
+            </div>
+
+            <div class="doc-detail">
+              Anand Singh GM · 48 hrs before loading
+            </div>
+          </div>
+
+          <div class="doc-action da-wait">
+            Today by 6 PM
+          </div>
+
+        </div>
+
+        <div class="db-section">
+          Post-shipment · Auto-collected
+        </div>
+
+        <div class="doc-row">
+
+          <div class="doc-status ds-later">
+            ·
+          </div>
+
+          <div class="doc-info">
+
+            <div class="doc-name">
+              ⑫ Bill of Lading (BL)
+            </div>
+
+            <div class="doc-detail">
+              Shipping line issues after vessel departs
+            </div>
+
+          </div>
+
+          <div class="doc-action da-later">
+            Post-departure
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Vessel booking -->
+    <div class="vessel-block">
+
+      <div class="vb-title">
+        🚢 Vessel booking confirmed
+      </div>
+
+      <div class="vb-grid">
+
+        <div class="vb-cell">
+          <div class="vb-k">Vessel</div>
+          <div class="vb-v">MV Maersk Hamburg</div>
+        </div>
+
+        <div class="vb-cell">
+          <div class="vb-k">Voyage</div>
+          <div class="vb-v">VOY-2643W</div>
+        </div>
+
+        <div class="vb-cell">
+          <div class="vb-k">Route</div>
+          <div class="vb-v">Vizag → Colombo → Hamburg</div>
+        </div>
+
+        <div class="vb-cell">
+          <div class="vb-k">ETD Vizag</div>
+          <div class="vb-v">07 Dec 2026</div>
+        </div>
+
+        <div class="vb-cell">
+          <div class="vb-k">ETA Hamburg</div>
+          <div class="vb-v">26 Dec 2026</div>
+        </div>
+
+        <div class="vb-cell">
+          <div class="vb-k">Container</div>
+          <div class="vb-v">20' Reefer · 1×TEU</div>
+        </div>
+
+      </div>
+
+      <div class="cutoff">
+        ⏰ <span>CFS cut-off: <strong>04 Dec · 5 PM</strong> · Container stuffing at packhouse 02 Dec</span>
+      </div>
+
+    </div>
+
+    <div class="cta23">
+
+      Authorize CHA → File Shipping Bill on ICEGATE
+
+      <div class="cta23-te">
+        ★ Stage 7 step 2 of 4 · LEO + ECGC activation
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

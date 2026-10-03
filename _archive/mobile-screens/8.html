@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen8_Soil_Health_Card_Upload</title>
+</head>
+
+<body>
+
+<style>
+.ps8{
+    width:340px;
+    background:#1a1a2e;
+    border-radius:36px;
+    padding:12px;
+    margin:0 auto;
+    box-shadow:0 0 0 6px #0f0f1a
+}
+
+.ss8{
+    background:#f9f8f4;
+    border-radius:26px;
+    overflow:hidden;
+    min-height:640px;
+    display:flex;
+    flex-direction:column
+}
+
+.hdr8{
+    background:#4e342e;
+    padding:12px 18px;
+    display:flex;
+    align-items:center;
+    gap:8px
+}
+
+.hdr8-title{
+    color:#fff;
+    font-size:13px;
+    font-weight:500;
+    flex:1
+}
+
+.stage-pill8{
+    background:rgba(255,255,255,0.2);
+    border-radius:10px;
+    padding:2px 8px;
+    font-size:10px;
+    color:#fff
+}
+
+.body8{
+    padding:12px 16px;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    gap:10px
+}
+
+.section-lbl8{
+    font-size:10px;
+    font-weight:500;
+    color:#4e342e;
+    text-transform:uppercase;
+    letter-spacing:0.4px;
+    margin-bottom:3px
+}
+
+.upload-zone{
+    border:1.5px dashed #bcaaa4;
+    border-radius:12px;
+    padding:18px;
+    text-align:center;
+    background:#efebe9;
+    cursor:pointer
+}
+
+.upload-icon{
+    font-size:28px;
+    margin-bottom:5px
+}
+
+.upload-title{
+    font-size:12px;
+    font-weight:500;
+    color:#4e342e
+}
+
+.upload-sub{
+    font-size:10px;
+    color:#8d6e63;
+    margin-top:2px
+}
+
+.upload-sources{
+    display:flex;
+    gap:6px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:8px
+}
+
+.source-tag{
+    background:#fff;
+    border:0.5px solid #bcaaa4;
+    border-radius:14px;
+    padding:3px 9px;
+    font-size:10px;
+    color:#5d4037
+}
+
+.shc-card{
+    background:#fff;
+    border:0.5px solid #d7ccc8;
+    border-radius:10px;
+    padding:12px 14px
+}
+
+.shc-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:8px
+}
+
+.shc-title{
+    font-size:12px;
+    font-weight:500;
+    color:#4e342e
+}
+
+.shc-id{
+    font-size:10px;
+    color:#8d6e63;
+    font-family:monospace
+}
+
+.nutrient-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:6px
+}
+
+.nutrient-box{
+    background:#f5f5f5;
+    border-radius:8px;
+    padding:6px 8px;
+    text-align:center
+}
+
+.n-val{
+    font-size:14px;
+    font-weight:500;
+    color:#333
+}
+
+.n-unit{
+    font-size:8px;
+    color:#888
+}
+
+.n-label{
+    font-size:10px;
+    color:#666;
+    margin-top:1px
+}
+
+.n-status{
+    font-size:9px;
+    font-weight:500;
+    margin-top:2px
+}
+
+.n-status.ok{
+    color:#2e7d32
+}
+
+.n-status.low{
+    color:#e65100
+}
+
+.n-status.high{
+    color:#1565c0
+}
+
+.rec-box{
+    background:#e8f5e9;
+    border:0.5px solid #81c784;
+    border-radius:8px;
+    padding:8px 12px
+}
+
+.rec-title{
+    font-size:11px;
+    font-weight:500;
+    color:#1b5e20;
+    margin-bottom:4px
+}
+
+.rec-row{
+    font-size:10px;
+    color:#2e7d32;
+    margin-bottom:2px;
+    line-height:1.4
+}
+
+.checklist{
+    background:#fff3e0;
+    border:0.5px solid #ffb74d;
+    border-radius:8px;
+    padding:8px 12px
+}
+
+.check-title{
+    font-size:11px;
+    font-weight:500;
+    color:#e65100;
+    margin-bottom:5px
+}
+
+.check-row{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:11px;
+    color:#333;
+    margin-bottom:3px
+}
+
+.chk{
+    width:14px;
+    height:14px;
+    border-radius:3px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:9px
+}
+
+.chk.done{
+    background:#1b5e20;
+    color:#fff
+}
+
+.chk.pending{
+    background:#f5f5f5;
+    border:0.5px solid #ddd
+}
+
+.cta8{
+    background:#4e342e;
+    border-radius:12px;
+    padding:12px;
+    text-align:center;
+    color:#fff;
+    font-size:13px;
+    font-weight:500;
+    margin-top:2px
+}
+
+.cta8-te{
+    font-size:10px;
+    color:rgba(255,255,255,0.8);
+    margin-top:2px
+}
+</style>
+
+
+<div style="padding:12px 0 8px">
+
+<div class="ps8">
+
+<div class="ss8">
+
+    <div style="background:#4e342e;padding:10px 18px 6px;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.7)">
+        <span>Day 87 · 10:22 AM</span>
+        <span>📶 2G 🔋</span>
+    </div>
+
+
+    <div class="hdr8">
+
+        <div style="color:rgba(255,255,255,0.8);font-size:16px">
+            ←
+        </div>
+
+        <div class="hdr8-title">
+            Soil Health Card · నేల ఆరోగ్య కార్డు
+        </div>
+
+        <div class="stage-pill8">
+            Stage 1 · Final step
+        </div>
+
+    </div>
+
+
+    <div class="body8">
+
+
+        <!-- Stage 1 checklist status -->
+
+        <div class="checklist">
+
+            <div class="check-title">
+                📋 Stage 1 Completion — 3 of 4 done
+            </div>
+
+            <div class="check-row">
+                <div class="chk done">✓</div>
+                Farm Plot GPS registered (ANP-001)
+            </div>
+
+            <div class="check-row">
+                <div class="chk done">✓</div>
+                GAP Log — Day 87/90 (3 more days!)
+            </div>
+
+            <div class="check-row">
+                <div class="chk done">✓</div>
+                Crop registered (Chilli S4 · 2.5 acres)
+            </div>
+
+            <div class="check-row">
+                <div class="chk pending"></div>
+                <strong>Soil Health Card upload — pending</strong>
+            </div>
+
+        </div>
+
+
+        <!-- Upload zone -->
+
+        <div>
+
+            <div class="section-lbl8">
+                Upload your Soil Health Card
+            </div>
+
+            <div class="upload-zone">
+
+                <div class="upload-icon">
+                    📄
+                </div>
+
+                <div class="upload-title">
+                    Tap to upload SHC PDF or Photo
+                </div>
+
+                <div class="upload-sub">
+                    From ICAR Soil Health Portal · soilhealth.dac.gov.in
+                </div>
+
+                <div class="upload-sources">
+
+                    <div class="source-tag">
+                        📷 Camera
+                    </div>
+
+                    <div class="source-tag">
+                        📁 Files
+                    </div>
+
+                    <div class="source-tag">
+                        🔗 ICAR Portal
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SHC data -->
+
+        <div>
+
+            <div class="section-lbl8">
+                Soil report — ANP-001 · Plot data
+            </div>
+
+            <div class="shc-card">
+
+                <div class="shc-header">
+
+                    <div class="shc-title">
+                        Soil Health Card Data
+                    </div>
+
+                    <div class="shc-id">
+                        SHC-ANP-2024-8821
+                    </div>
+
+                </div>
+
+
+                <div class="nutrient-grid">
+
+                    <div class="nutrient-box">
+
+                        <div class="n-val">
+                            142
+                        </div>
+
+                        <div class="n-unit">
+                            kg/ha
+                        </div>
+
+                        <div class="n-label">
+                            Nitrogen (N)
+                        </div>
+
+                        <div class="n-status low">
+                            ⚠ Low
+                        </div>
+
+                    </div>
+
+
+                    <div class="nutrient-box">
+
+                        <div class="n-val">
+                            38
+                        </div>
+
+                        <div class="n-unit">
+                            kg/ha
+                        </div>
+
+                        <div class="n-label">
+                            Phosphorus (P)
+                        </div>
+
+                        <div class="n-status ok">
+                            ✓ Medium
+                        </div>
+
+                    </div>
+
+
+                    <div class="nutrient-box">
+
+                        <div class="n-val">
+                            312
+                        </div>
+
+                        <div class="n-unit">
+                            kg/ha
+                        </div>
+
+                        <div class="n-label">
+                            Potassium (K)
+                        </div>
+
+                        <div class="n-status ok">
+                            ✓ High
+                        </div>
+
+                    </div>
+
+
+                    <div class="nutrient-box">
+
+                        <div class="n-val">
+                            6.8
+                        </div>
+
+                        <div class="n-unit">
+                            pH
+                        </div>
+
+                        <div class="n-label">
+                            Soil pH
+                        </div>
+
+                        <div class="n-status ok">
+                            ✓ Optimal
+                        </div>
+
+                    </div>
+
+
+                    <div class="nutrient-box">
+
+                        <div class="n-val">
+                            0.48
+                        </div>
+
+                        <div class="n-unit">
+                            %
+                        </div>
+
+                        <div class="n-label">
+                            Organic C
+                        </div>
+
+                        <div class="n-status low">
+                            ⚠ Low
+                        </div>
+
+                    </div>
+
+
+                    <div class="nutrient-box">
+
+                        <div class="n-val">
+                            0.32
+                        </div>
+
+                        <div class="n-unit">
+                            dS/m
+                        </div>
+
+                        <div class="n-label">
+                            EC
+                        </div>
+
+                        <div class="n-status ok">
+                            ✓ Normal
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Recommendations -->
+
+        <div class="rec-box">
+
+            <div class="rec-title">
+                🌱 ఫీడ్ యొక్క మిర్చి S4 నేల సిఫార్సు
+            </div>
+
+            <div class="rec-row">
+                🔴 నాట్లు వేయడానికి ముందు ఎకరానికి 80 కిలోల యూరియా వేయండి (నైట్రోజన్ లోపం)
+            </div>
+
+            <div class="rec-row">
+                🟢 నేలలో సేంద్రియ కార్బన్ పెంచడానికి ఎకరానికి 4 టన్నుల FYM (పశువుల ఎరువు) వేయండి
+            </div>
+
+            <div class="rec-row">
+                ✓ అదనంగా ఫాస్ఫరస్ (P) లేదా పొటాషియం (K) వేయాల్సిన అవసరం లేదు — మోతాదు సరిపోతుంది
+            </div>
+
+            <div style="font-size:10px;color:#558b2f;margin-top:4px">
+                మూలం: ICAR-IIHR బెంగళూరు + KVK అనంతపురం
+            </div>
+
+        </div>
+
+
+        <div class="cta8">
+
+            Confirm & Upload Card · కార్డు నమోదు చేయండి
+
+            <div class="cta8-te">
+                This completes your Stage 1 prerequisites → Badge in 3 days!
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

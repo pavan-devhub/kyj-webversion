@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen18_BSM_Scheduler</title>
+</head>
+<body>
+
+<style>
+.ps18{width:340px;background:#1a1a2e;border-radius:36px;padding:12px;margin:0 auto;box-shadow:0 0 0 6px #0f0f1a}
+.ss18{background:#f9f8f4;border-radius:26px;overflow:hidden;min-height:650px;display:flex;flex-direction:column}
+.hdr18{background:#283593;padding:12px 18px;display:flex;align-items:center;gap:8px}
+.body18{padding:12px 16px;flex:1;display:flex;flex-direction:column;gap:10px}
+.sl18{font-size:10px;font-weight:500;color:#283593;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:3px}
+.buyer-summary{background:#e8eaf6;border:0.5px solid #9fa8da;border-radius:10px;padding:9px 14px;display:flex;align-items:center;gap:10px}
+.bs-flag{font-size:18px}
+.bs-info{flex:1}
+.bs-name{font-size:12px;font-weight:500;color:#1a237e}
+.bs-country{font-size:10px;color:#3949ab}
+.bs-ts{background:#1a237e;color:#fff;border-radius:10px;padding:2px 7px;font-size:10px}
+.slots-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.slot-card{border:0.5px solid #e0e0e0;border-radius:8px;padding:8px 10px;background:#fff;cursor:pointer;text-align:center}
+.slot-card.sel{border:1.5px solid #283593;background:#e8eaf6}
+.slot-card.taken{background:#f5f5f5;opacity:0.6;cursor:not-allowed}
+.sc-date{font-size:11px;font-weight:500;color:#333}
+.sc-time{font-size:10px;color:#666;margin-top:1px}
+.sc-status{font-size:9px;margin-top:2px}
+.sc-status.avail{color:#1b5e20}
+.sc-status.taken{color:#bbb}
+.bsm-confirmed{background:#e8f5e9;border:0.5px solid #81c784;border-radius:10px;padding:10px 14px}
+.bsm-c-title{font-size:12px;font-weight:500;color:#1b5e20;margin-bottom:5px}
+.bsm-c-row{display:flex;align-items:center;gap:6px;font-size:11px;color:#2e7d32;margin-bottom:3px}
+.pi-card{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;padding:10px 14px}
+.pi-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.pi-title{font-size:11px;font-weight:500;color:#333}
+.pi-badge{background:#283593;color:#fff;border-radius:8px;padding:2px 7px;font-size:9px}
+.pi-row{display:flex;justify-content:space-between;font-size:11px;padding:4px 0;border-bottom:0.5px solid #f5f5f5}
+.pi-row:last-child{border-bottom:none}
+.pi-key{color:#666}
+.pi-val{color:#222;font-weight:500}
+.pi-total{display:flex;justify-content:space-between;font-size:12px;font-weight:500;padding-top:6px;border-top:1px solid #e0e0e0;margin-top:4px}
+.coins18{background:#fff8e1;border:0.5px solid #ffd54f;border-radius:8px;padding:7px 12px;display:flex;justify-content:space-between;align-items:center}
+.negotiation-note{background:#e3f2fd;border:0.5px solid #90caf9;border-radius:8px;padding:7px 12px;font-size:10px;color:#1565c0;line-height:1.5}
+.cta18{background:#283593;border-radius:12px;padding:12px;text-align:center;color:#fff;font-size:13px;font-weight:500}
+.cta18-te{font-size:10px;color:rgba(255,255,255,0.8);margin-top:2px}
+</style>
+
+<div style="padding:12px 0 8px">
+
+<div class="ps18">
+
+<div class="ss18">
+
+  <div style="background:#283593;padding:10px 18px 6px;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.7)">
+    <span>18 Nov 2026 · 11:00 AM</span>
+    <span>📶 4G 🔋</span>
+  </div>
+
+  <div class="hdr18">
+
+    <div style="color:rgba(255,255,255,0.8);font-size:16px">
+      ←
+    </div>
+
+    <div style="color:#fff;font-size:13px;font-weight:500;flex:1">
+      BSM Scheduler (EX-05)
+    </div>
+
+    <div style="background:rgba(255,255,255,0.2);border-radius:10px;padding:2px 8px;font-size:10px;color:#fff;font-weight:500">
+      Stage 5 · 2 of 3
+    </div>
+
+  </div>
+
+  <div class="body18">
+
+    <!-- Buyer summary -->
+    <div class="buyer-summary">
+
+      <div class="bs-flag">
+        🇩🇪
+      </div>
+
+      <div class="bs-info">
+
+        <div class="bs-name">
+          Hamburg Spice Imports GmbH
+        </div>
+
+        <div class="bs-country">
+          Hamburg, Germany · Trust Score 8.7/10
+        </div>
+
+      </div>
+
+      <div class="bs-ts">
+        ✓ Cleared
+      </div>
+
+    </div>
+
+    <!-- Slot selector -->
+    <div>
+
+      <div class="sl18">
+        Available Meeting Slots · సమావేశ సమయం (IST)
+      </div>
+
+      <div class="slots-grid">
+
+        <div class="slot-card">
+
+          <div class="sc-date">
+            20 Nov, Thu
+          </div>
+
+          <div class="sc-time">
+            2:30 PM IST · 10:00 AM CET
+          </div>
+
+          <div class="sc-status avail">
+            Available ✓
+          </div>
+
+        </div>
+
+        <div class="slot-card sel">
+
+          <div class="sc-date">
+            21 Nov, Fri
+          </div>
+
+          <div class="sc-time">
+            3:00 PM IST · 10:30 AM CET
+          </div>
+
+          <div class="sc-status avail">
+            ✓ Selected
+          </div>
+
+        </div>
+
+        <div class="slot-card taken">
+
+          <div class="sc-date">
+            22 Nov, Sat
+          </div>
+
+          <div class="sc-time">
+            11:00 AM IST
+          </div>
+
+          <div class="sc-status taken">
+            Buyer busy
+          </div>
+
+        </div>
+
+        <div class="slot-card">
+
+          <div class="sc-date">
+            24 Nov, Mon
+          </div>
+
+          <div class="sc-time">
+            2:00 PM IST · 9:30 AM CET
+          </div>
+
+          <div class="sc-status avail">
+            Available ✓
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BSM confirmed block -->
+    <div class="bsm-confirmed">
+
+      <div class="bsm-c-title">
+        ✅ BSM Confirmed — 21 Nov 2026, 3:00 PM IST
+      </div>
+
+      <div class="bsm-c-row">
+        📹 Video link: Google Meet · meet.google.com/feed-bsm-anttrap-0042
+      </div>
+
+      <div class="bsm-c-row">
+        📋 పంపించిన వివరాలు: PHRT COA · TraceX QR · Price spec sheet
+      </div>
+
+      <div class="bsm-c-row">
+        🌐 FCDA సహాయం చేస్తారు: తెలుగు ↔ ఇంగ్లీష్
+      </div>
+
+    </div>
+
+    <!-- Proforma Invoice -->
+    <div>
+
+      <div class="sl18">
+        Proforma Invoice — Auto-generated (EX-05)
+      </div>
+
+      <div class="pi-card">
+
+        <div class="pi-header">
+
+          <div class="pi-title">
+            PI No: FEED/ANT/PI/2026/042
+          </div>
+
+          <div class="pi-badge">
+            Proforma
+          </div>
+
+        </div>
+
+        <div class="pi-row">
+          <span class="pi-key">Commodity</span>
+          <span class="pi-val">Guntur Chilli S4 (Red Dried)</span>
+        </div>
+
+        <div class="pi-row">
+          <span class="pi-key">HS Code</span>
+          <span class="pi-val">0904 21 10</span>
+        </div>
+
+        <div class="pi-row">
+          <span class="pi-key">Quantity</span>
+          <span class="pi-val">1,400 kg (1.4 MT)</span>
+        </div>
+
+        <div class="pi-row">
+          <span class="pi-key">Unit price (indicative)</span>
+          <span class="pi-val">Rs.700/kg FOB Vizag</span>
+        </div>
+
+        <div class="pi-row">
+          <span class="pi-key">Incoterms</span>
+          <span class="pi-val">FOB Visakhapatnam Port</span>
+        </div>
+
+        <div class="pi-row">
+          <span class="pi-key">Payment terms</span>
+          <span class="pi-val">LC at sight (UCP 600)</span>
+        </div>
+
+        <div class="pi-row">
+          <span class="pi-key">Validity</span>
+          <span class="pi-val">10 days from BSM date</span>
+        </div>
+
+        <div class="pi-total">
+
+          <span>
+            Indicative FOB Value
+          </span>
+
+          <span style="color:#1a237e">
+            Rs.9,80,000 (~€10,780)
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Coins note -->
+    <div class="coins18">
+
+      <span style="font-size:11px;color:#f57f17">
+        🏅 +2,000 KC awarded on BSM confirmation
+      </span>
+
+      <span style="font-size:13px;font-weight:500;color:#bf360c">
+        Total: 7,100
+      </span>
+
+    </div>
+
+    <!-- Negotiation note -->
+    <div class="negotiation-note">
+
+      💬 <strong>చర్చల సూచన:</strong>
+      కొనుగోలుదారు డిస్కౌంట్ అడిగితే, విలువను చూపించడానికి TraceX QR పారదర్శకతను వివరించండి —
+      ETO-free ధృవీకరణ పొందిన Guntur Chilli ధర Rs.700/kg FOBగా ప్రీమియం ధరలో ఉంది.
+      కనిష్ట ధర: Rs.620/kg FOB
+      (FEED consultation fee + రైతుకు mandi 3× కనిష్ట ధరలో 93% లక్ష్యాన్ని కవర్ చేస్తుంది).
+
+    </div>
+
+    <div class="cta18">
+
+      Confirm BSM &amp; Proceed to MoA · Screen 19
+
+      <div class="cta18-te">
+        BSM done → MoA signing → Stage 5 badge → +2,000 KC
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

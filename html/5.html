@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen5_Farm_Plot_GPS_Registration</title>
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=JetBrains+Mono:wght@400..700&family=Noto+Sans+Telugu:wght@400..700&family=Plus+Jakarta+Sans:wght@500..800&display=swap">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/pages/screen-5.css">
+<script src="../assets/js/data/screens.js" defer></script>
+<script src="../assets/js/components/app-shell.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body class="screen" data-screen="5">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app">
+  <aside class="sidebar" data-sidebar></aside>
+  <div class="app__main">
+    <header class="topbar" data-topbar></header>
+
+    <main class="page" id="main">
+
+      <!-- Page header -->
+      <section class="page-head">
+        <div class="page-head__top">
+          <a class="back-btn" href="4.html" aria-label="Back">←</a>
+          <div class="page-head__meta">
+            <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>9:52 AM</span>
+            <span class="meta-chip">📶 2G 🔋</span>
+          </div>
+          <div class="page-head__top-end">
+            <span class="stage-pill">Stage 1 · +500 KC</span>
+          </div>
+        </div>
+
+        <div class="page-head__body">
+          <div class="page-head__titles">
+            <h1 class="page-title">Farm Plot Registration</h1>
+          </div>
+        </div>
+      </section>
+
+      <div class="grid grid--stretch">
+
+        <!-- Satellite map + GPS capture -->
+        <section class="span-7 card card--flush map-card">
+          <div class="map">
+            <div class="map__grid"></div>
+            <div class="map__plot"></div>
+            <div class="map__pin">📍</div>
+            <div class="map__label">Plot ANP-001 · 2.5 ac</div>
+            <div class="map__controls">
+              <button type="button" class="map__btn" aria-label="Zoom in">+</button>
+              <button type="button" class="map__btn" aria-label="Zoom out">−</button>
+            </div>
+            <div class="map__source">Bhuvan ISRO · Satellite</div>
+          </div>
+
+          <div class="gps">
+            <span class="gps__icon">📍</span>
+            <div class="gps__info">
+              <div class="gps__coords">14.6789° N, 77.6012° E</div>
+              <div class="gps__sub">± 3m accuracy · GPS locked</div>
+            </div>
+            <button type="button" class="btn btn--tone tone-green gps__btn">📍 Retap</button>
+          </div>
+        </section>
+
+        <!-- Plot details -->
+        <section class="span-5 card form-card">
+          <div class="fields">
+            <div class="field field--full">
+              <span class="field__label">Plot Name · పొలం పేరు</span>
+              <div class="field__control is-filled">
+                <span>Home Field — Kalyandurgam</span>
+                <span class="field__adorn">✓</span>
+              </div>
+            </div>
+
+            <div class="field field--full">
+              <span class="field__label">Crop · పంట</span>
+              <div class="field__control is-active">
+                <span>🌶 Chilli (Red)</span>
+              </div>
+              <div class="chips variety-chips">
+                <span class="chip is-selected">Sannam S4</span>
+                <span class="chip">Teja</span>
+                <span class="chip">334</span>
+                <span class="chip">LCA 334</span>
+                <span class="chip">+ Other</span>
+              </div>
+            </div>
+
+            <div class="field field--full">
+              <span class="field__label">Area · విస్తీర్ణం (acres)</span>
+              <div class="field__control">
+                <span>2.5 acres</span>
+              </div>
+              <span class="field__hint">≈ 20 MT yield estimate</span>
+            </div>
+
+            <div class="field field--full">
+              <span class="field__label">Sowing Date · విత్తిన తేది</span>
+              <div class="field__control">
+                <span>14 Aug 2026</span>
+                <span class="field__adorn">📅</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout tone-orange offline-tag">
+            <span class="callout__icon">⚡</span>
+            <span class="callout__body">Offline-first — syncs to Bhuvan ISRO on reconnect</span>
+          </div>
+        </section>
+
+        <!-- TraceX chain note -->
+        <div class="span-12 callout callout--lg tone-blue trace-note">
+          <span class="callout__icon">🔗</span>
+          <p class="callout__body">
+            <strong>TraceX QR చైన్ ఇక్కడ ప్రారంభమవుతుంది:</strong>
+            మీ GPS coordinates, పంట రకం మరియు విత్తిన తేదీ ఆధారంగా
+            పంటకు సంబంధించిన మొదటి రికార్డు తయారవుతుంది.
+            ఇది మీ export consignment యొక్క QR traceability chain లో
+            <strong>"Farm GPS"</strong> node గా ఉంటుంది —
+            గమ్యస్థానంలో international buyers దీనిని scan చేయగలరు.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Primary action -->
+      <div class="action-bar">
+        <div class="action-bar__text"><strong class="plot-id">Plot ID: ANP-001</strong></div>
+        <div class="action-bar__actions">
+          <a class="btn btn--primary btn--lg" href="6.html">Register Plot · పొలం నమోదు చేయండి<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+    </main>
+
+    <nav class="pager" data-pager aria-label="Screen navigation"></nav>
+  </div>
+</div>
+</body>
+</html>

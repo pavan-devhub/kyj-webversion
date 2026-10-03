@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      KYJ_Screen27_KYJ1_Platinum_Certification
+    </title>
+  </head>
+  <body>
+    <style>
+      .ps27{width:340px;background:#1a1a2e;border-radius:36px;padding:12px;margin:0 auto;box-shadow:0 0 0 6px #0f0f1a}
+.ss27{background:linear-gradient(180deg,#ECEFF1 0%,#fff 25%,#fff 75%,#ECEFF1 100%);border-radius:26px;overflow:hidden;min-height:780px;display:flex;flex-direction:column}
+.status27{background:#263238;padding:10px 18px 6px;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.85)}
+.hdr27{background:linear-gradient(135deg,#263238 0%,#37474F 35%,#455A64 100%);padding:14px 18px;display:flex;align-items:center;gap:8px;position:relative;overflow:hidden}
+.hdr-shimmer{position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:radial-gradient(circle,rgba(255,215,0,0.12) 0%,transparent 60%);pointer-events:none}
+.crown27{font-size:14px}
+.hdr-title27{color:#fff;font-size:13px;font-weight:500;flex:1;letter-spacing:0.3px}
+.pill27{background:linear-gradient(135deg,#FFD700,#FFC107);color:#263238;border-radius:10px;padding:2px 8px;font-size:10px;font-weight:600;display:inline-flex;align-items:center;gap:3px}
+.body27{padding:12px 16px;flex:1;display:flex;flex-direction:column;gap:11px}
+.sl27{font-size:10px;font-weight:600;color:#455A64;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:3px}
+.platinum-hero{background:linear-gradient(160deg,#263238 0%,#455A64 30%,#607D8B 60%,#90A4AE 100%);border-radius:14px;padding:18px 16px;color:#fff;text-align:center;position:relative;overflow:hidden;box-shadow:0 6px 20px rgba(38,50,56,0.3)}
+.ph-shimmer{position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(255,255,255,0.12) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(255,215,0,0.15) 0%,transparent 50%)}
+.ph-crown{font-size:36px;color:#FFD700;margin-bottom:4px;filter:drop-shadow(0 0 10px rgba(255,215,0,0.5));position:relative;z-index:1}
+.ph-title{font-size:20px;font-weight:600;color:#fff;letter-spacing:1px;margin-bottom:3px;position:relative;z-index:1}
+.ph-te{font-size:11px;color:rgba(255,255,255,0.85);line-height:1.4;position:relative;z-index:1}
+.ph-tag{display:inline-block;background:rgba(255,215,0,0.25);border:1px solid rgba(255,215,0,0.6);border-radius:14px;padding:4px 12px;font-size:10px;color:#FFD700;font-weight:600;margin-top:7px;letter-spacing:0.5px;position:relative;z-index:1}
+.journey-strip{background:#fff;border:0.5px solid #CFD8DC;border-radius:10px;padding:10px 14px}
+.js-title{font-size:11px;font-weight:600;color:#263238;margin-bottom:7px;display:flex;align-items:center;justify-content:space-between}
+.js-status{background:#1b5e20;color:#fff;border-radius:8px;padding:2px 8px;font-size:9px;font-weight:500}
+.js-stages{display:flex;align-items:center}
+.js-node{display:flex;flex-direction:column;align-items:center;flex:1}
+.js-dot{width:24px;height:24px;border-radius:50%;background:#1b5e20;color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600}
+.js-dot.platinum{background:linear-gradient(135deg,#263238,#607D8B);box-shadow:0 0 0 3px rgba(96,125,139,0.25);color:#FFD700}
+.js-lb{font-size:7px;color:#666;margin-top:3px;text-align:center;line-height:1.1}
+.js-line{flex:1;height:2px;background:#1b5e20;margin-bottom:13px}
+.cert-credential{background:#fff;border:2px solid #263238;border-radius:12px;padding:14px 16px;position:relative;overflow:hidden}
+.cc-corner{position:absolute;width:30px;height:30px;border:2px solid #FFD700}
+.cc-corner.tl{top:6px;left:6px;border-right:none;border-bottom:none}
+.cc-corner.tr{top:6px;right:6px;border-left:none;border-bottom:none}
+.cc-corner.bl{bottom:6px;left:6px;border-right:none;border-top:none}
+.cc-corner.br{bottom:6px;right:6px;border-left:none;border-top:none}
+.cc-stamp{position:absolute;top:8px;right:12px;width:50px;height:50px;border:2px solid #FFD700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;color:#FFD700;background:rgba(255,215,0,0.08);transform:rotate(-10deg)}
+.cc-label{font-size:9px;color:#607D8B;text-transform:uppercase;letter-spacing:1.5px;text-align:center;font-weight:600}
+.cc-title{font-size:15px;font-weight:600;color:#263238;text-align:center;margin:4px 0;letter-spacing:0.5px}
+.cc-subtitle{font-size:10px;color:#455A64;text-align:center;font-style:italic;margin-bottom:8px}
+.cc-name{font-size:18px;color:#263238;text-align:center;font-weight:500;margin:8px 0 4px;font-family:'Georgia',serif}
+.cc-card-id{font-size:10px;color:#607D8B;text-align:center;font-family:monospace;margin-bottom:8px}
+.cc-quote{font-size:9px;color:#37474F;text-align:center;line-height:1.5;padding:0 8px;font-style:italic;border-top:0.5px solid #ECEFF1;padding-top:7px;margin-top:5px}
+.cc-issued{display:flex;justify-content:space-between;font-size:9px;color:#607D8B;margin-top:8px;padding-top:6px;border-top:0.5px solid #ECEFF1}
+.platinum-card{background:linear-gradient(135deg,#263238 0%,#37474F 25%,#546E7A 55%,#90A4AE 85%,#CFD8DC 100%);border-radius:14px;padding:16px 18px;color:#fff;position:relative;overflow:hidden;box-shadow:0 8px 24px rgba(38,50,56,0.4)}
+.plc-shine{position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(255,215,0,0.18) 0%,transparent 70%)}
+.plc-shine-2{position:absolute;bottom:-40px;left:-30px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.06) 0%,transparent 70%)}
+.plc-brand{font-size:10px;font-weight:500;letter-spacing:1.5px;color:rgba(255,255,255,0.9);margin-bottom:8px;position:relative;z-index:1}
+.plc-tier{display:inline-flex;align-items:center;gap:5px;background:rgba(255,215,0,0.25);border:0.5px solid #FFD700;border-radius:14px;padding:3px 12px;font-size:11px;font-weight:600;color:#FFD700;margin-bottom:10px;position:relative;z-index:1;letter-spacing:0.5px}
+.plc-name{font-size:17px;font-weight:500;margin-bottom:2px;position:relative;z-index:1}
+.plc-id{font-size:11px;font-family:monospace;color:rgba(255,255,255,0.85);position:relative;z-index:1}
+.plc-bottom{display:flex;justify-content:space-between;align-items:flex-end;margin-top:10px;font-size:10px;color:rgba(255,255,255,0.85);position:relative;z-index:1}
+.plc-note{background:rgba(255,215,0,0.12);border-radius:6px;padding:4px 8px;font-size:9px;margin-top:5px;font-weight:500;position:relative;z-index:1;border:0.5px solid rgba(255,215,0,0.3)}
+.chairman-block{background:#fff;border:0.5px solid #CFD8DC;border-radius:10px;padding:11px 14px}
+.cb-title{font-size:11px;font-weight:600;color:#263238;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.cb-photo{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.cb-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,#1B5E20,#388E3C);display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:600;flex-shrink:0;border:2px solid #FFD700}
+.cb-info{flex:1}
+.cb-name{font-size:12px;font-weight:600;color:#263238}
+.cb-role{font-size:10px;color:#607D8B;margin-top:1px}
+.cb-quote{font-size:11px;color:#455A64;line-height:1.5;font-style:italic;background:#F5F7FA;border-left:3px solid #FFD700;padding:8px 10px;border-radius:0 6px 6px 0}
+.cb-sig{display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-size:9px;color:#607D8B}
+.cb-sig-text{font-family:'Brush Script MT',cursive;font-size:14px;color:#263238}
+.track-record{background:#fff;border:0.5px solid #CFD8DC;border-radius:10px;padding:11px 14px}
+.tr-title{font-size:11px;font-weight:600;color:#263238;margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.tr-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.tr-cell{background:linear-gradient(135deg,#ECEFF1,#fff);border:0.5px solid #CFD8DC;border-radius:8px;padding:8px 6px;text-align:center}
+.tr-val{font-size:15px;font-weight:600;color:#263238}
+.tr-unit{font-size:8px;color:#607D8B;margin-top:1px}
+.tr-lbl{font-size:8px;color:#607D8B;margin-top:2px;line-height:1.2}
+.tr-summary{font-size:10px;color:#37474F;line-height:1.5;margin-top:7px;padding-top:7px;border-top:0.5px solid #ECEFF1;text-align:center}
+.tr-amount{font-weight:600;color:#1B5E20}
+.benefits-block{background:#fff;border:0.5px solid #CFD8DC;border-radius:10px;padding:11px 14px}
+.bb-title{font-size:11px;font-weight:600;color:#263238;margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.bb-row{display:flex;align-items:flex-start;gap:8px;padding:5px 0;border-bottom:0.5px solid #ECEFF1;font-size:10px}
+.bb-row:last-child{border-bottom:none}
+.bb-icon{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.bb-info{flex:1}
+.bb-name{font-size:11px;font-weight:500;color:#263238}
+.bb-detail{font-size:9px;color:#607D8B;margin-top:1px;line-height:1.4}
+.bb-status{font-size:9px;color:#1b5e20;font-weight:600;flex-shrink:0}
+.kc-final{background:linear-gradient(135deg,#FFD700,#FFC107);border-radius:10px;padding:12px 14px;text-align:center}
+.kf-label{font-size:10px;color:#5D4037;font-weight:600;text-transform:uppercase;letter-spacing:0.5px}
+.kf-value{font-size:24px;font-weight:700;color:#BF360C;margin:3px 0}
+.kf-detail{font-size:10px;color:#5D4037}
+.wa-block27{background:#E8F5E9;border:0.5px solid #A5D6A7;border-radius:10px;padding:9px 14px}
+.wb-title27{font-size:11px;font-weight:600;color:#1B5E20;margin-bottom:5px;display:flex;align-items:center;gap:5px}
+.wb-msg27{background:#fff;border-radius:8px;padding:8px 10px;font-size:10px;color:#333;line-height:1.6;border:0.5px solid #C8E6C9}
+.cta27{background:linear-gradient(135deg,#263238,#455A64,#607D8B);border-radius:12px;padding:13px;text-align:center;color:#fff;font-size:13px;font-weight:600;box-shadow:0 4px 14px rgba(38,50,56,0.35);position:relative;overflow:hidden}
+.cta-shimmer{position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,rgba(255,215,0,0.08) 50%,transparent 100%)}
+.cta-text27{position:relative;z-index:1}
+.cta-te27{font-size:10px;color:#FFD700;margin-top:3px;font-weight:500;position:relative;z-index:1} .benefits-block{background:#fff;border:0.5px solid #CFD8DC;border-radius:10px;padding:11px 14px}
+.bb-title{font-size:11px;font-weight:600;color:#263238;margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.bb-row{display:flex;align-items:flex-start;gap:8px;padding:5px 0;border-bottom:0.5px solid #ECEFF1;font-size:10px}
+.bb-row:last-child{border-bottom:none}
+.bb-icon{width:24px;height:24px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.bb-info{flex:1}
+.bb-name{font-size:11px;font-weight:500;color:#263238}
+.bb-detail{font-size:9px;color:#607D8B;margin-top:1px;line-height:1.4}
+.bb-status{font-size:9px;color:#1b5e20;font-weight:600;flex-shrink:0}
+      </style>
+    <div style="padding:12px 0 8px">
+      <div class="ps27">
+        <div class="ss27">
+          <div class="status27">
+            <span>
+              15 Mar 2027 · 11:30 AM
+            </span>
+            <span>
+              📶 4G 🔋
+            </span>
+          </div>
+          <div class="hdr27">
+            <div class="hdr-shimmer">
+            </div>
+            <div style="color:rgba(255,255,255,0.85);font-size:16px">
+              ←
+            </div>
+            <div class="crown27">
+              👑
+            </div>
+            <div class="hdr-title27">
+              KYJ-1 Certification · PLATINUM
+            </div>
+            <div class="pill27">
+              ★ Stage 8
+            </div>
+          </div>
+          <div class="body27">
+            <!-- Hero -->
+            <div class="platinum-hero">
+              <div class="ph-shimmer">
+              </div>
+              <div class="ph-crown">
+                👑
+              </div>
+              <div class="ph-title">
+                KYJ-1 సర్టిఫైడ్!
+              </div>
+              <div class="ph-te">
+                Stage 8 · Certified · The journey is complete · You are now a PLATINUM member of FEED MSCS LTD
+              </div>
+              <div class="ph-tag">
+                ★ +2,500 KC awarded · Final stage
+              </div>
+            </div>
+            <!-- 8-stage journey complete -->
+            <div class="journey-strip">
+              <div class="js-title">
+                <span>
+                  🏁 8-Stage Journey · 100% Complete
+                </span>
+                <span class="js-status">
+                  ALL 8 ✓
+                </span>
+              </div>
+              <div class="js-stages">
+                <div class="js-node">
+                  <div class="js-dot">
+                    ✓
+                  </div>
+                  <div class="js-lb">
+                    EPM
+                  </div>
+                </div>
+                <div class="js-line">
+                </div>
+                <div class="js-node">
+                  <div class="js-dot">
+                    1
+                  </div>
+                  <div class="js-lb">
+                    Farm
+                  </div>
+                </div>
+                <div class="js-line">
+                </div>
+                <div class="js-node">
+                  <div class="js-dot">
+                    2
+                  </div>
+                  <div class="js-lb">
+                    Reg
+                  </div>
+                </div>
+                <div class="js-line">
+                </div>
+                <div class="js-node">
+                  <div class="js-dot">
+                    3
+                  </div>
+                  <div class="js-lb">
+                    Pack
+                  </div>
+                </div>
+                <div class="js-line">
+                </div>
+                <div class="js-node">
+                  <div class="js-dot">
+                    4
+                  </div>
+                  <div class="js-lb">
+                    Quality
+                  </div>
+                </div>
+                <div class="js-line">
+                </div>
+                <div class="js-node">
+                  <div class="js-dot">
+                    5
+                  </div>
+                  <div class="js-lb">
+                    Buyer
+                  </div>
+                </div>
+                <div class="js-line">
+                </div>
+                <div class="js-node">
+                  <div class="js-dot">
+                    6
+                  </div>
+                  <div class="js-lb">
+                    Sample
+                  </div>
+                </div>
+                <div class="js-line">
+                </div>
+                <div class="js-node">
+                  <div class="js-dot">
+                    7
+                  </div>
+                  <div class="js-lb">
+                    FIRC ★
+                  </div>
+                </div>
+                <div class="js-line">
+                </div>
+                <div class="js-node">
+                  <div class="js-dot platinum">
+                    👑
+                  </div>
+                  <div class="js-lb">
+                    KYJ-1 ✓
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- KYJ-1 Credential -->
+            <div>
+              <div class="sl27">
+                Your Official Credential
+              </div>
+              <div class="cert-credential">
+                <div class="cc-corner tl">
+                </div>
+                <div class="cc-corner tr">
+                </div>
+                <div class="cc-corner bl">
+                </div>
+                <div class="cc-corner br">
+                </div>
+                <div class="cc-stamp">
+                  🌾
+                </div>
+                <div class="cc-label">
+                  FEED MSCS LTD · MSCS/CR/1295/2020
+                </div>
+                <div class="cc-title">
+                  KYJ-1 CERTIFIED
+                </div>
+                <div class="cc-subtitle">
+                  Krushi Yeva Jayate · Export Cooperative Member
+                </div>
+                <div class="cc-name">
+                  Ramu Naidu
+                </div>
+                <div class="cc-card-id">
+                  FEED-ANT-000042 · PLATINUM
+                </div>
+                <div class="cc-quote">
+                  "Having completed 3 successful international exports across 14 months with sustained FILR 14.3:1 protection, this farmer is hereby certified as a KYJ Export Cooperative member with full PLATINUM benefits."
+                </div>
+                <div class="cc-issued">
+                  <span>
+                    Issued: 15 Mar 2027
+                  </span>
+                  <span>
+                    Anantapur · DSMS Zone-4
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- PLATINUM CARD -->
+            <div>
+              <div class="sl27">
+                FEED CARD → PLATINUM upgrade
+              </div>
+              <div class="platinum-card">
+                <div class="plc-shine">
+                </div>
+                <div class="plc-shine-2">
+                </div>
+                <div class="plc-brand">
+                  FEED MSCS LTD · కృషి యేవ జయతే
+                </div>
+                <div class="plc-tier">
+                  👑 PLATINUM MEMBER
+                </div>
+                <div class="plc-name">
+                  Ramu Naidu
+                </div>
+                <div class="plc-id">
+                  FEED-ANT-000042
+                </div>
+                <div class="plc-bottom">
+                  <span>
+                    🌶 Chilli · 3 exports
+                  </span>
+                  <span>
+                    Issued: 15 Mar 2027
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Chairman recognition -->
+            <div>
+              <div class="sl27">
+                చైర్మన్ నుండి ప్రత్యేక అభినందనలు
+              </div>
+              <div class="chairman-block">
+                <div class="cb-title">
+                  🎖 Presented at District Cooperative Event
+                </div>
+                <div class="cb-photo">
+                  <div class="cb-avatar">
+                    KR
+                  </div>
+                  <div class="cb-info">
+                    <div class="cb-name">
+                      K Raghu Vamsi
+                    </div>
+                    <div class="cb-role">
+                      Chairman & Founder · FEED MSCS LTD
+                    </div>
+                  </div>
+                </div>
+                <div class="cb-quote">
+                  "రాము గారూ, అనంతపూర్ జిల్లాలో మా తొలి PLATINUM రైతుగా మీరు నిలిచారు. హాంబర్గ్‌కు మీరు విజయవంతంగా చేసిన 3 ఎగుమతులు, కృషి యేవ జయతే అనేది కేవలం మా నినాదం మాత్రమే కాదు — అది ఇప్పుడు మీ విజయంగా మారిందని చూపిస్తున్నాయి. PLATINUM కుటుంబంలోకి మీకు హృదయపూర్వక స్వాగతం."
+                </div>
+                <div class="cb-sig">
+                  <span>
+                    K Raghu Vamsi · 15 Mar 2027
+                  </span>
+                  <span class="cb-sig-text">
+                    K. Raghu Vamsi
+                  </span>
+                </div>
+              </div>
+            </div>
+            <!-- Track record -->
+            <div>
+              <div class="sl27">
+                Your 14-month track record
+              </div>
+              <div class="track-record">
+                <div class="tr-title">
+                  📊 Multi-FIRC export performance
+                </div>
+                <div class="tr-grid">
+                  <div class="tr-cell">
+                    <div class="tr-val">
+                      3
+                    </div>
+                    <div class="tr-unit">
+                      exports
+                    </div>
+                    <div class="tr-lbl">
+                      FIRC count
+                    </div>
+                  </div>
+                  <div class="tr-cell">
+                    <div class="tr-val">
+                      4.2 MT
+                    </div>
+                    <div class="tr-unit">
+                      Grade A
+                    </div>
+                    <div class="tr-lbl">
+                      cumulative shipped
+                    </div>
+                  </div>
+                  <div class="tr-cell">
+                    <div class="tr-val">
+                      14.3:1
+                    </div>
+                    <div class="tr-unit">
+                      FILR
+                    </div>
+                    <div class="tr-lbl">
+                      protection ratio
+                    </div>
+                  </div>
+                  <div class="tr-cell">
+                    <div class="tr-val">
+                      €32K
+                    </div>
+                    <div class="tr-unit">
+                      FOB earned
+                    </div>
+                    <div class="tr-lbl">
+                      Hamburg total
+                    </div>
+                  </div>
+                  <div class="tr-cell">
+                    <div class="tr-val">
+                      3
+                    </div>
+                    <div class="tr-unit">
+                      PHRT PASS
+                    </div>
+                    <div class="tr-lbl">
+                      zero rejection
+                    </div>
+                  </div>
+                  <div class="tr-cell">
+                    <div class="tr-val">
+                      A
+                    </div>
+                    <div class="tr-unit">
+                      CCS Band
+                    </div>
+                    <div class="tr-lbl">
+                      FEED-AAA next
+                    </div>
+                  </div>
+                </div>
+                <div class="tr-summary">
+                  Cumulative farmer take-home
+                  <span class="tr-amount">
+                    Rs.28,87,212
+                  </span>
+                  · 5.7× mandi-equivalent · RoDTEP+Drawback Rs.42,278
+                </div>
+              </div>
+            </div>
+            <!-- PLATINUM benefits unlocked -->
+            <div>
+              <div class="sl27">
+                PLATINUM BENEFITS NOW ACTIVE
+              </div>
+              <div class="benefits-block">
+                <div class="bb-title">
+                  🎁 cooperative member rights
+                </div>
+                <div class="bb-row">
+                  <div class="bb-icon" style="background:#E1F5FE;color:#01579B">
+                    📜
+                  </div>
+                  <div class="bb-info">
+                    <div class="bb-name">
+                      CERT-2 KACC issued
+                    </div>
+                    <div class="bb-detail">
+                      KYJ Awareness Certificate · valid lifetime · framed
+                    </div>
+                  </div>
+                  <div class="bb-status">
+                    ACTIVE
+                  </div>
+                </div>
+                <div class="bb-row">
+                  <div class="bb-icon" style="background:#FFF3E0;color:#BF360C">
+                    🎤
+                  </div>
+                  <div class="bb-info">
+                    <div class="bb-name">
+                      Mentor speaker · Next EPM batch
+                    </div>
+                    <div class="bb-detail">
+                      Invited to speak at Anantapur EPM-7 (May 2027) · Telugu
+                    </div>
+                  </div>
+                  <div class="bb-status">
+                    INVITED
+                  </div>
+                </div>
+                <div class="bb-row">
+                  <div class="bb-icon" style="background:#E8F5E9;color:#1B5E20">
+                    🏛
+                  </div>
+                  <div class="bb-info">
+                    <div class="bb-name">
+                      DSMS board nomination eligible
+                    </div>
+                    <div class="bb-detail">
+                      District SAFE Mission Coop · Zone-4 · State Co-op Act
+                    </div>
+                  </div>
+                  <div class="bb-status">
+                    ELIGIBLE
+                  </div>
+                </div>
+               
+                <div class="bb-row">
+                  <div class="bb-icon" style="background:#FFEBEE;color:#B71C1C">
+                    🛡
+                  </div>
+                  <div class="bb-info">
+                    <div class="bb-name">
+                      FILR-protected income lock
+                    </div>
+                    <div class="bb-detail">
+                      10:1 minimum maintained until farmer exits by own choice
+                    </div>
+                  </div>
+                  <div class="bb-status">
+                    LOCKED
+                  </div>
+                </div>
+                <div class="bb-row">
+                  <div class="bb-icon" style="background:#E3F2FD;color:#0D47A1">
+                    🏦
+                  </div>
+                  <div class="bb-info">
+                    <div class="bb-name">
+                      NBFC + Bank credit lines unlocked
+                    </div>
+                    <div class="bb-detail">
+                      CCS FEED-A · pre-approved Rs.5L crop loan @ 8.5% (NABARD-backed)
+                    </div>
+                  </div>
+                  <div class="bb-status">
+                    OFFERS
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- KRISHI COINS final -->
+            <div class="kc-final">
+              <div class="kf-label">
+                🏅 KRISHI COINS · final tally
+              </div>
+              <div class="kf-value">
+                13,100
+              </div>
+              <div class="kf-detail">
+                12,500 stage badges (cap reached) + 150 EPM bonus + 450 GAP daily
+              </div>
+            </div>
+            <!-- WhatsApp final celebration -->
+            <div class="wa-block27">
+              <div class="wb-title27">
+                <span style="width:10px;height:10px;background:#25d366;border-radius:50%;display:inline-block">
+                </span>
+                WhatsApp · Chairman's message
+              </div>
+              <div class="wb-msg27">
+                👑
+                <strong>
+                  హృదయపూర్వక అభినందనలు రాము గారూ!
+                </strong>
+                <br>
+                <br>
+                🏆 అనంతపూర్‌లో FEED తొలి PLATINUM రైతుగా మీకు ఘన స్వాగతం!
+                <br>
+                <br>
+                మీ పట్టుదల, నాణ్యత మరియు ఎగుమతి ప్రయాణం ద్వారా
+                <br>
+                హాంబర్గ్‌కు 3 విజయవంతమైన ఎగుమతులు పూర్తి చేశారు.
+                <br>
+                <br>
+                💰 రైతు మొత్తం ఆదాయం: ₹28.87 లక్షలు
+                <br>
+                ⚖️ రైతు–FEED విలువ నిష్పత్తి (FILR): 14.3 : 1
+                <br>
+                <br>
+                🎤 మీ విజయమే మరొక రైతుకు మార్గదర్శకం
+                <br>
+                <br>
+                తదుపరి EPM-7 · మే 2027
+                <br>
+                కొత్త రైతులతో మీ ఎగుమతి అనుభవాన్ని పంచుకుని,
+                <br>
+                వారిని Farm-to-Foreign ప్రయాణంలో ముందుకు నడిపించండి.
+                <br>
+                <br>
+                — కె. రఘు వంశీ
+                <br>
+                చైర్మన్, FEED MSCS LTD
+              </div>
+            </div>
+            <!-- CTA -->
+            <div class="cta27">
+              <div class="cta-shimmer">
+              </div>
+              <div class="cta-text27">
+                Become Mentor for EPM-7 · Anantapur
+              </div>
+              <div class="cta-te27">
+                👑 మీ ఎగుమతి ప్రయాణం విజయవంతంగా పూర్తైంది · ఇప్పుడు మరో రైతు ప్రయాణానికి మీరు మార్గదర్శకులు కండి
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

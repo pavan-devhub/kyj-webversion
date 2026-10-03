@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen11_FSSAI_Stage2_Gate</title>
+</head>
+
+<body>
+
+<style>
+.ps11{
+  width:340px;
+  background:#1a1a2e;
+  border-radius:36px;
+  padding:12px;
+  margin:0 auto;
+  box-shadow:0 0 0 6px #0f0f1a
+}
+
+.ss11{
+  background:#f9f8f4;
+  border-radius:26px;
+  overflow:hidden;
+  min-height:670px;
+  display:flex;
+  flex-direction:column
+}
+
+.hdr11{
+  background:#283593;
+  padding:12px 18px;
+  display:flex;
+  align-items:center;
+  gap:8px
+}
+
+.body11{
+  padding:12px 16px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:10px
+}
+
+.fssai-context{
+  background:#ede7f6;
+  border:0.5px solid #b39ddb;
+  border-radius:10px;
+  padding:10px 14px
+}
+
+.fc-title{
+  font-size:12px;
+  font-weight:500;
+  color:#283593;
+  margin-bottom:3px
+}
+
+.fc-sub{
+  font-size:10px;
+  color:#4527a0;
+  line-height:1.5
+}
+
+.fc-types{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5px;
+  margin-top:7px
+}
+
+.ftype{
+  background:#fff;
+  border:0.5px solid #ce93d8;
+  border-radius:7px;
+  padding:6px 8px
+}
+
+.ftype.active{
+  border-color:#283593;
+  background:#e8eaf6
+}
+
+.ft-label{
+  font-size:9px;
+  color:#888;
+  font-weight:500
+}
+
+.ft-val{
+  font-size:10px;
+  color:#283593;
+  font-weight:500;
+  margin-top:1px
+}
+
+.section-lbl11{
+  font-size:10px;
+  font-weight:500;
+  color:#283593;
+  text-transform:uppercase;
+  letter-spacing:0.4px;
+  margin-bottom:4px
+}
+
+.upload-zone11{
+  border:1.5px dashed #9fa8da;
+  border-radius:12px;
+  padding:14px;
+  text-align:center;
+  background:#e8eaf6;
+  cursor:pointer
+}
+
+.uz11-icon{
+  font-size:24px;
+  margin-bottom:4px
+}
+
+.uz11-title{
+  font-size:12px;
+  font-weight:500;
+  color:#283593
+}
+
+.uz11-sub{
+  font-size:10px;
+  color:#5c6bc0;
+  margin-top:2px
+}
+
+.uploaded-box{
+  background:#e8f5e9;
+  border:0.5px solid #81c784;
+  border-radius:10px;
+  padding:10px 14px;
+  display:flex;
+  align-items:center;
+  gap:8px
+}
+
+.ub-icon{
+  font-size:20px
+}
+
+.ub-info{
+  flex:1
+}
+
+.ub-name{
+  font-size:11px;
+  font-weight:500;
+  color:#1b5e20
+}
+
+.ub-meta{
+  font-size:10px;
+  color:#2e7d32;
+  margin-top:1px
+}
+
+.ub-status{
+  background:#1b5e20;
+  color:#fff;
+  border-radius:10px;
+  padding:2px 8px;
+  font-size:10px
+}
+
+.hard-gate{
+  background:#fff;
+  border:1.5px solid #283593;
+  border-radius:12px;
+  padding:12px 14px
+}
+
+.hg-title{
+  font-size:12px;
+  font-weight:500;
+  color:#283593;
+  margin-bottom:8px;
+  text-align:center
+}
+
+.gate-row{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 0;
+  border-bottom:0.5px solid #e8eaf6
+}
+
+.gate-row:last-child{
+  border-bottom:none
+}
+
+.gate-dot{
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:10px;
+  flex-shrink:0
+}
+
+.gate-dot.green{
+  background:#1b5e20;
+  color:#fff
+}
+
+.gate-dot.pending{
+  background:#f5f5f5;
+  border:0.5px solid #ddd;
+  color:#bbb
+}
+
+.gate-label{
+  flex:1;
+  font-size:11px;
+  color:#333
+}
+
+.gate-val{
+  font-size:10px;
+  font-weight:500
+}
+
+.gate-val.ok{
+  color:#1b5e20
+}
+
+.gate-val.wait{
+  color:#f57f17
+}
+
+.all-clear{
+  background:#1b5e20;
+  border-radius:10px;
+  padding:10px 14px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  display:none
+}
+
+.pending-note{
+  background:#fff8e1;
+  border:0.5px solid #ffe082;
+  border-radius:8px;
+  padding:8px 12px;
+  font-size:10px;
+  color:#f57f17;
+  line-height:1.5
+}
+
+.cta11{
+  background:#283593;
+  border-radius:12px;
+  padding:12px;
+  text-align:center;
+  color:#fff;
+  font-size:13px;
+  font-weight:500;
+  margin-top:2px
+}
+
+.cta11-te{
+  font-size:10px;
+  color:rgba(255,255,255,0.8);
+  margin-top:2px
+}
+</style>
+
+
+<div style="padding:12px 0 8px">
+
+<div class="ps11">
+
+<div class="ss11">
+
+
+  <!-- STATUS BAR -->
+
+  <div style="
+    background:#283593;
+    padding:10px 18px 6px;
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+    color:rgba(255,255,255,0.7)
+  ">
+    <span>11:30 AM</span>
+    <span>📶 2G 🔋</span>
+  </div>
+
+
+  <!-- HEADER -->
+
+  <div class="hdr11">
+
+    <div style="
+      color:rgba(255,255,255,0.8);
+      font-size:16px
+    ">
+      ←
+    </div>
+
+    <div style="
+      color:#fff;
+      font-size:13px;
+      font-weight:500;
+      flex:1
+    ">
+      FSSAI Licence · Stage 2 Gate
+    </div>
+
+    <div style="
+      background:rgba(255,255,255,0.2);
+      border-radius:10px;
+      padding:2px 8px;
+      font-size:10px;
+      color:#fff;
+      font-weight:500
+    ">
+      Stage 2 · 3 of 3
+    </div>
+
+  </div>
+
+
+  <div style="height:3px;background:#9fa8da">
+
+    <div style="
+      height:3px;
+      background:#283593;
+      width:90%
+    "></div>
+
+  </div>
+
+
+  <div class="body11">
+
+
+    <!-- FSSAI CONTEXT -->
+
+    <div class="fssai-context">
+
+      <div class="fc-title">
+        FSSAI ఫుడ్ బిజినెస్ ఆపరేటర్ లైసెన్స్
+      </div>
+
+      <div class="fc-sub">
+        ఆహార ప్రాసెసింగ్ మరియు ఎగుమతులకు FSSAI లైసెన్స్ తప్పనిసరి. రెండు రకాల లైసెన్స్‌లు ఉన్నాయి — సెంట్రల్ లైసెన్స్ (ఎగుమతి / పెద్ద స్థాయి వ్యాపారం) మరియు స్టేట్ లైసెన్స్ (ప్రాంతీయ వ్యాపారం). FEED MSCS LTD ద్వారా ఎగుమతి చేసే రైతులకు వ్యక్తిగత సెంట్రల్ లైసెన్స్ అవసరం లేదు.
+      </div>
+
+
+      <div class="fc-types">
+
+        <div class="ftype active">
+
+          <div class="ft-label">
+            FEED MSCS LTD
+          </div>
+
+          <div class="ft-val">
+            సెంట్రల్ లైసెన్స్ ✓
+          </div>
+
+        </div>
+
+
+        <div class="ftype">
+
+          <div class="ft-label">
+            వ్యక్తిగత FPO
+          </div>
+
+          <div class="ft-val">
+            స్టేట్ లైసెన్స్
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- UPLOAD ZONE -->
+
+    <div>
+
+      <div class="section-lbl11">
+        FSSAI లైసెన్స్ సర్టిఫికేట్ అప్‌లోడ్ చేయండి
+      </div>
+
+      <div class="upload-zone11">
+
+        <div class="uz11-icon">
+          📋
+        </div>
+
+        <div class="uz11-title">
+          FSSAI సర్టిఫికేట్ PDF అప్‌లోడ్ చేయడానికి ట్యాప్ చేయండి
+        </div>
+
+        <div class="uz11-sub">
+          Portal: foscos.fssai.gov.in · AP contact: fsap@fssai.gov.in
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- UPLOADED CONFIRMATION -->
+
+    <div class="uploaded-box">
+
+      <div class="ub-icon">
+        📄
+      </div>
+
+      <div class="ub-info">
+
+        <div class="ub-name">
+          FSSAI_FEEDMSCS_Central_2026.pdf
+        </div>
+
+        <div class="ub-meta">
+          Licence No: 10024999009876 · Valid until: Mar 2028
+        </div>
+
+      </div>
+
+      <div class="ub-status">
+        ✓ Verified
+      </div>
+
+    </div>
+
+
+    <!-- THE HARD GATE -->
+
+    <div>
+
+      <div class="section-lbl11">
+        స్టేజ్ 2 హార్డ్ గేట్ — ఎగుమతి చేయడానికి ఈ మూడు తప్పనిసరి.
+      </div>
+
+
+      <div class="hard-gate">
+
+        <div class="hg-title">
+          🔒 సిస్టమ్ చెక్ — దాటవేయడం లేదా మార్చడం సాధ్యం కాదు
+        </div>
+
+
+        <div class="gate-row">
+
+          <div class="gate-dot green">
+            ✓
+          </div>
+
+          <div class="gate-label">
+            IEC — DGFT ద్వారా జారీ చేయబడింది
+          </div>
+
+          <div class="gate-val ok">
+            GREEN ✓
+          </div>
+
+        </div>
+
+
+        <div class="gate-row">
+
+          <div class="gate-dot green">
+            ✓
+          </div>
+
+          <div class="gate-label">
+            APEDA RCMC — యాక్టివ్
+          </div>
+
+          <div class="gate-val ok">
+            GREEN ✓
+          </div>
+
+        </div>
+
+
+        <div class="gate-row">
+
+          <div class="gate-dot green">
+            ✓
+          </div>
+
+          <div class="gate-label">
+            FSSAI లైసెన్స్ — ధృవీకరించబడింది
+          </div>
+
+          <div class="gate-val ok">
+            GREEN ✓
+          </div>
+
+        </div>
+
+
+        <div style="
+          margin-top:10px;
+          background:#e8f5e9;
+          border-radius:8px;
+          padding:8px 12px;
+          text-align:center
+        ">
+
+          <div style="
+            font-size:12px;
+            font-weight:500;
+            color:#1b5e20
+          "
+
+          <div style="
+            font-size:10px;
+            color:#2e7d32;
+            margin-top:2px
+          ">
+            నమోదు Badge · +1,000 KRISHI COINS · Stage 3 packhouse unlocks
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PENDING NOTE -->
+
+    <div class="pending-note" style="display:none">
+
+      ⚠️ స్టేజ్ 2 గేట్ కోసం మూడు డాక్యుమెంట్లు ఒకేసారి GREENలో ఉండాలి. కొంతవరకు మాత్రమే క్లియరెన్స్ ఇవ్వడం సాధ్యం కాదు — అడ్మిన్ ద్వారా మార్చడం సాధ్యం కాదు. ప్లాట్‌ఫారమ్ ప్రతి 6 గంటలకు ఆటో-చెక్ చేస్తుంది.
+
+    </div>
+
+
+    <!-- CTA -->
+
+    <div class="cta11">
+
+      Claim Stage 2 Badge · నమోదు Badge తీసుకోండి
+
+      <div class="cta11-te">
+        +1,000 KC · Packhouse verification starts next → Screen 12
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

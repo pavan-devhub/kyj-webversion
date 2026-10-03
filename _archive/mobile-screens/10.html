@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen10_APEDA_RCMC</title>
+</head>
+<body>
+
+<style>
+.ps10{
+  width:340px;
+  background:#1a1a2e;
+  border-radius:36px;
+  padding:12px;
+  margin:0 auto;
+  box-shadow:0 0 0 6px #0f0f1a
+}
+
+.ss10{
+  background:#f9f8f4;
+  border-radius:26px;
+  overflow:hidden;
+  min-height:650px;
+  display:flex;
+  flex-direction:column
+}
+
+.hdr10{
+  background:#1a237e;
+  padding:12px 18px;
+  display:flex;
+  align-items:center;
+  gap:8px
+}
+
+.hdr10-title{
+  color:#fff;
+  font-size:13px;
+  font-weight:500;
+  flex:1
+}
+
+.body10{
+  padding:12px 16px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:10px
+}
+
+.prereq-box{
+  background:#e8f5e9;
+  border:0.5px solid #81c784;
+  border-radius:10px;
+  padding:8px 14px;
+  display:flex;
+  align-items:center;
+  gap:8px
+}
+
+.prereq-icon{
+  font-size:16px
+}
+
+.prereq-text{
+  font-size:11px;
+  color:#1b5e20;
+  font-weight:500
+}
+
+.prereq-sub{
+  font-size:10px;
+  color:#2e7d32
+}
+
+.context-card{
+  background:#e8eaf6;
+  border:0.5px solid #9fa8da;
+  border-radius:10px;
+  padding:10px 14px
+}
+
+.cc-title{
+  font-size:12px;
+  font-weight:500;
+  color:#1a237e;
+  margin-bottom:3px
+}
+
+.cc-sub{
+  font-size:10px;
+  color:#3949ab;
+  line-height:1.5
+}
+
+.cc-contact{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  margin-top:6px;
+  background:#fff;
+  border-radius:6px;
+  padding:5px 8px;
+  border:0.5px solid #9fa8da
+}
+
+.section-lbl10{
+  font-size:10px;
+  font-weight:500;
+  color:#1a237e;
+  text-transform:uppercase;
+  letter-spacing:0.4px;
+  margin-bottom:4px
+}
+
+.status-tracker10{
+  background:#fff;
+  border:0.5px solid #e0e0e0;
+  border-radius:10px;
+  overflow:hidden
+}
+
+.st10-header{
+  background:#1a237e;
+  padding:8px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+
+.st10-title{
+  font-size:11px;
+  font-weight:500;
+  color:#fff
+}
+
+.st10-status{
+  background:#fff3e0;
+  color:#e65100;
+  border-radius:10px;
+  padding:2px 8px;
+  font-size:10px;
+  font-weight:500
+}
+
+.st10-steps{
+  padding:10px 14px;
+  display:flex;
+  flex-direction:column;
+  gap:0
+}
+
+.st10-step{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  padding:6px 0;
+  border-bottom:0.5px solid #f5f5f5
+}
+
+.st10-step:last-child{
+  border-bottom:none
+}
+
+.snum10{
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:10px;
+  font-weight:500;
+  flex-shrink:0;
+  margin-top:1px
+}
+
+.snum10.done{
+  background:#1b5e20;
+  color:#fff
+}
+
+.snum10.active{
+  background:#1a237e;
+  color:#fff
+}
+
+.snum10.pending{
+  background:#f0f0f0;
+  color:#bbb;
+  border:0.5px solid #ddd
+}
+
+.sc{
+  flex:1
+}
+
+.st10{
+  font-size:11px;
+  font-weight:500;
+  color:#222
+}
+
+.sd10{
+  font-size:10px;
+  color:#888;
+  margin-top:1px;
+  line-height:1.3
+}
+
+.benefits-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6px
+}
+
+.benefit-card{
+  background:#fff;
+  border:0.5px solid #e0e0e0;
+  border-radius:8px;
+  padding:8px 10px
+}
+
+.bc-icon{
+  font-size:14px;
+  margin-bottom:3px
+}
+
+.bc-title{
+  font-size:10px;
+  font-weight:500;
+  color:#333
+}
+
+.bc-val{
+  font-size:11px;
+  color:#1a237e;
+  font-weight:500;
+  margin-top:1px
+}
+
+.fee10{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#e8eaf6;
+  border-radius:8px;
+  padding:7px 12px;
+  font-size:11px
+}
+
+.cta10{
+  background:#1a237e;
+  border-radius:12px;
+  padding:12px;
+  text-align:center;
+  color:#fff;
+  font-size:13px;
+  font-weight:500;
+  margin-top:2px
+}
+
+.cta10-te{
+  font-size:10px;
+  color:rgba(255,255,255,0.8);
+  margin-top:2px
+}
+
+.dgft-note{
+  font-size:10px;
+  color:#3949ab;
+  background:#e8eaf6;
+  border-radius:6px;
+  padding:5px 10px;
+  text-align:center
+}
+</style>
+
+<div style="padding:12px 0 8px">
+
+<div class="ps10">
+
+<div class="ss10">
+
+  <div style="background:#1a237e;padding:10px 18px 6px;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.7)">
+    <span>10:18 AM</span>
+    <span>📶 2G 🔋</span>
+  </div>
+
+  <div class="hdr10">
+
+    <div style="color:rgba(255,255,255,0.8);font-size:16px">
+      ←
+    </div>
+
+    <div class="hdr10-title">
+      APEDA RCMC · నమోదు ధృవీకరణ
+    </div>
+
+    <div style="background:rgba(255,255,255,0.2);border-radius:10px;padding:2px 8px;font-size:10px;color:#fff;font-weight:500">
+      Stage 2 · 2 of 3
+    </div>
+
+  </div>
+
+  <div style="height:3px;background:#c5cae9">
+    <div style="height:3px;background:#1a237e;width:66%"></div>
+  </div>
+
+
+  <div class="body10">
+
+
+   
+
+    <!-- Context card -->
+    <div class="context-card">
+
+      <div class="cc-sub">
+
+        APEDA షెడ్యూల్‌లో ఉన్న వ్యవసాయ మరియు ప్రాసెస్డ్ ఫుడ్ ఉత్పత్తులను ఎగుమతి చేసే వారికి అవసరమైన ముఖ్యమైన నమోదు. APEDA సేవలు, వర్తించే ఎగుమతి ప్రోత్సాహక పథకాలు మరియు ట్రేడ్ ఫెయిర్ కార్యక్రమాల్లో పాల్గొనే అవకాశాలను పొందేందుకు ఇది ఉపయోగపడుతుంది. అలాగే, గుర్తింపు పొందిన Packhouse దరఖాస్తులు మరియు వర్తించే సందర్భాల్లో TraceNet ఆధారిత ఆర్గానిక్ ఎగుమతి ట్రేసబిలిటీ ప్రక్రియలకు ఇది సంబంధితంగా ఉంటుంది.
+
+        <br><br>
+
+        దరఖాస్తు విధానం: IEC పొందిన తరువాత 17 జూలై 2023 నుండి DGFT e-RCMC పోర్టల్ ద్వారా ఆన్‌లైన్‌లో దరఖాస్తు చేయవచ్చు.
+
+        <br><br>
+
+        ఫీజు: ₹5,000 + 18% GST = ₹5,900
+
+        <br><br>
+
+        చెల్లుబాటు: 5 సంవత్సరాలు
+
+        <br><br>
+
+
+
+      </div>
+
+    </div>
+
+
+    <!-- Status tracker -->
+    <div>
+
+      <div class="section-lbl10">
+        Application Status · దరఖాస్తు స్థితి
+      </div>
+
+      <div class="status-tracker10">
+
+        <div class="st10-header">
+
+          <div class="st10-title">
+            RCMC — FEED MSCS LTD · Agri Commodities
+          </div>
+
+          <div class="st10-status">
+            APPLIED
+          </div>
+
+        </div>
+
+
+        <div class="st10-steps">
+
+
+          <div class="st10-step">
+
+            <div class="snum10 done">
+              ✓
+            </div>
+
+            <div class="sc">
+
+              <div class="st10">
+                DGFT portal application submitted
+              </div>
+
+              <div class="sd10">
+                dgft.gov.in → APEDA RCMC form · IEC linked · HS codes: 0904 Chilli, 0803 Banana
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="st10-step">
+
+            <div class="snum10 done">
+              ✓
+            </div>
+
+            <div class="sc">
+
+              <div class="st10">
+                Documents uploaded
+              </div>
+
+              <div class="sd10">
+                IEC copy · FSSAI licence · Audited accounts FY2025–26 · Bank certificate · Export performance statement
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="st10-step">
+
+            <div class="snum10 done">
+              ✓
+            </div>
+
+            <div class="sc">
+
+              <div class="st10">
+                Rs.5,900 fee paid
+              </div>
+
+              <div class="sd10">
+                DGFT portal payment · Reference: RCMC2026APEDA0087
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="st10-step">
+
+            <div class="snum10 active">
+              →
+            </div>
+
+            <div class="sc">
+
+              <div class="st10">
+                APEDA Vizag verification in progress
+              </div>
+
+              <div class="sd10">
+                ETA: 12–18 working days · Contact Shri RP Naidu if delayed beyond Day 20
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="st10-step">
+
+            <div class="snum10 pending">
+              5
+            </div>
+
+            <div class="sc">
+
+              <div class="st10">
+                RCMC certificate issued · Upload here
+              </div>
+
+              <div class="sd10">
+                Download from DGFT → Upload
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- What RCMC unlocks -->
+    <div>
+
+      <div class="section-lbl10">
+        What RCMC unlocks for you
+      </div>
+
+      <div class="benefits-grid">
+
+
+        <div class="benefit-card">
+
+          <div class="bc-icon">
+            📋
+          </div>
+
+          <div class="bc-title">
+            APEDA పథకాలు &amp; సేవలు
+          </div>
+
+          <div class="bc-val">
+            వర్తించే ఎగుమతి ప్రోత్సాహక ప్రయోజనాలు
+          </div>
+
+        </div>
+
+
+        <div class="benefit-card">
+
+          <div class="bc-icon">
+            🔗
+          </div>
+
+          <div class="bc-title">
+            ట్రేస్‌నెట్
+          </div>
+
+          <div class="bc-val">
+            అర్హత ఉన్న ఆర్గానిక్ ఎగుమతులకు
+          </div>
+
+        </div>
+
+
+        <div class="benefit-card">
+
+          <div class="bc-icon">
+            🏭
+          </div>
+
+          <div class="bc-title">
+            ప్యాక్‌హౌస్ గుర్తింపు
+          </div>
+
+          <div class="bc-val">
+            APEDA గుర్తింపు కోసం దరఖాస్తు చేసుకోవచ్చు
+          </div>
+
+        </div>
+
+
+        <div class="benefit-card">
+
+          <div class="bc-icon">
+            ✈️
+          </div>
+
+          <div class="bc-title">
+            వాణిజ్య ప్రదర్శనలు
+          </div>
+
+          <div class="bc-val">
+            వర్తించే APEDA కార్యక్రమాల్లో పాల్గొనే అవకాశం
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <div class="fee10">
+
+      <span style="color:#555">
+        APEDA RCMC fee
+      </span>
+
+      <span style="color:#1a237e;font-weight:500">
+        Rs.5,900 paid · DGFT portal
+      </span>
+
+    </div>
+
+
+    <div class="dgft-note">
+      ⚡ APEDA RCMC now issued via DGFT portal only (since July 17, 2023)
+    </div>
+
+
+    <div class="cta10">
+
+      Upload RCMC Certificate · RCMC అప్‌లోడ్
+
+    </div>
+
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

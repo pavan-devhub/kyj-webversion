@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen9_IEC_Registration</title>
+</head>
+<body>
+
+<style>
+.ps9{
+  width:340px;
+  background:#1a1a2e;
+  border-radius:36px;
+  padding:12px;
+  margin:0 auto;
+  box-shadow:0 0 0 6px #0f0f1a
+}
+
+.ss9{
+  background:#f9f8f4;
+  border-radius:26px;
+  overflow:hidden;
+  min-height:650px;
+  display:flex;
+  flex-direction:column
+}
+
+.hdr9{
+  background:#0d47a1;
+  padding:12px 18px;
+  display:flex;
+  align-items:center;
+  gap:8px
+}
+
+.hdr9-title{
+  color:#fff;
+  font-size:13px;
+  font-weight:500;
+  flex:1
+}
+
+.stage2-pill{
+  background:rgba(255,255,255,0.2);
+  border-radius:10px;
+  padding:2px 8px;
+  font-size:10px;
+  color:#fff;
+  font-weight:500
+}
+
+.progress9{
+  height:3px;
+  background:#bbdefb
+}
+
+.progress9-fill{
+  height:3px;
+  background:#0d47a1;
+  width:33%
+}
+
+.body9b{
+  padding:12px 16px;
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:10px
+}
+
+.context-banner{
+  background:#e3f2fd;
+  border:0.5px solid #90caf9;
+  border-radius:10px;
+  padding:10px 14px
+}
+
+.cb-title{
+  font-size:12px;
+  font-weight:500;
+  color:#0d47a1;
+  margin-bottom:3px
+}
+
+.cb-sub{
+  font-size:10px;
+  color:#1565c0;
+  line-height:1.5
+}
+
+.cb-contact{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  margin-top:6px;
+  background:#fff;
+  border-radius:6px;
+  padding:5px 8px;
+  border:0.5px solid #90caf9
+}
+
+.cb-contact-text{
+  font-size:10px;
+  color:#0d47a1;
+  font-weight:500
+}
+
+.section-lbl{
+  font-size:10px;
+  font-weight:500;
+  color:#0d47a1;
+  text-transform:uppercase;
+  letter-spacing:0.4px;
+  margin-bottom:4px
+}
+
+.status-tracker{
+  background:#fff;
+  border:0.5px solid #e0e0e0;
+  border-radius:10px;
+  overflow:hidden
+}
+
+.st-header{
+  background:#0d47a1;
+  padding:8px 14px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+
+.st-title{
+  font-size:11px;
+  font-weight:500;
+  color:#fff
+}
+
+.st-status{
+  background:#fff3e0;
+  color:#e65100;
+  border-radius:10px;
+  padding:2px 8px;
+  font-size:10px;
+  font-weight:500
+}
+
+.st-steps{
+  padding:10px 14px;
+  display:flex;
+  flex-direction:column;
+  gap:0
+}
+
+.st-step{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  padding:7px 0;
+  border-bottom:0.5px solid #f5f5f5
+}
+
+.st-step:last-child{
+  border-bottom:none
+}
+
+.step-num{
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:10px;
+  font-weight:500;
+  flex-shrink:0;
+  margin-top:1px
+}
+
+.step-num.done{
+  background:#1b5e20;
+  color:#fff
+}
+
+.step-num.active{
+  background:#0d47a1;
+  color:#fff
+}
+
+.step-num.pending{
+  background:#f0f0f0;
+  color:#bbb;
+  border:0.5px solid #ddd
+}
+
+.step-content{
+  flex:1
+}
+
+.step-title{
+  font-size:11px;
+  font-weight:500;
+  color:#222
+}
+
+.step-detail{
+  font-size:10px;
+  color:#888;
+  margin-top:1px;
+  line-height:1.4
+}
+
+.doc-checklist{
+  background:#f9f8f4;
+  border:0.5px solid #e0e0e0;
+  border-radius:10px;
+  padding:10px 14px
+}
+
+.dc-title{
+  font-size:11px;
+  font-weight:500;
+  color:#333;
+  margin-bottom:6px
+}
+
+.dc-row{
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-size:11px;
+  color:#333;
+  margin-bottom:4px
+}
+
+.dc-icon{
+  width:16px;
+  height:16px;
+  border-radius:3px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:9px;
+  flex-shrink:0
+}
+
+.dc-icon.done{
+  background:#1b5e20;
+  color:#fff
+}
+
+.dc-icon.pending{
+  background:#f5f5f5;
+  border:0.5px solid #ddd;
+  color:#bbb
+}
+
+.annual-alert{
+  background:#fff8e1;
+  border:0.5px solid #ffe082;
+  border-radius:8px;
+  padding:8px 12px;
+  font-size:10px;
+  color:#f57f17;
+  line-height:1.5
+}
+
+.cta9b{
+  background:#0d47a1;
+  border-radius:12px;
+  padding:12px;
+  text-align:center;
+  color:#fff;
+  font-size:13px;
+  font-weight:500;
+  margin-top:2px
+}
+
+.cta9b-te{
+  font-size:10px;
+  color:rgba(255,255,255,0.8);
+  margin-top:2px
+}
+
+.fee-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#e8f5e9;
+  border-radius:8px;
+  padding:7px 12px;
+  font-size:11px
+}
+</style>
+
+<div style="padding:12px 0 8px">
+
+<div class="ps9">
+
+<div class="ss9">
+
+  <div style="background:#0d47a1;padding:10px 18px 6px;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.7)">
+    <span>10:05 AM</span>
+    <span>📶 2G 🔋</span>
+  </div>
+
+  <div class="hdr9">
+    <div style="color:rgba(255,255,255,0.8);font-size:16px">←</div>
+    <div class="hdr9-title">IEC Registration · IEC నమోదు</div>
+    <div class="stage2-pill">Stage 2 · 1 of 3</div>
+  </div>
+
+  <div class="progress9">
+    <div class="progress9-fill"></div>
+  </div>
+
+  <div class="body9b">
+
+    <!-- Context banner -->
+    <div class="context-banner">
+
+      <div class="cb-title">
+        IEC — దిగుమతి మరియు ఎగుమతి కోడ్
+      </div>
+
+      <div class="cb-sub">
+        DGFT ద్వారా ఇచ్చే 10 అంకెల జీవితకాల కోడ్. ప్రతి ఎగుమతి సరుకుకు IEC తప్పనిసరి. IEC లేకుండా ఎగుమతి చేయడం సాధ్యం కాదు. ప్రభుత్వ రుసుము: రూ.500 మాత్రమే. 1–3 పని రోజుల్లో జారీ అవుతుంది.
+      </div>
+
+      <div class="cb-contact">
+        <span style="font-size:14px">📞</span>
+
+        <div class="cb-contact-text">
+          DGFT విశాఖ · అశ్విని జీ · 0891-2746641 · dgftvizag@nic.in
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Application status tracker -->
+    <div>
+
+      <div class="section-lbl">
+        Application Status · స్థితి
+      </div>
+
+      <div class="status-tracker">
+
+        <div class="st-header">
+          <div class="st-title">
+            IEC Application — Ramu Naidu / FEED MSCS LTD
+          </div>
+
+          <div class="st-status">
+            IN PROGRESS
+          </div>
+        </div>
+
+        <div class="st-steps">
+
+          <div class="st-step">
+            <div class="step-num done">✓</div>
+
+            <div class="step-content">
+              <div class="step-title">
+                DGFT పోర్టల్ నమోదు
+              </div>
+
+              <div class="step-detail">
+                dgft.gov.in · PAN + మొబైల్ OTP ధృవీకరణ పూర్తయింది · ఖాతా సృష్టించబడింది
+              </div>
+            </div>
+          </div>
+
+          <div class="st-step">
+            <div class="step-num done">✓</div>
+
+            <div class="step-content">
+              <div class="step-title">
+                Form ANF-2A సమర్పించబడింది
+              </div>
+
+              <div class="step-detail">
+                సంస్థ రకం: Cooperative (MSCS) · బ్యాంక్ ఖాతా: APGVB లింక్ చేయబడింది · ఎగుమతి రంగాలు: Agri, Spices
+              </div>
+            </div>
+          </div>
+
+          <div class="st-step">
+            <div class="step-num done">✓</div>
+
+            <div class="step-content">
+              <div class="step-title">
+                రుసుము చెల్లింపు — రూ.500
+              </div>
+
+              <div class="step-detail">
+                Bharatkosh UPI · Reference: BK2026XXXXXX · చెల్లింపు ధృవీకరించబడింది
+              </div>
+            </div>
+          </div>
+
+          <div class="st-step">
+            <div class="step-num active">→</div>
+
+            <div class="step-content">
+              <div class="step-title">
+                DGFT వద్ద IEC ధృవీకరణలో ఉంది
+              </div>
+
+              <div class="step-detail">
+                Acknowledgment: DGFT/ANT/2026/IEC/0042 · అంచనా సమయం: 1–2 పని రోజులు
+              </div>
+            </div>
+          </div>
+
+          <div class="st-step">
+            <div class="step-num pending">5</div>
+
+            <div class="step-content">
+              <div class="step-title">
+                IEC సర్టిఫికేట్ జారీ · ఇక్కడ అప్‌లోడ్ చేయండి
+              </div>
+
+              <div class="step-detail">
+                DGFT నుండి డౌన్‌లోడ్ చేయండి → PDF అప్‌లోడ్ చేయండి
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Documents checklist -->
+    <div class="doc-checklist">
+
+      <div class="dc-title">
+        📋 అవసరమైన పత్రాలు
+      </div>
+
+      <div class="dc-row">
+        <div class="dc-icon done">✓</div>
+        PAN card (సంస్థ — FEED MSCS LTD)
+      </div>
+
+      <div class="dc-row">
+        <div class="dc-icon done">✓</div>
+        Bank certificate / cancelled cheque (APGVB)
+      </div>
+
+      <div class="dc-row">
+        <div class="dc-icon done">✓</div>
+        Address proof (నమోదిత కార్యాలయం — Gundugolanu)
+      </div>
+
+      <div class="dc-row">
+        <div class="dc-icon done">✓</div>
+        Aadhaar OTP signature (సంతకం చేసే వ్యక్తి K Raghu Vamsi)
+      </div>
+
+      <div class="dc-row">
+        <div class="dc-icon pending">○</div>
+        IEC certificate PDF (అందిన తర్వాత అప్‌లోడ్ చేయండి)
+      </div>
+
+    </div>
+
+    <!-- Fee info -->
+    <div class="fee-row">
+
+      <span style="color:#555">
+        ప్రభుత్వ రుసుము చెల్లించబడింది
+      </span>
+
+      <span style="color:#1b5e20;font-weight:500">
+        ✓ రూ.500 · Bharatkosh UPI
+      </span>
+
+    </div>
+
+    <!-- Annual alert -->
+    <div class="annual-alert">
+      ⚠️ <strong>ముఖ్యమైనది:</strong> IEC ను ప్రతి సంవత్సరం ఏప్రిల్ 1 – జూన్ 30 మధ్య అప్‌డేట్ చేయాలి. అప్‌డేట్ చేయకపోతే IEC ఆటోమేటిక్‌గా డీయాక్టివేట్ అవుతుంది మరియు అన్ని ఎగుమతులు ఆగిపోతాయి. FEED ప్లాట్‌ఫారమ్ 60 రోజుల ముందుగానే అలర్ట్ పంపుతుంది.
+    </div>
+
+    <div class="cta9b">
+      IEC సర్టిఫికేట్ అప్‌లోడ్ చేయండి · IEC అప్‌లోడ్ చేయండి
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

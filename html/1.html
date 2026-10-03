@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen1_EPM_QR_Landing</title>
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=JetBrains+Mono:wght@400..700&family=Noto+Sans+Telugu:wght@400..700&family=Plus+Jakarta+Sans:wght@500..800&display=swap">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/pages/screen-1.css">
+<script src="../assets/js/data/screens.js" defer></script>
+<script src="../assets/js/components/app-shell.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body class="screen" data-screen="1">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app">
+  <aside class="sidebar" data-sidebar></aside>
+  <div class="app__main">
+    <header class="topbar" data-topbar></header>
+
+    <main class="page" id="main">
+
+      <!-- Header + welcome band -->
+      <section class="page-head">
+        <div class="page-head__top">
+          <span class="brand-pill">FEED</span>
+          <div class="page-head__meta">
+            <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>9:42 AM</span>
+            <span class="meta-chip">📶 2G  🔋</span>
+          </div>
+        </div>
+        <div class="page-head__body">
+          <div class="page-head__titles">
+            <h1 class="page-title">Export Promotional Meeting</h1>
+            <div class="welcome">
+              <p class="welcome__top">Welcome to FEED MSCS LTD · స్వాగతం!</p>
+              <p class="welcome__sub">Anantapur District EPM · Register to start your export journey</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="grid">
+
+        <!-- DPDP consent -->
+        <div class="span-5 col col--sticky">
+          <div class="block">
+            <div class="section-label tone-orange">Step 0 — Consent (DPDP Act 2023)</div>
+            <section class="card card--tinted tone-blue consent">
+              <h2 class="card__title">Your data is protected · మీ డేటా సురక్షితం</h2>
+              <div class="checks mt-16">
+                <div class="check"><span class="check__dot"></span><span>Aadhaar number is NEVER stored — only a secure hash</span></div>
+                <div class="check"><span class="check__dot"></span><span>WhatsApp notifications (opt-in)</span></div>
+                <div class="check"><span class="check__dot"></span><span>FEED WORLD newsletter (opt-in)</span></div>
+              </div>
+              <div class="consent-check">
+                <span class="consent-check__box">✓</span>
+                <span>I agree · నేను అంగీకరిస్తున్నాను</span>
+              </div>
+            </section>
+          </div>
+
+          <!-- KRISHI COINS preview -->
+          <div class="coins coins--inline">
+            <span class="coins__emoji">🏅</span>
+            <span>You will receive <strong>+150 KRISHI COINS</strong> on registration</span>
+          </div>
+        </div>
+
+        <!-- Registration form -->
+        <section class="span-7 card form-card">
+          <div class="divider-label">─── Registration Details ───</div>
+
+          <div class="fields mt-24">
+            <div class="field">
+              <span class="field__label">Full Name · పూర్తి పేరు</span>
+              <div class="field__control is-active">
+                <span>Ramu Naidu</span>
+                <span class="field__adorn">✓</span>
+              </div>
+            </div>
+
+            <div class="field">
+              <span class="field__label">Mobile Number · మొబైల్ నంబర్</span>
+              <div class="field__control is-filled">
+                <span>+91 98765 43210</span>
+                <span class="field__adorn">OTP sent →</span>
+              </div>
+            </div>
+
+            <div class="field field--full">
+              <span class="field__label">Village · గ్రామం</span>
+              <div class="field__control is-active">
+                <span>Kalyandurgam</span>
+              </div>
+            </div>
+
+            <div class="field field--full">
+              <span class="field__label">Primary Crop · మీ పంట ఏమిటి?</span>
+              <div class="chips">
+                <span class="chip is-selected">🌶 Chilli</span>
+                <span class="chip">🍌 Banana</span>
+                <span class="chip">🥜 Groundnut</span>
+                <span class="chip">+ Other</span>
+              </div>
+            </div>
+          </div>
+
+          <a class="btn btn--primary btn--lg btn--block mt-24" href="2.html">Register · నమోదు చేయండి<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+
+          <p class="note note--center mt-16">⚡ Works offline — data syncs when connected</p>
+        </section>
+
+      </div>
+
+    </main>
+
+    <nav class="pager" data-pager aria-label="Screen navigation"></nav>
+  </div>
+</div>
+</body>
+</html>

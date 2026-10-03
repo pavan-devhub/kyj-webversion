@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen21_TraceX_QR_Creation</title>
+</head>
+<body>
+<style>
+.ps21{width:340px;background:#1a1a2e;border-radius:36px;padding:12px;margin:0 auto;box-shadow:0 0 0 6px #0f0f1a}
+.ss21{background:#f9f8f4;border-radius:26px;overflow:hidden;min-height:680px;display:flex;flex-direction:column}
+.hdr21{background:#311b92;padding:12px 18px;display:flex;align-items:center;gap:8px}
+.body21{padding:12px 16px;flex:1;display:flex;flex-direction:column;gap:10px}
+.sl21{font-size:10px;font-weight:500;color:#311b92;text-transform:uppercase;letter-spacing:0.4px;margin-bottom:3px}
+.qr-hero{background:linear-gradient(135deg,#311b92,#512da8);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:14px}
+.qr-display{width:90px;height:90px;background:#fff;border-radius:8px;padding:6px;flex-shrink:0;display:grid;grid-template-columns:repeat(8,1fr);grid-template-rows:repeat(8,1fr);gap:1px}
+.qr-cell{background:#000;border-radius:1px}
+.qr-cell.off{background:#fff}
+.qr-hero-info{flex:1;color:#fff}
+.qr-hero-title{font-size:13px;font-weight:500;margin-bottom:3px}
+.qr-hero-sub{font-size:10px;color:rgba(255,255,255,0.8);margin-bottom:5px;line-height:1.4}
+.qr-hero-id{background:rgba(255,255,255,0.2);border-radius:6px;padding:3px 7px;font-size:10px;font-family:monospace;display:inline-block}
+.chain-block{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;padding:10px 14px}
+.cb-title{font-size:11px;font-weight:500;color:#311b92;margin-bottom:8px;display:flex;align-items:center;gap:5px}
+.chain-row{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:0.5px solid #f5f5f5}
+.chain-row:last-child{border-bottom:none}
+.chain-dot{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:600;flex-shrink:0;margin-top:1px}
+.chain-info{flex:1}
+.chain-stage{font-size:10px;color:#666;font-weight:500;margin-bottom:1px}
+.chain-data{font-size:11px;color:#222;line-height:1.4}
+.chain-hash{font-size:9px;color:#888;font-family:monospace;margin-top:2px}
+.tracenet-block{background:#e8f5e9;border:0.5px solid #81c784;border-radius:10px;padding:9px 14px}
+.tn-title{font-size:11px;font-weight:500;color:#1b5e20;margin-bottom:4px}
+.tn-row{display:flex;justify-content:space-between;font-size:10px;color:#2e7d32;padding:2px 0}
+.carton-block{background:#fff;border:0.5px solid #e0e0e0;border-radius:10px;padding:10px 14px}
+.cart-title{font-size:11px;font-weight:500;color:#333;margin-bottom:7px}
+.cart-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.cart-stat{background:#f9f9f9;border-radius:7px;padding:7px 10px;text-align:center}
+.cart-val{font-size:15px;font-weight:500;color:#311b92}
+.cart-lbl{font-size:9px;color:#666;margin-top:2px}
+.cart-preview{background:#f3e5f5;border:1px dashed #ba68c8;border-radius:8px;padding:8px 12px;margin-top:7px;display:flex;align-items:center;gap:10px}
+.cart-mini-qr{width:36px;height:36px;background:#000;border-radius:4px;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(5,1fr);gap:1px;padding:2px}
+.cart-mini-cell{background:#000;border-radius:1px}
+.cart-mini-cell.off{background:#fff}
+.cart-mini-info{flex:1}
+.cart-mini-id{font-size:10px;font-weight:500;color:#311b92;font-family:monospace}
+.cart-mini-detail{font-size:9px;color:#666;margin-top:1px}
+.eu-preview{background:#e8eaf6;border:0.5px solid #9fa8da;border-radius:10px;padding:9px 14px}
+.eu-title{font-size:11px;font-weight:500;color:#1a237e;margin-bottom:5px}
+.eu-detail{font-size:10px;color:#3949ab;line-height:1.5}
+.cta21{background:#311b92;border-radius:12px;padding:12px;text-align:center;color:#fff;font-size:13px;font-weight:500}
+.cta21-te{font-size:10px;color:rgba(255,255,255,0.8);margin-top:2px}
+</style>
+<div style="padding:12px 0 8px">
+<div class="ps21">
+<div class="ss21">
+  <div style="background:#311b92;padding:10px 18px 6px;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.7)"><span>18 Nov 2026 · 11:20 AM</span><span>📶 4G 🔋</span></div>
+  <div class="hdr21">
+    <div style="color:rgba(255,255,255,0.8);font-size:16px">←</div>
+    <div style="color:#fff;font-size:13px;font-weight:500;flex:1">TraceX QR Creation</div>
+    <div style="background:rgba(255,255,255,0.2);border-radius:10px;padding:2px 8px;font-size:10px;color:#fff;font-weight:500">Stage 6 · 2 of 3</div>
+  </div>
+
+  <div class="body21">
+
+    <!-- QR Hero -->
+    <div class="qr-hero">
+      <div class="qr-display">
+        <!-- Pattern QR (decorative) -->
+        <div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell"></div><div class="qr-cell"></div>
+        <div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell off"></div><div class="qr-cell off"></div><div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell off"></div><div class="qr-cell"></div>
+        <div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div>
+        <div class="qr-cell off"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell off"></div>
+        <div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell off"></div><div class="qr-cell"></div><div class="qr-cell"></div>
+        <div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell"></div><div class="qr-cell off"></div>
+        <div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell off"></div><div class="qr-cell off"></div><div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell off"></div><div class="qr-cell"></div>
+        <div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell off"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell"></div>
+      </div>
+      <div class="qr-hero-info">
+        <div class="qr-hero-title">TraceX Lot QR Generated</div>
+        <div class="qr-hero-sub">Blockchain chain locked · 6 hops · immutable</div>
+        <div class="qr-hero-id">tracex.in/lot/FEED-ANT-26-001</div>
+      </div>
+    </div>
+
+    <!-- Chain breakdown -->
+    <div>
+      <div class="sl21">Farm-to-Port Provenance Chain</div>
+      <div class="chain-block">
+        <div class="cb-title">🔗 6-hop chain encoded in this QR</div>
+        <div class="chain-row">
+          <div class="chain-dot" style="background:#1b5e20">1</div>
+          <div class="chain-info">
+            <div class="chain-stage">ORIGIN · Stage 1</div>
+            <div class="chain-data">Farm GPS 14.6789°N, 77.6012°E · Plot ANP-001 · Sown 14 Aug 2026 · Sannam S4</div>
+            <div class="chain-hash">hash: 7a3f...8b2c</div>
+          </div>
+        </div>
+        <div class="chain-row">
+          <div class="chain-dot" style="background:#2e7d32">2</div>
+          <div class="chain-info">
+            <div class="chain-stage">GAP COMPLIANCE · Stage 1</div>
+            <div class="chain-data">90/90 GAP days logged · Last spray 18 Oct · No RED ZONE chemicals · Soil Health Card uploaded</div>
+            <div class="chain-hash">hash: c14e...92ad</div>
+          </div>
+        </div>
+        <div class="chain-row">
+          <div class="chain-dot" style="background:#004D40">3</div>
+          <div class="chain-info">
+            <div class="chain-stage">QUALITY · Stage 4</div>
+            <div class="chain-data">PHRT PASS · Eurofins NABL TC-3218 · EF-HYD-2026-8821 · ETO ND · Aflatoxin B1 1.8 μg/kg · Phyto SPQO ✓</div>
+            <div class="chain-hash">hash: f9b2...4e51</div>
+          </div>
+        </div>
+        <div class="chain-row">
+          <div class="chain-dot" style="background:#5d4037">4</div>
+          <div class="chain-info">
+            <div class="chain-stage">PACKHOUSE · Stage 6</div>
+            <div class="chain-data">Gorantla intake 17 Nov 07:42 AM · Net 1,425 kg · Grade A 980 kg → 39 cartons · 25 kg/carton</div>
+            <div class="chain-hash">hash: 3d8a...7c19</div>
+          </div>
+        </div>
+        <div class="chain-row">
+          <div class="chain-dot" style="background:#0d47a1">5</div>
+          <div class="chain-info">
+            <div class="chain-stage">COLD CHAIN · Stage 6</div>
+            <div class="chain-data">IoT log started 07:48 · Target 0–5°C · Currently 3.2°C · Sensor GP-CH-001 · 5-min interval</div>
+            <div class="chain-hash">hash: 6e29...d4f8</div>
+          </div>
+        </div>
+        <div class="chain-row">
+          <div class="chain-dot" style="background:#bf360c">6</div>
+          <div class="chain-info">
+            <div class="chain-stage">TREATMENT · Stage 6</div>
+            <div class="chain-data">ETO-Free steam 18 Nov 09:00 AM · 45 min · NO ETO chemicals · EU heightened control compliant</div>
+            <div class="chain-hash">hash: b7a1...e35c</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TraceNet upload -->
+    <div class="tracenet-block">
+      <div class="tn-title">🔗 APEDA TraceNet · Govt Upload Status (D03-16)</div>
+      <div class="tn-row"><span>Lot uploaded to TraceNet</span><span style="font-weight:500">✓ 18 Nov 11:18 AM</span></div>
+      <div class="tn-row"><span>TraceNet ref</span><span style="font-weight:500;font-family:monospace">TN-AP-2026-FEED-0087</span></div>
+      <div class="tn-row"><span>EU authorities visible</span><span style="font-weight:500">✓ Reg 2019/1793 compliant</span></div>
+    </div>
+
+    <!-- Carton count -->
+    <div>
+      <div class="sl21">Carton-Level QR Stickers</div>
+      <div class="carton-block">
+        <div class="cart-title">📦 39 EU-export cartons (Grade A · 980 kg)</div>
+        <div class="cart-grid">
+          <div class="cart-stat"><div class="cart-val">39</div><div class="cart-lbl">cartons (25 kg each)</div></div>
+          <div class="cart-stat"><div class="cart-val">39</div><div class="cart-lbl">unique QR stickers</div></div>
+        </div>
+        <div class="cart-preview">
+          <div class="cart-mini-qr">
+            <div class="cart-mini-cell"></div><div class="cart-mini-cell off"></div><div class="cart-mini-cell"></div><div class="cart-mini-cell"></div><div class="cart-mini-cell off"></div>
+            <div class="cart-mini-cell off"></div><div class="cart-mini-cell"></div><div class="cart-mini-cell"></div><div class="cart-mini-cell off"></div><div class="cart-mini-cell"></div>
+            <div class="cart-mini-cell"></div><div class="cart-mini-cell"></div><div class="cart-mini-cell off"></div><div class="cart-mini-cell"></div><div class="cart-mini-cell off"></div>
+            <div class="cart-mini-cell off"></div><div class="cart-mini-cell"></div><div class="cart-mini-cell"></div><div class="cart-mini-cell off"></div><div class="cart-mini-cell"></div>
+            <div class="cart-mini-cell"></div><div class="cart-mini-cell off"></div><div class="cart-mini-cell"></div><div class="cart-mini-cell"></div><div class="cart-mini-cell"></div>
+          </div>
+          <div class="cart-mini-info">
+            <div class="cart-mini-id">Sample: CRT-001 of 039</div>
+            <div class="cart-mini-detail">tracex.in/c/FEED-ANT-26-001/001</div>
+            <div class="cart-mini-detail">Buyer scans → full chain</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EU buyer preview -->
+    <div class="eu-preview">
+      <div class="eu-title">🇩🇪 హాంబర్గ్ కొనుగోలుదారు స్కాన్ చేసినప్పుడు చూసేది</div>
+      <div class="eu-detail">"ఈ మిర్చిని ఆంధ్రప్రదేశ్, భారతదేశంలోని కళ్యాణదుర్గం ప్రాంతం, ANP-001 పొలంలో రైతు రాము నాయుడు పండించారు. విత్తిన తేదీ: 14 ఆగస్టు 2026. 90 రోజుల GAP నిబంధనలు పాటించారు. Eurofins TC-3218 ద్వారా PHRT పరీక్ష నవంబర్ 10న క్లియర్ అయింది. ETO-Free. నవంబర్ 17 నుంచి కోల్డ్-చైన్ నిర్వహించబడింది. Gorantla APEDA ప్యాక్‌హౌస్‌లో ప్యాక్ చేయబడింది." — పూర్తి పంట వివరాలు మరియు ప్రయాణ వివరాలు హాంబర్గ్ పోర్ట్‌లో ఏ ఫోన్‌లోనైనా స్కాన్ చేసి చూడవచ్చు.</div>
+    </div>
+
+    <div class="cta21">
+      Print 39 Carton QR Stickers & Seal Cartons
+      <div class="cta21-te">Stickers ready in 4 min · Stage 6 advance → Screen 22 Sample Dispatch</div>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen12_Packhouse_Locator</title>
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=JetBrains+Mono:wght@400..700&family=Noto+Sans+Telugu:wght@400..700&family=Plus+Jakarta+Sans:wght@500..800&display=swap">
+<link rel="stylesheet" href="../assets/css/main.css">
+<link rel="stylesheet" href="../assets/css/pages/screen-12.css">
+<script src="../assets/js/data/screens.js" defer></script>
+<script src="../assets/js/components/app-shell.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body class="screen" data-screen="12">
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="app">
+  <aside class="sidebar" data-sidebar></aside>
+  <div class="app__main">
+    <header class="topbar" data-topbar></header>
+
+    <main class="page" id="main">
+
+      <!-- Page header -->
+      <section class="page-head">
+        <div class="page-head__top">
+          <a class="back-btn" href="11a.html" aria-label="Back">←</a>
+          <div class="page-head__meta">
+            <span class="meta-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>9:40 AM</span>
+            <span class="meta-chip">📶 2G 🔋</span>
+          </div>
+          <div class="page-head__top-end">
+            <span class="stage-pill">Stage 3 · 1 of 2</span>
+          </div>
+        </div>
+        <div class="page-head__body">
+          <div class="page-head__titles">
+            <h1 class="page-title">Packhouse Locator · ప్యాక్ హౌస్</h1>
+          </div>
+        </div>
+      </section>
+
+      <div class="grid">
+
+        <!-- Map + GPS details -->
+        <div class="span-7 col">
+          <section class="card card--flush map-card">
+            <div class="map">
+              <div class="map__canvas">
+                <div class="map__grid" aria-hidden="true"></div>
+                <div class="map__radius" aria-hidden="true"></div>
+                <div class="map__pin map__pin--farm">🌾</div>
+                <div class="map__pin map__pin--ph">🏭</div>
+                <div class="map__line" aria-hidden="true"></div>
+                <div class="map__dist">38 km</div>
+              </div>
+              <div class="map__legend">🌾 Farm ANP-001 · 🏭 Gorantla Packhouse · ○ 50km radius</div>
+            </div>
+
+            <!-- GPS details -->
+            <div class="gps tone-green">
+              <div class="kv-grid gps__grid">
+                <div class="kv-cell">
+                  <div class="kv-cell__k">Farm GPS (ANP-001)</div>
+                  <div class="kv-cell__v mono">14.6789°N, 77.6012°E</div>
+                </div>
+                <div class="kv-cell">
+                  <div class="kv-cell__k">Packhouse GPS</div>
+                  <div class="kv-cell__v mono">14.1234°N, 77.4567°E</div>
+                </div>
+                <div class="kv-cell gps__measured">
+                  <div class="kv-cell__k">Measured distance</div>
+                  <div class="kv-cell__v">38.4 km ✓</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="span-5 col">
+
+          <!-- Selected packhouse -->
+          <div class="block">
+            <div class="section-label tone-accent">Selected Packhouse — APEDA Registered</div>
+            <section class="card card--flush tone-accent ph-card">
+              <div class="card__strip">
+                <h2 class="card__strip-title">Gorantla APEDA Packhouse</h2>
+                <span class="tag tag--glass tag--lg">PRIMARY ✓</span>
+              </div>
+              <div class="card__body">
+                <div class="kv ph-kv">
+                  <div class="kv__row">
+                    <span class="kv__key"><span class="kv__icon">📍</span>Distance from farm</span>
+                    <span class="kv__val is-ok">38 km ✓ (limit: 50km)</span>
+                  </div>
+                  <div class="kv__row">
+                    <span class="kv__key"><span class="kv__icon">🏛️</span>APEDA Registration</span>
+                    <span class="kv__val is-ok mono">APEDA/PH/AP/2024/0187 ✓</span>
+                  </div>
+                  <div class="kv__row">
+                    <span class="kv__key"><span class="kv__icon">🌡️</span>Pre-cooling (Banana)</span>
+                    <span class="kv__val is-ok">13–14°C Forced Air ✓</span>
+                  </div>
+                  <div class="kv__row">
+                    <span class="kv__key"><span class="kv__icon">❄️</span>Cold storage (Chilli)</span>
+                    <span class="kv__val is-ok">0–5°C ✓</span>
+                  </div>
+                  <div class="kv__row">
+                    <span class="kv__key"><span class="kv__icon">⚗️</span>ETO exposure risk</span>
+                    <span class="kv__val is-ok">ETO-Free certified ✓</span>
+                  </div>
+                  <div class="kv__row">
+                    <span class="kv__key"><span class="kv__icon">📞</span>Contact</span>
+                    <span class="kv__val is-info mono">08554-XXXXXX</span>
+                  </div>
+                  <div class="kv__row">
+                    <span class="kv__key"><span class="kv__icon">📅</span>Availability</span>
+                    <span class="kv__val is-ok">Slot open: Nov–Dec 2026</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Other packhouses -->
+          <section class="card alt-card">
+            <div class="card__head">
+              <h2 class="card__title">Other packhouses in district</h2>
+            </div>
+            <div class="kv">
+              <div class="kv__row">
+                <span class="kv__key alt-name">Kurnool APEDA Cold House</span>
+                <span class="tag tone-orange">67 km ✗</span>
+              </div>
+              <div class="kv__row">
+                <span class="kv__key alt-name">Anantapur APMC Storage</span>
+                <span class="tag tone-orange">12 km · Not APEDA ✗</span>
+              </div>
+              <div class="kv__row">
+                <span class="kv__key alt-name">Dhone Horticulture PH</span>
+                <span class="tag tone-orange">54 km ✗</span>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+      <!-- Primary action -->
+      <div class="action-bar action-bar--solo">
+        <div class="action-bar__actions">
+          <a class="btn btn--primary btn--lg" href="13.html">Confirm Gorantla Packhouse · నిర్ధారించండి<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+
+    </main>
+
+    <nav class="pager" data-pager aria-label="Screen navigation"></nav>
+  </div>
+</div>
+</body>
+</html>

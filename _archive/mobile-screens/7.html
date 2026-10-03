@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ_Screen7_EU_MRL_Alert</title>
+</head>
+<body>
+<style>
+.ps7{width:340px;background:#1a1a2e;border-radius:36px;padding:12px;margin:0 auto;box-shadow:0 0 0 6px #0f0f1a}
+.ss7{background:#f9f8f4;border-radius:26px;overflow:hidden;min-height:670px;display:flex;flex-direction:column}
+.hdr7{background:#b71c1c;padding:12px 18px;display:flex;align-items:center;gap:8px}
+.hdr7-title{color:#fff;font-size:13px;font-weight:500;flex:1}
+.alert-band{background:#b71c1c;padding:8px 18px 14px;text-align:center}
+.alert-icon{font-size:30px}
+.alert-title{color:#fff;font-size:14px;font-weight:500;margin-top:2px}
+.alert-te{color:rgba(255,255,255,0.8);font-size:10px;margin-top:2px}
+.body7{padding:12px 16px;flex:1;display:flex;flex-direction:column;gap:10px}
+.detected-box{background:#ffebee;border:1px solid #ef9a9a;border-radius:10px;padding:12px 14px}
+.det-title{font-size:12px;font-weight:500;color:#b71c1c;margin-bottom:6px;display:flex;align-items:center;gap:5px}
+.det-row{display:flex;justify-content:space-between;align-items:center;font-size:11px;padding:3px 0;border-bottom:0.5px solid #ffcdd2}
+.det-row:last-child{border-bottom:none}
+.det-key{color:#555}
+.det-val{color:#b71c1c;font-weight:500}
+.tl-title{font-size:11px;font-weight:500;color:#333;margin-bottom:6px;letter-spacing:0.3px;text-transform:uppercase}
+.tl-row{display:flex;align-items:flex-start;gap:8px;padding:7px 10px;border-radius:8px;margin-bottom:4px}
+.tl-row.red{background:#ffebee;border:0.5px solid #ef9a9a}
+.tl-row.yellow{background:#fff8e1;border:0.5px solid #ffe082}
+.tl-row.green{background:#e8f5e9;border:0.5px solid #a5d6a7}
+.tl-dot{width:16px;height:16px;border-radius:50%;flex-shrink:0;margin-top:1px}
+.tl-content{flex:1}
+.tl-name{font-size:11px;font-weight:500;color:#333}
+.tl-desc{font-size:10px;color:#666;margin-top:1px;line-height:1.4}
+.substitute-box{background:#e8f5e9;border:0.5px solid #81c784;border-radius:10px;padding:10px 14px}
+.sub-title{font-size:12px;font-weight:500;color:#1b5e20;margin-bottom:6px}
+.sub-option{display:flex;align-items:center;justify-content:space-between;padding:5px 0;border-bottom:0.5px solid #c8e6c9;font-size:11px}
+.sub-option:last-child{border-bottom:none}
+.sub-name{color:#2e7d32;font-weight:500}
+.sub-tag{background:#1b5e20;color:#fff;border-radius:10px;padding:1px 7px;font-size:9px}
+.cta7-block{display:flex;gap:8px;margin-top:4px}
+.cta7-a{flex:1;background:#b71c1c;border-radius:10px;padding:10px;text-align:center;color:#fff;font-size:12px;font-weight:500}
+.cta7-b{flex:1;background:#f5f5f5;border:0.5px solid #ddd;border-radius:10px;padding:10px;text-align:center;color:#333;font-size:12px;font-weight:500}
+.rasff-note{font-size:10px;color:#b71c1c;text-align:center;padding:2px 0 4px}
+</style>
+<div style="padding:12px 0 8px">
+<div class="ps7">
+<div class="ss7">
+  <div style="background:#b71c1c;padding:10px 18px 6px;display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.7)"><span>8:14 AM</span><span>📶 2G 🔋</span></div>
+  <div class="hdr7">
+    <div style="color:rgba(255,255,255,0.8);font-size:16px">←</div>
+    <div class="hdr7-title">EU MRL Alert (D-0088)</div>
+    <div style="font-size:14px">⚠️</div>
+  </div>
+
+  <!-- Alert band -->
+  <div class="alert-band">
+    <div class="alert-icon">🚫</div>
+    <div class="alert-title">Pesticide Not Safe for EU Export!</div>
+    <div class="alert-te">మీరు ఎంచుకున్న పురుగుమందు EU లో నిషేధించబడింది</div>
+  </div>
+
+  <div class="body7">
+
+    <!-- Detected chemical -->
+    <div class="detected-box">
+      <div class="det-title">🔴 RED ZONE chemical detected · అప్రమత్తత</div>
+      <div class="det-row"><span class="det-key">Chemical entered</span><span class="det-val">Chlorpyrifos (Dursban)</span></div>
+      <div class="det-row"><span class="det-key">Status in EU</span><span class="det-val">BANNED (since 2020)</span></div>
+      <div class="det-row"><span class="det-key">EU MRL (Chilli)</span><span class="det-val">0.01 mg/kg (effectively zero)</span></div>
+      <div class="det-row"><span class="det-key">Your crop</span><span class="det-val">Chilli S4 · Plot ANP-001</span></div>
+      <div class="det-row"><span class="det-key">RASFF risk</span><span class="det-val" style="color:#b71c1c">⛔ CONSIGNMENT REJECTION</span></div>
+      <div style="font-size:10px;color:#b71c1c;margin-top:6px">స్ప్రే చేస్తే → PHRT విఫలమవుతుంది → Stage 4 నిలిచిపోతుంది → FIRC పొందడం సాధ్యం కాదు. శుభ్రమైన ఉత్పత్తితోనే మీ ఆదాయం రక్షించబడుతుంది.</div>
+    </div>
+
+    <!-- Traffic light system -->
+    <div class="traffic-section">
+      <div class="tl-title">FEED Pesticide Traffic Light · వర్గీకరణ</div>
+      <div class="tl-row red">
+        <div class="tl-dot" style="background:#c62828"></div>
+        <div class="tl-content">
+          <div class="tl-name">🔴 RED — Never use for EU export</div>
+          <div class="tl-desc">Chlorpyrifos · Acephate · Profenofos · ETO · Carbofuran · Monocrotophos</div>
+        </div>
+      </div>
+      <div class="tl-row yellow">
+        <div class="tl-dot" style="background:#f9a825"></div>
+        <div class="tl-content">
+          <div class="tl-name">🟡 YELLOW — Use with strict PHI</div>
+          <div class="tl-desc">Cypermethrin (PHI 10+ days) · Lambda-cyhalothrin · Imidacloprid (indoor only)</div>
+        </div>
+      </div>
+      <div class="tl-row green">
+        <div class="tl-dot" style="background:#2e7d32"></div>
+        <div class="tl-content">
+          <div class="tl-name">🟢 GREEN — EU + BharatGAP approved</div>
+          <div class="tl-desc">Neem Oil · Bacillus thuringiensis · Spinosad · Trichoderma · Beauveria</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Substitutes -->
+    <div class="substitute-box">
+      <div class="sub-title">✅ Recommended substitutes for Chilli pests</div>
+      <div class="sub-option">
+        <span class="sub-name">Spinosad (Tracer / Closer)</span>
+        <span class="sub-tag">EU APPROVED</span>
+      </div>
+      <div class="sub-option">
+        <span class="sub-name">Neem Azadirachtin (Econeem)</span>
+        <span class="sub-tag">ORGANIC</span>
+      </div>
+      <div class="sub-option">
+        <span class="sub-name">Beauveria bassiana (BioJodi)</span>
+        <span class="sub-tag">BIOLOGICAL</span>
+      </div>
+    </div>
+
+    <!-- CTAs -->
+    <div class="cta7-block">
+      <div class="cta7-a">Switch Chemical · మార్చండి</div>
+      <div class="cta7-b">Call FCDA · సహాయం</div>
+    </div>
+    
+  </div>
+</div>
+</div>
+</div>
+</body>
+</html>

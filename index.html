@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KYJ Screens · Krushi Yeva Jayate</title>
+<meta name="description" content="KYJ (Krushi Yeva Jayate) — all 30 farmer-journey screens in web layout.">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=JetBrains+Mono:wght@400..700&family=Noto+Sans+Telugu:wght@400..700&family=Plus+Jakarta+Sans:wght@500..800&display=swap">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/pages/home.css">
+<script src="assets/js/pages/home.js" defer></script>
+</head>
+<body class="home">
+
+<a class="skip-link" href="#screens">Skip to screens</a>
+
+<!-- Top navigation -->
+<header class="home-nav">
+  <div class="home-nav__inner">
+    <a class="home-brand" href="index.html">
+      <img src="assets/icons/logo.svg" alt="" width="40" height="40">
+      <span class="home-brand__text">
+        <strong>KYJ</strong>
+        <span>Krushi Yeva Jayate</span>
+      </span>
+    </a>
+    <nav class="home-nav__links" aria-label="Quick links">
+      <a href="#screens">Screens</a>
+      <a href="#journey">Journey</a>
+      <a class="home-nav__cta" href="html/1.html">Open first screen</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="home-hero">
+    <div class="home-hero__inner">
+      <div class="home-hero__copy">
+        <span class="home-eyebrow"><span class="home-eyebrow__dot"></span>FEED MSCS LTD · Export Cooperative</span>
+        <h1 class="home-title">KYJ <span>Screens</span></h1>
+        <p class="home-telugu">కృషి యేవ జయతే</p>
+        <p class="home-lead">The complete Farm-to-Foreign farmer journey — from the EPM QR landing to KYJ-1 Platinum certification. Every screen, redesigned for the web. Pick any screen below to open it.</p>
+
+        <div class="home-actions">
+          <a class="btn btn--primary btn--lg" href="html/1.html">Start the journey<svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <a class="btn btn--secondary btn--lg" href="html/27.html">👑 Jump to the finale</a>
+        </div>
+
+        <dl class="home-stats">
+          <div><dt>Screens</dt><dd>30</dd></div>
+          <div><dt>Stages</dt><dd>9</dd></div>
+          <div><dt>Stage badges</dt><dd>7</dd></div>
+        </dl>
+      </div>
+
+      <!-- Journey overview -->
+      <aside class="journey-card" id="journey" aria-label="KYJ journey stages">
+        <div class="journey-card__head">
+          <span>The KYJ journey</span>
+          <span class="journey-card__badge">Stage 0 → 8</span>
+        </div>
+        <ol class="journey-list" role="list">
+          <li><a href="#stage-0"><span class="journey-list__num">0</span><span class="journey-list__name">EPM &amp; Onboarding</span><span class="journey-list__count">4</span></a></li>
+          <li><a href="#stage-1"><span class="journey-list__num">1</span><span class="journey-list__name">Farm Ready</span><span class="journey-list__count">5</span></a></li>
+          <li><a href="#stage-2"><span class="journey-list__num">2</span><span class="journey-list__name">Registered</span><span class="journey-list__count">4</span></a></li>
+          <li><a href="#stage-3"><span class="journey-list__num">3</span><span class="journey-list__name">Packhouse</span><span class="journey-list__count">3</span></a></li>
+          <li><a href="#stage-4"><span class="journey-list__num">4</span><span class="journey-list__name">Quality</span><span class="journey-list__count">3</span></a></li>
+          <li><a href="#stage-5"><span class="journey-list__num">5</span><span class="journey-list__name">Buyer</span><span class="journey-list__count">3</span></a></li>
+          <li><a href="#stage-6"><span class="journey-list__num">6</span><span class="journey-list__name">Sample</span><span class="journey-list__count">4</span></a></li>
+          <li><a href="#stage-7"><span class="journey-list__num">7</span><span class="journey-list__name">FIRC ★</span><span class="journey-list__count">3</span></a></li>
+          <li class="is-final"><a href="#stage-8"><span class="journey-list__num">8</span><span class="journey-list__name">KYJ-1 Certified</span><span class="journey-list__count">1</span></a></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Screens -->
+  <section class="home-screens" id="screens">
+    <div class="home-container">
+
+      <div class="toolbar">
+        <div class="toolbar__title">
+          <h2>All screens</h2>
+          <p>Click a file to open it. Use <kbd>←</kbd> <kbd>→</kbd> inside a screen to move through the journey.</p>
+        </div>
+        <label class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          <span class="sr-only">Search screens</span>
+          <input type="search" placeholder="Search by file or name…  e.g. 8a, FIRC, badge" data-search autocomplete="off">
+          <kbd class="search__kbd">/</kbd>
+        </label>
+      </div>
+
+      <div class="filters" role="toolbar" aria-label="Filter by stage">
+        <button type="button" class="filter is-active" data-filter="all">All</button>
+        <button type="button" class="filter" data-filter="0">Stage 0</button>
+        <button type="button" class="filter" data-filter="1">Stage 1</button>
+        <button type="button" class="filter" data-filter="2">Stage 2</button>
+        <button type="button" class="filter" data-filter="3">Stage 3</button>
+        <button type="button" class="filter" data-filter="4">Stage 4</button>
+        <button type="button" class="filter" data-filter="5">Stage 5</button>
+        <button type="button" class="filter" data-filter="6">Stage 6</button>
+        <button type="button" class="filter" data-filter="7">Stage 7</button>
+        <button type="button" class="filter" data-filter="8">Stage 8</button>
+        <button type="button" class="filter filter--badge" data-filter="badge">🏅 Badges</button>
+      </div>
+
+      <!-- Stage 0 -->
+      <section class="stage-group" id="stage-0" data-stage="0">
+        <header class="stage-group__head">
+          <span class="stage-group__num">00</span>
+          <div>
+            <h3 class="stage-group__title">EPM &amp; Onboarding</h3>
+            <p class="stage-group__meta">Stage 0 · 4 screens</p>
+          </div>
+        </header>
+        <div class="screen-grid">
+          <a class="screen-btn" href="html/1.html" style="--c:#1d6b3e"><span class="screen-btn__id">1</span><span class="screen-btn__body"><span class="screen-btn__file">1.html</span><span class="screen-btn__title">EPM QR Landing</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/2.html" style="--c:#2e7d32"><span class="screen-btn__id">2</span><span class="screen-btn__body"><span class="screen-btn__file">2.html</span><span class="screen-btn__title">FEED CARD Basic Issued</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/3.html" style="--c:#0d47a1"><span class="screen-btn__id">3</span><span class="screen-btn__body"><span class="screen-btn__file">3.html</span><span class="screen-btn__title">Farmer Consent Agreement</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/4.html" style="--c:#4a148c"><span class="screen-btn__id">4</span><span class="screen-btn__body"><span class="screen-btn__file">4.html</span><span class="screen-btn__title">Export Readiness Score</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        </div>
+      </section>
+
+      <!-- Stage 1 -->
+      <section class="stage-group" id="stage-1" data-stage="1">
+        <header class="stage-group__head">
+          <span class="stage-group__num">01</span>
+          <div>
+            <h3 class="stage-group__title">Farm Ready</h3>
+            <p class="stage-group__meta">Stage 1 · 5 screens</p>
+          </div>
+        </header>
+        <div class="screen-grid">
+          <a class="screen-btn" href="html/5.html" style="--c:#2e7d32"><span class="screen-btn__id">5</span><span class="screen-btn__body"><span class="screen-btn__file">5.html</span><span class="screen-btn__title">Farm Plot GPS Registration</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/6.html" style="--c:#2e7d32"><span class="screen-btn__id">6</span><span class="screen-btn__body"><span class="screen-btn__file">6.html</span><span class="screen-btn__title">GAP Activity Log</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/7.html" style="--c:#b71c1c"><span class="screen-btn__id">7</span><span class="screen-btn__body"><span class="screen-btn__file">7.html</span><span class="screen-btn__title">EU MRL Alert</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/8.html" style="--c:#4e342e"><span class="screen-btn__id">8</span><span class="screen-btn__body"><span class="screen-btn__file">8.html</span><span class="screen-btn__title">Soil Health Card Upload</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn is-badge" href="html/8a.html" style="--c:#1b5e20"><span class="screen-btn__id">8a</span><span class="screen-btn__body"><span class="screen-btn__file">8a.html</span><span class="screen-btn__title">Stage 1 Badge · Polam Siddham</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        </div>
+      </section>
+
+      <!-- Stage 2 -->
+      <section class="stage-group" id="stage-2" data-stage="2">
+        <header class="stage-group__head">
+          <span class="stage-group__num">02</span>
+          <div>
+            <h3 class="stage-group__title">Registered</h3>
+            <p class="stage-group__meta">Stage 2 · 4 screens</p>
+          </div>
+        </header>
+        <div class="screen-grid">
+          <a class="screen-btn" href="html/9.html" style="--c:#0d47a1"><span class="screen-btn__id">9</span><span class="screen-btn__body"><span class="screen-btn__file">9.html</span><span class="screen-btn__title">IEC Registration</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/10.html" style="--c:#1a237e"><span class="screen-btn__id">10</span><span class="screen-btn__body"><span class="screen-btn__file">10.html</span><span class="screen-btn__title">APEDA RCMC</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/11.html" style="--c:#283593"><span class="screen-btn__id">11</span><span class="screen-btn__body"><span class="screen-btn__file">11.html</span><span class="screen-btn__title">FSSAI Stage 2 Gate</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn is-badge" href="html/11a.html" style="--c:#0d47a1"><span class="screen-btn__id">11a</span><span class="screen-btn__body"><span class="screen-btn__file">11a.html</span><span class="screen-btn__title">Stage 2 Badge · Namodu</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        </div>
+      </section>
+
+      <!-- Stage 3 -->
+      <section class="stage-group" id="stage-3" data-stage="3">
+        <header class="stage-group__head">
+          <span class="stage-group__num">03</span>
+          <div>
+            <h3 class="stage-group__title">Packhouse</h3>
+            <p class="stage-group__meta">Stage 3 · 3 screens</p>
+          </div>
+        </header>
+        <div class="screen-grid">
+          <a class="screen-btn" href="html/12.html" style="--c:#e65100"><span class="screen-btn__id">12</span><span class="screen-btn__body"><span class="screen-btn__file">12.html</span><span class="screen-btn__title">Packhouse Locator</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/13.html" style="--c:#bf360c"><span class="screen-btn__id">13</span><span class="screen-btn__body"><span class="screen-btn__file">13.html</span><span class="screen-btn__title">Packing &amp; Labelling</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn is-badge" href="html/13a.html" style="--c:#bf360c"><span class="screen-btn__id">13a</span><span class="screen-btn__body"><span class="screen-btn__file">13a.html</span><span class="screen-btn__title">Stage 3 Badge · PackHouse</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        </div>
+      </section>
+
+      <!-- Stage 4 -->
+      <section class="stage-group" id="stage-4" data-stage="4">
+        <header class="stage-group__head">
+          <span class="stage-group__num">04</span>
+          <div>
+            <h3 class="stage-group__title">Quality</h3>
+            <p class="stage-group__meta">Stage 4 · 3 screens</p>
+          </div>
+        </header>
+        <div class="screen-grid">
+          <a class="screen-btn" href="html/14.html" style="--c:#004d40"><span class="screen-btn__id">14</span><span class="screen-btn__body"><span class="screen-btn__file">14.html</span><span class="screen-btn__title">NABL Lab Booking</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/15.html" style="--c:#1b5e20"><span class="screen-btn__id">15</span><span class="screen-btn__body"><span class="screen-btn__file">15.html</span><span class="screen-btn__title">PHRT Sample Result</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn is-badge" href="html/16.html" style="--c:#006064"><span class="screen-btn__id">16</span><span class="screen-btn__body"><span class="screen-btn__file">16.html</span><span class="screen-btn__title">COA · Phytosanitary · Stage 4 Badge</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        </div>
+      </section>
+
+      <!-- Stage 5 -->
+      <section class="stage-group" id="stage-5" data-stage="5">
+        <header class="stage-group__head">
+          <span class="stage-group__num">05</span>
+          <div>
+            <h3 class="stage-group__title">Buyer</h3>
+            <p class="stage-group__meta">Stage 5 · 3 screens</p>
+          </div>
+        </header>
+        <div class="screen-grid">
+          <a class="screen-btn" href="html/17.html" style="--c:#1a237e"><span class="screen-btn__id">17</span><span class="screen-btn__body"><span class="screen-btn__file">17.html</span><span class="screen-btn__title">VISWARUPAM Buyer Match</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/s18.html" style="--c:#283593"><span class="screen-btn__id">s18</span><span class="screen-btn__body"><span class="screen-btn__file">s18.html</span><span class="screen-btn__title">BSM Scheduler</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn is-badge" href="html/s19.html" style="--c:#1a237e"><span class="screen-btn__id">s19</span><span class="screen-btn__body"><span class="screen-btn__file">s19.html</span><span class="screen-btn__title">MoA Signing · Stage 5 Badge</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        </div>
+      </section>
+
+      <!-- Stage 6 -->
+      <section class="stage-group" id="stage-6" data-stage="6">
+        <header class="stage-group__head">
+          <span class="stage-group__num">06</span>
+          <div>
+            <h3 class="stage-group__title">Sample</h3>
+            <p class="stage-group__meta">Stage 6 · 4 screens</p>
+          </div>
+        </header>
+        <div class="screen-grid">
+          <a class="screen-btn" href="html/s20.html" style="--c:#5d4037"><span class="screen-btn__id">s20</span><span class="screen-btn__body"><span class="screen-btn__file">s20.html</span><span class="screen-btn__title">CFC Intake &amp; Grading</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/s21.html" style="--c:#311b92"><span class="screen-btn__id">s21</span><span class="screen-btn__body"><span class="screen-btn__file">s21.html</span><span class="screen-btn__title">TraceX QR Creation</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/22.html" style="--c:#01579b"><span class="screen-btn__id">22</span><span class="screen-btn__body"><span class="screen-btn__file">22.html</span><span class="screen-btn__title">Sample Dispatch</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn is-badge" href="html/22a.html" style="--c:#01579b"><span class="screen-btn__id">22a</span><span class="screen-btn__body"><span class="screen-btn__file">22a.html</span><span class="screen-btn__title">Stage 6 Badge · Namuna</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        </div>
+      </section>
+
+      <!-- Stage 7 -->
+      <section class="stage-group" id="stage-7" data-stage="7">
+        <header class="stage-group__head">
+          <span class="stage-group__num">07</span>
+          <div>
+            <h3 class="stage-group__title">FIRC ★</h3>
+            <p class="stage-group__meta">Stage 7 · 3 screens</p>
+          </div>
+        </header>
+        <div class="screen-grid">
+          <a class="screen-btn" href="html/23.html" style="--c:#0d2147"><span class="screen-btn__id">23</span><span class="screen-btn__body"><span class="screen-btn__file">23.html</span><span class="screen-btn__title">CHA Assignment · 12-Doc Checklist</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/24.html" style="--c:#00695c"><span class="screen-btn__id">24</span><span class="screen-btn__body"><span class="screen-btn__file">24.html</span><span class="screen-btn__title">Shipping Bill · ICEGATE</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+          <a class="screen-btn" href="html/25.html" style="--c:#1b5e20"><span class="screen-btn__id">25</span><span class="screen-btn__body"><span class="screen-btn__file">25.html</span><span class="screen-btn__title">FIRC Upload · Two-Track</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        </div>
+      </section>
+
+      <!-- Stage 8 -->
+      <section class="stage-group stage-group--final" id="stage-8" data-stage="8">
+        <header class="stage-group__head">
+          <span class="stage-group__num">08</span>
+          <div>
+            <h3 class="stage-group__title">KYJ-1 Certified</h3>
+            <p class="stage-group__meta">Stage 8 · 1 screen</p>
+          </div>
+        </header>
+        <div class="screen-grid">
+          <a class="screen-btn screen-btn--platinum is-badge" href="html/27.html" style="--c:#37474f"><span class="screen-btn__id">27</span><span class="screen-btn__body"><span class="screen-btn__file">27.html</span><span class="screen-btn__title">KYJ-1 Platinum Certification</span></span><span class="screen-btn__go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+        </div>
+      </section>
+
+      <div class="empty" data-empty hidden>
+        <span class="empty__icon">🔍</span>
+        <p><strong>No screens match your search.</strong></p>
+        <p>Try a file number like <span class="mono">13a</span> or a word like <em>badge</em>.</p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="home-footer">
+  <div class="home-container home-footer__inner">
+    <span class="home-footer__brand"><img src="assets/icons/favicon.svg" alt="" width="22" height="22">KYJ · Krushi Yeva Jayate</span>
+    <span>30 screens · Web layout · FEED MSCS LTD</span>
+  </div>
+</footer>
+
+</body>
+</html>
