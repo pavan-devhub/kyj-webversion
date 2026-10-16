@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="currentColor">
+  <!-- Ascending Bar Chart with Rounded Tops -->
+  <rect x="4" y="20" width="5.5" height="12" rx="1.6"/>
+  <rect x="13.5" y="13" width="5.5" height="19" rx="1.6"/>
+  <rect x="23" y="5" width="5.5" height="27" rx="1.6"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="currentColor">
+  <!-- Ribbon Tails at the bottom -->
+  <path d="M12 21.5L9.5 33l5-2.5 3.5 1.8v-9.5" fill="currentColor" opacity="0.85"/>
+  <path d="M24 21.5L26.5 33l-5-2.5-3.5 1.8v-9.5" fill="currentColor" opacity="0.85"/>
+  <!-- Rosette / Scalloped Medal Circle -->
+  <circle cx="18" cy="14" r="11" fill="none" stroke="currentColor" stroke-width="2.2"/>
+  <circle cx="18" cy="14" r="9" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 1.5"/>
+  <!-- Central 5-Point Star -->
+  <polygon points="18,8 20.2,12.4 25,13.1 21.5,16.5 22.3,21.3 18,19 13.7,21.3 14.5,16.5 11,13.1 15.8,12.4" fill="currentColor"/>
+</svg>

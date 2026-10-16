@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="currentColor">
+  <!-- Isometric / Perspective Map Grid Base -->
+  <path d="M4 23l14 8 14-8-14-8-14 8z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M11 19l14 8M25 19l-14 8" stroke="currentColor" stroke-width="1.8" stroke-dasharray="2 2" stroke-linecap="round"/>
+  <!-- Location Pin in center -->
+  <path d="M18 3c-4.4 0-8 3.6-8 8 0 5.8 8 13 8 13s8-7.2 8-13c0-4.4-3.6-8-8-8z" fill="currentColor"/>
+  <!-- Pin Inner Hole -->
+  <circle cx="18" cy="11" r="2.8" fill="#fff"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" fill="currentColor">
+  <!-- Ground / Soil Curve -->
+  <path d="M7 30c5-2 17-2 22 0" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Central Stem -->
+  <path d="M18 29V17" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Left Sprouting Leaf -->
+  <path d="M18 19c-6-1-12-6-12-12 5 0 11 5 12 12z" fill="currentColor"/>
+  <!-- Right Sprouting Leaf -->
+  <path d="M18 17c6-1 12-6 12-12-5 0-11 5-12 12z" fill="currentColor"/>
+  <!-- Soil Mound / Seed Base -->
+  <ellipse cx="18" cy="29.5" rx="3.5" ry="1.5" fill="currentColor"/>
+</svg>

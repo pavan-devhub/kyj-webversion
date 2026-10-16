@@ -1,0 +1,443 @@
+/* ==========================================================================
+   Stage 1 showcase: "Farm Ready" hero panel + numbered screen list.
+   Measured from a 1672 × 941 design: every size is N × --u, where --u is 1px
+   at that width and scales with the block (it's a size container).
+   ========================================================================== */
+
+.s1 {
+  --s1-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --s1-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --s1-sans: "Nunito Sans", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  flex: 1;
+  min-width: 0;
+  container-type: inline-size;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(63, 110, 20, 0.1);
+  box-shadow: 0 6px 24px rgba(16, 26, 53, 0.05);
+  scroll-margin-top: 90px;
+}
+
+.s1__defs {
+  position: absolute;
+}
+
+.s1__grid {
+  --u: calc(100cqw / 1672);
+  /* The list panel's rounded left edge overlaps the hero by this much */
+  --s1-tuck: calc(30 * var(--u));
+
+  display: grid;
+  grid-template-columns: 836fr 836fr;
+  min-height: calc(941 * var(--u));
+}
+
+/* ---------- Hero panel ---------- */
+
+.s1-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-right: calc(-1 * var(--s1-tuck));
+  padding-right: var(--s1-tuck);
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(227, 233, 194, 0) calc(100% - var(--s1-tuck) - 150 * var(--u)), #E3E9C2 calc(100% - var(--s1-tuck))),
+    linear-gradient(180deg, #FEF8E7 0, #FDF8E6 calc(380 * var(--u)), #EEF0D0 calc(640 * var(--u)), #E1E7BF calc(900 * var(--u)));
+}
+
+.s1-hero__corner,
+.s1-hero__wave,
+.s1-hero__edge,
+.s1-hero__leaves,
+.s1-hero__sprig,
+.s1-hero__base {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+}
+
+.s1-hero__corner {
+  top: 0;
+  left: 0;
+  width: calc(260 * var(--u));
+}
+
+.s1-hero__wave {
+  top: calc(228 * var(--u));
+  left: calc(570 * var(--u));
+  width: calc(290 * var(--u));
+  fill: #E5EAC4;
+}
+
+.s1-hero__edge {
+  top: calc(400 * var(--u));
+  left: 0;
+  width: calc(80 * var(--u));
+  fill: #E2E8C1;
+}
+
+.s1-hero__leaves {
+  top: calc(578 * var(--u));
+  left: 0;
+  width: calc(70 * var(--u));
+}
+
+/* Peeks out from behind the photo's right edge */
+.s1-hero__sprig {
+  top: calc(684 * var(--u));
+  left: calc(752 * var(--u));
+  width: calc(100 * var(--u));
+}
+
+.s1-sprig__stem {
+  fill: none;
+  stroke: #4C7E22;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.s1-sprig__vein {
+  fill: none;
+  stroke: rgba(226, 240, 196, 0.75);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+}
+
+.s1-hero__base {
+  bottom: 0;
+  left: 0;
+  width: calc(100% - var(--s1-tuck));
+  height: calc(140 * var(--u));
+}
+
+.s1-hero__content {
+  position: relative;
+  z-index: 2;
+  padding: calc(82 * var(--u)) calc(40 * var(--u)) 0 calc(68 * var(--u));
+}
+
+.s1-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: calc(16 * var(--u));
+  margin: 0;
+  font-family: var(--s1-sans);
+  font-size: max(10.5px, calc(21 * var(--u)));
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: 0.145em;
+  text-transform: uppercase;
+  color: #A9622A;
+}
+
+/* Cancel the tracking after the last letter so both rules sit evenly */
+.s1-hero__eyebrow-text {
+  margin-right: -0.145em;
+}
+
+.s1-hero__rule {
+  width: calc(56 * var(--u));
+  height: max(1.5px, calc(3 * var(--u)));
+  border-radius: 2px;
+  background: #B06A2C;
+}
+
+.s1-hero__title {
+  margin: calc(14 * var(--u)) 0 0;
+  font-family: var(--s1-display);
+  font-size: calc(126 * var(--u));
+  font-weight: 780;
+  font-variation-settings: "opsz" 72;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: #161D1A;
+  white-space: nowrap;
+}
+
+.s1-hero__accent {
+  position: relative;
+  display: inline-block;
+  color: #3F6E14;
+}
+
+/* The italic cut, stood upright, gives the calligraphic "Ready" of the design */
+.s1-hero__accent-text {
+  display: inline-block;
+  font-size: 1.05em;
+  font-style: italic;
+  font-weight: 700;
+  transform: skewX(10deg);
+  transform-origin: 0 100%;
+}
+
+.s1-hero__title-sprig {
+  position: absolute;
+  top: calc(-46 * var(--u));
+  right: calc(-3 * var(--u));
+  width: calc(85 * var(--u));
+  height: auto;
+}
+
+.s1-hero__swoosh {
+  position: absolute;
+  top: calc(127 * var(--u));
+  left: calc(117 * var(--u));
+  width: calc(180 * var(--u));
+  height: calc(24 * var(--u));
+  fill: #4A7A1E;
+}
+
+.s1-hero__subtitle {
+  margin: calc(15 * var(--u)) 0 0;
+  font-family: var(--s1-sans);
+  font-size: max(13px, calc(30.5 * var(--u)));
+  font-weight: 400;
+  line-height: 1.345;
+  color: #26261F;
+}
+
+.s1-hero__media {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-height: calc(509 * var(--u));
+  margin: calc(32 * var(--u)) calc(44 * var(--u)) calc(50 * var(--u)) calc(56 * var(--u));
+  overflow: hidden;
+  border-radius: calc(24 * var(--u));
+  background: #CFE2B8;
+  box-shadow: 0 calc(14 * var(--u)) calc(32 * var(--u)) rgba(62, 74, 20, 0.16);
+}
+
+.s1-hero__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- List panel ---------- */
+
+.s1-list {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  padding: calc(41.5 * var(--u)) calc(56 * var(--u)) calc(27 * var(--u)) calc(72 * var(--u));
+  overflow: hidden;
+  border-radius: calc(30 * var(--u)) 0 0 calc(30 * var(--u));
+  background: #FDFDFB;
+  box-shadow: calc(-8 * var(--u)) 0 calc(28 * var(--u)) rgba(90, 100, 50, 0.08);
+}
+
+.s1-list__top,
+.s1-list__bottom {
+  position: absolute;
+  right: 0;
+  height: auto;
+  pointer-events: none;
+}
+
+.s1-list__top {
+  top: 0;
+  width: calc(140 * var(--u));
+}
+
+.s1-list__bottom {
+  bottom: 0;
+  width: calc(230 * var(--u));
+}
+
+.s1-list__heading {
+  position: relative;
+  margin: 0;
+  font-family: var(--s1-serif);
+  font-size: calc(88 * var(--u));
+  font-style: italic;
+  font-weight: 700;
+  font-variation-settings: "opsz" 60;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: #0E131B;
+  white-space: nowrap;
+}
+
+.s1-list__accent {
+  color: #3F7016;
+}
+
+.s1-list__rule {
+  width: calc(72 * var(--u));
+  height: max(2px, calc(4 * var(--u)));
+  margin: calc(10 * var(--u)) 0 0 calc(4 * var(--u));
+  border-radius: 2px;
+  background: #4D7B23;
+}
+
+.s1-list__rows {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: calc(18 * var(--u));
+}
+
+.s1-row {
+  --s1-accent: #3F7C12;
+  --s1-divider: #B4CF98;
+
+  display: grid;
+  flex: 1 1 auto;
+  grid-template-columns: calc(135 * var(--u)) max(1.5px, calc(3.5 * var(--u))) 1fr;
+  align-items: center;
+  padding: calc(32 * var(--u)) 0 calc(41 * var(--u)) calc(5 * var(--u));
+  border-bottom: max(1px, calc(1.5 * var(--u))) solid #E4E5E2;
+  color: inherit;
+  text-decoration: none;
+}
+
+.s1-row:last-child {
+  border-bottom: 0;
+}
+
+/* A search filter can leave fewer than five rows: keep them at their design height */
+.s1-list__rows:not(:has(> :nth-child(5))) > .s1-row {
+  flex: none;
+}
+
+.s1-row--orange {
+  --s1-accent: #EF7A1A;
+  --s1-divider: #F5BE8C;
+}
+
+.s1-row--red {
+  --s1-accent: #E8204B;
+  --s1-divider: #F2A5B4;
+}
+
+.s1-row--purple {
+  --s1-accent: #5A23E0;
+  --s1-divider: #BBAEF0;
+}
+
+.s1-row--amber {
+  --s1-accent: #EA9616;
+  --s1-divider: #F5CD80;
+}
+
+.s1-row__num {
+  font-family: var(--s1-sans);
+  font-size: calc(88 * var(--u));
+  font-weight: 500;
+  line-height: 0.85;
+  font-stretch: 88%;
+  letter-spacing: -0.02em;
+  color: transparent;
+  -webkit-text-stroke: max(1px, calc(3 * var(--u))) var(--s1-accent);
+  transition: color 0.2s ease;
+}
+
+.s1-row__divider {
+  height: calc(75 * var(--u));
+  border-radius: 2px;
+  background: var(--s1-divider);
+}
+
+.s1-row__text {
+  min-width: 0;
+  margin-left: calc(45 * var(--u));
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.s1-row__title {
+  margin: 0;
+  font-family: var(--s1-sans);
+  font-size: max(14px, calc(33 * var(--u)));
+  font-stretch: 86%;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0F1218;
+}
+
+.s1-row__desc {
+  margin: calc(7 * var(--u)) 0 0;
+  font-family: var(--s1-sans);
+  font-size: max(12px, calc(25.5 * var(--u)));
+  font-stretch: 90%;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #3E4859;
+}
+
+.s1-row:hover .s1-row__num {
+  color: var(--s1-accent);
+}
+
+.s1-row:hover .s1-row__text {
+  transform: translateX(calc(6 * var(--u)));
+}
+
+.s1-row:focus-visible {
+  outline: 2px solid var(--s1-accent);
+  outline-offset: -2px;
+  border-radius: 8px;
+}
+
+/* ---------- Narrow: stack the hero above the list ---------- */
+
+@container (max-width: 759px) {
+  .s1__grid {
+    --u: min(calc(100cqw / 836), 0.6px);
+
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .s1-hero {
+    margin: 0 0 calc(-1 * var(--s1-tuck));
+    padding: 0 0 var(--s1-tuck);
+    background:
+      linear-gradient(180deg, #FEF8E7 0, #FDF8E6 calc(380 * var(--u)), #EEF0D0 calc(640 * var(--u)), #E1E7BF calc(900 * var(--u)));
+  }
+
+  .s1-hero__base {
+    bottom: var(--s1-tuck);
+    width: 100%;
+  }
+
+  .s1-hero__wave,
+  .s1-hero__sprig {
+    display: none;
+  }
+
+  .s1-hero__media {
+    min-height: calc(420 * var(--u));
+  }
+
+  .s1-list {
+    padding: calc(48 * var(--u)) calc(40 * var(--u)) calc(27 * var(--u));
+    border-radius: calc(30 * var(--u)) calc(30 * var(--u)) 0 0;
+    box-shadow: 0 calc(-8 * var(--u)) calc(28 * var(--u)) rgba(90, 100, 50, 0.08);
+  }
+
+  .s1-row {
+    grid-template-columns: calc(120 * var(--u)) max(1.5px, calc(3.5 * var(--u))) 1fr;
+    padding-block: calc(26 * var(--u));
+  }
+
+  .s1-row__num {
+    font-size: calc(76 * var(--u));
+  }
+
+  .s1-row__text {
+    margin-left: calc(32 * var(--u));
+  }
+}
+
+@media (max-width: 640px) {
+  .s1 {
+    border-radius: 18px;
+  }
+}

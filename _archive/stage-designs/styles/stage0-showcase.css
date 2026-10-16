@@ -1,0 +1,374 @@
+/* ==========================================================================
+   Stage 0 showcase: green hero panel + four photo cards.
+   Measured from a 1672 × 941 design: every size is N × --u, where --u is 1px
+   at that width and scales with the block (it's a size container).
+   ========================================================================== */
+
+.s0 {
+  --s0-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --s0-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  flex: 1;
+  min-width: 0;
+  container-type: inline-size;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 53, 33, 0.08);
+  box-shadow: 0 6px 24px rgba(16, 26, 53, 0.05);
+  scroll-margin-top: 90px;
+}
+
+.s0__grid {
+  --u: calc(100cqw / 1672);
+
+  display: grid;
+  grid-template-columns: 841fr 831fr;
+  min-height: calc(941 * var(--u));
+}
+
+/* ---------- Hero panel ---------- */
+
+.s0-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background:
+    radial-gradient(calc(520 * var(--u)) calc(300 * var(--u)) at 0 0, rgba(240, 247, 233, 0.9), rgba(240, 247, 233, 0) 100%),
+    linear-gradient(180deg, #EBF3E5 0, #F2F6EB calc(170 * var(--u)), #F8F8F0 calc(300 * var(--u)), #FAF8F2 calc(420 * var(--u)));
+}
+
+/* Soft green sweeps: top-right corner and the left edge behind the photo */
+.s0-hero__sweep {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.s0-hero__sweep-soft {
+  fill: #D3E6CC;
+  opacity: 0.75;
+}
+
+.s0-hero__sweep-band {
+  fill: #B2D2A9;
+  opacity: 0.6;
+}
+
+/* Dotted world map (Europe / Africa) fading out from the top-right */
+.s0-hero__map {
+  position: absolute;
+  top: calc(-150 * var(--u));
+  left: calc(48 * var(--u));
+  width: calc(1100 * var(--u));
+  pointer-events: none;
+  opacity: 0.32;
+  -webkit-mask-image: radial-gradient(calc(300 * var(--u)) calc(260 * var(--u)) at calc(610 * var(--u)) calc(250 * var(--u)), #000 35%, transparent 100%);
+  mask-image: radial-gradient(calc(300 * var(--u)) calc(260 * var(--u)) at calc(610 * var(--u)) calc(250 * var(--u)), #000 35%, transparent 100%);
+}
+
+.s0-hero__map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.s0-hero__content {
+  position: relative;
+  z-index: 2;
+  padding: calc(67 * var(--u)) calc(40 * var(--u)) 0 calc(80 * var(--u));
+}
+
+.s0-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: calc(18 * var(--u));
+  margin: 0;
+  font-family: var(--s0-sans);
+  font-size: max(12px, calc(26 * var(--u)));
+  font-weight: 450;
+  line-height: 1.2;
+  letter-spacing: 0.005em;
+  color: #EF8B37;
+}
+
+.s0-hero__rule {
+  width: calc(58 * var(--u));
+  height: max(1.5px, calc(3 * var(--u)));
+  border-radius: 2px;
+  background: #EF9447;
+}
+
+.s0-hero__title {
+  margin: calc(31 * var(--u)) 0 0;
+  font-family: var(--s0-serif);
+  font-variation-settings: "opsz" 60;
+  font-size: calc(110 * var(--u));
+  font-weight: 700;
+  line-height: 0.79;
+  letter-spacing: -0.012em;
+  color: #0F3520;
+}
+
+.s0-hero__amp {
+  color: #67966B;
+}
+
+.s0-hero__subtitle {
+  max-width: calc(620 * var(--u));
+  margin: calc(28 * var(--u)) 0 0;
+  font-family: var(--s0-sans);
+  font-size: max(13px, calc(31 * var(--u)));
+  font-weight: 400;
+  line-height: 1.36;
+  color: #3D3F3B;
+}
+
+/* Photo fills the rest of the panel and fades into the background at the top */
+.s0-hero__media {
+  position: relative;
+  flex: 1;
+  min-height: calc(520 * var(--u));
+  margin-top: calc(-12 * var(--u));
+}
+
+.s0-hero__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 100%;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.55) calc(60 * var(--u)), #000 calc(130 * var(--u)));
+  mask-image: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.55) calc(60 * var(--u)), #000 calc(130 * var(--u)));
+}
+
+.s0-hero__waves {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.s0-hero__wave {
+  fill: #285A35;
+}
+
+.s0-hero__wave-line {
+  fill: #EF8B3A;
+}
+
+/* ---------- Cards panel ---------- */
+
+.s0-cards {
+  display: flex;
+  flex-direction: column;
+  gap: calc(22 * var(--u));
+  padding: calc(72 * var(--u)) calc(42 * var(--u)) calc(56 * var(--u)) calc(57 * var(--u));
+  background: #F9F9F2;
+}
+
+.s0-card {
+  --s0-tint: #FEF6F0;
+  --s0-edge: #F3E4DA;
+  --s0-swoop: #FDE9DC;
+  --s0-chip: #FDD8C8;
+  --s0-ink: #DB2020;
+
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  padding: calc(5 * var(--u)) calc(26 * var(--u)) calc(5 * var(--u)) 0;
+  border-radius: calc(16 * var(--u));
+  color: inherit;
+  text-decoration: none;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* A search filter can leave fewer than four cards: keep them at their design height */
+.s0-cards:not(:has(> :nth-child(4))) > .s0-card {
+  flex: 0 0 calc(187 * var(--u));
+}
+
+.s0-card--green {
+  --s0-tint: #F2FAF1;
+  --s0-edge: #DDEEDB;
+  --s0-swoop: #E0F5E0;
+  --s0-chip: #C8F1CC;
+  --s0-ink: #0E6A29;
+}
+
+.s0-card--amber {
+  --s0-tint: #FDF8EB;
+  --s0-edge: #F3E9CF;
+  --s0-swoop: #FEF0D3;
+  --s0-chip: #FEE8B6;
+  --s0-ink: #9A6C0E;
+}
+
+.s0-card--blue {
+  --s0-tint: #EFF7FE;
+  --s0-edge: #DAE9F7;
+  --s0-swoop: #DBEAFD;
+  --s0-chip: #D0E5FE;
+  --s0-ink: #156BDD;
+}
+
+.s0-card__bg {
+  position: absolute;
+  inset: 0 0 0 calc(175 * var(--u));
+  overflow: hidden;
+  border: max(1px, calc(1.5 * var(--u))) solid var(--s0-edge);
+  border-radius: calc(16 * var(--u));
+  background: var(--s0-tint);
+  box-shadow: 0 calc(6 * var(--u)) calc(18 * var(--u)) rgba(72, 60, 28, 0.05);
+  transition: box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.s0-card__swoop {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: calc(185 * var(--u));
+  height: calc(68 * var(--u));
+  fill: var(--s0-swoop);
+}
+
+.s0-card__photo {
+  position: relative;
+  flex: 0 0 calc(195 * var(--u));
+  align-self: stretch;
+  width: calc(195 * var(--u));
+  min-height: calc(150 * var(--u));
+  object-fit: cover;
+  border-radius: calc(14 * var(--u));
+  background: var(--s0-chip);
+}
+
+.s0-card__main {
+  position: relative;
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  gap: calc(26 * var(--u));
+  min-width: 0;
+  margin: 0 0 calc(8 * var(--u)) calc(29 * var(--u));
+}
+
+.s0-card__num {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: calc(66 * var(--u));
+  height: calc(66 * var(--u));
+  border-radius: calc(16 * var(--u));
+  background: var(--s0-chip);
+  font-family: var(--s0-sans);
+  font-size: max(14px, calc(33 * var(--u)));
+  font-weight: 550;
+  letter-spacing: -0.01em;
+  color: var(--s0-ink);
+}
+
+.s0-card__text {
+  min-width: 0;
+  padding-top: calc(4 * var(--u));
+}
+
+.s0-card__title {
+  margin: 0;
+  font-family: var(--s0-serif);
+  font-variation-settings: "opsz" 60;
+  font-size: max(14px, calc(31 * var(--u)));
+  font-weight: 650;
+  line-height: 1.04;
+  letter-spacing: -0.008em;
+  color: #11231E;
+}
+
+.s0-card__desc {
+  margin: calc(11 * var(--u)) 0 0;
+  font-family: var(--s0-sans);
+  font-size: max(12px, calc(19.5 * var(--u)));
+  font-weight: 400;
+  line-height: 1.48;
+  color: #5F615C;
+}
+
+.s0-card__go {
+  position: relative;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: calc(64 * var(--u));
+  height: calc(64 * var(--u));
+  margin: 0 0 calc(8 * var(--u)) calc(16 * var(--u));
+  border-radius: 50%;
+  background: var(--s0-chip);
+  color: var(--s0-ink);
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.s0-card__go svg {
+  width: calc(32 * var(--u));
+  height: calc(32 * var(--u));
+  stroke-width: 2.5;
+}
+
+.s0-card:hover {
+  transform: translateY(-3px);
+}
+
+.s0-card:hover .s0-card__bg {
+  border-color: color-mix(in srgb, var(--s0-ink) 22%, var(--s0-edge));
+  box-shadow: 0 calc(16 * var(--u)) calc(32 * var(--u)) color-mix(in srgb, var(--s0-ink) 14%, transparent);
+}
+
+.s0-card:hover .s0-card__go {
+  transform: translateX(2px);
+  background: var(--s0-ink);
+  color: #FFFFFF;
+}
+
+.s0-card:focus-visible {
+  outline: 2px solid var(--s0-ink);
+  outline-offset: 3px;
+}
+
+/* ---------- Narrow: stack the hero above the cards ---------- */
+
+@container (max-width: 759px) {
+  .s0__grid {
+    --u: min(calc(100cqw / 841), 0.6px);
+
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .s0-hero__media {
+    min-height: calc(470 * var(--u));
+  }
+
+  .s0-cards {
+    padding: calc(40 * var(--u)) calc(32 * var(--u)) calc(44 * var(--u));
+  }
+
+  .s0-card {
+    flex: none;
+    min-height: calc(190 * var(--u));
+  }
+}
+
+@media (max-width: 640px) {
+  .s0 {
+    border-radius: 18px;
+  }
+}

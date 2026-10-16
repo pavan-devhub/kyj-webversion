@@ -1,7 +1,8 @@
 # KYJ — Krushi Yeva Jayate · Web Screens
 
 All 30 KYJ farmer-journey screens (EPM landing → KYJ-1 Platinum certification), converted from
-mobile phone mock-ups into a responsive **desktop web layout** with a shared design system.
+mobile phone mock-ups into a responsive **desktop web layout** with a shared design system —
+built as a **React + Vite** single-page app.
 
 > Screen content (every text, number, emoji and Telugu string) is unchanged — only the layout and
 > visual design were rebuilt. The original mobile files are kept untouched in `_archive/mobile-screens/`.
@@ -10,17 +11,24 @@ mobile phone mock-ups into a responsive **desktop web layout** with a shared des
 
 ## Quick start
 
-No build step and no dependencies.
+Requires **Node.js 22.22+** (React Router 8 minimum).
 
-- **Open `index.html`** in any modern browser (double-click works). Every screen is a button.
-- Or serve the folder locally (recommended, mirrors production):
+```bash
+npm install
+npm run dev        # dev server with hot reload → http://localhost:5173
+```
 
-  ```bash
-  npx serve .
-  ```
+| Script            | What it does                                     |
+|-------------------|--------------------------------------------------|
+| `npm run dev`     | Vite dev server with HMR                         |
+| `npm run build`   | Production build into `dist/`                    |
+| `npm run preview` | Serve the production build locally               |
+| `npm run lint`    | Lint with [oxlint](https://oxc.rs)               |
 
-Inside a screen: use the sidebar, the ‹ › buttons in the top bar, the Previous / Next cards at the
-bottom, or the keyboard **← / →** keys to move through the journey. On the index page press **/** to search.
+The home page (`/`) lists every screen as a button. Each screen lives at `/screens/<id>`
+(e.g. `/screens/8a`). Inside a screen: use the sidebar, the ‹ › buttons in the top bar, the
+Previous / Next cards at the bottom, or the keyboard **← / →** keys to move through the journey.
+On the home page press **/** to search.
 
 ---
 
@@ -28,100 +36,99 @@ bottom, or the keyboard **← / →** keys to move through the journey. On the i
 
 ```
 KYJ/
-├── index.html                    ← launcher: every screen as a button, grouped by stage
+├── index.html                    ← Vite entry (fonts, favicon, #root)
+├── package.json  vite.config.js  .oxlintrc.json
 ├── README.md
 │
-├── html/                         ← the 30 screens (original file names kept)
-│   ├── 1.html  2.html  3.html  4.html
-│   ├── 5.html  6.html  7.html  8.html  8a.html
-│   ├── 9.html  10.html  11.html  11a.html
-│   ├── 12.html  13.html  13a.html
-│   ├── 14.html  15.html  16.html
-│   ├── 17.html  s18.html  s19.html
-│   ├── s20.html  s21.html  22.html  22a.html
-│   ├── 23.html  24.html  25.html
-│   └── 27.html
-│
-├── assets/
-│   ├── css/
-│   │   ├── main.css              ← single entry point (imports the layers below in order)
-│   │   ├── base/
-│   │   │   ├── tokens.css        ← design tokens: colour, type, spacing, radius, shadow, motion
-│   │   │   ├── reset.css
-│   │   │   └── typography.css
-│   │   ├── layout/
-│   │   │   ├── app-shell.css     ← sidebar, top bar, pager, mobile drawer
-│   │   │   ├── page.css          ← page container, page header (hero), action bar
-│   │   │   └── grid.css          ← 12-column grid, columns, sticky column
-│   │   ├── components/
-│   │   │   ├── card.css          ← card, block, section label, callout, note
-│   │   │   ├── button.css        ← buttons, chips
-│   │   │   ├── badge.css         ← tags, dots, number badges
-│   │   │   ├── data-list.css     ← key/value rows & grid, rich list, table
-│   │   │   ├── form.css          ← fields, tiles, check lists, consent, drop zone
-│   │   │   ├── progress.css      ← progress bar, score ring, journey stepper
-│   │   │   ├── stat.css          ← metric tiles
-│   │   │   ├── timeline.css      ← vertical timeline / chain
-│   │   │   ├── message.css       ← WhatsApp preview
-│   │   │   ├── coins.css         ← KRISHI COINS wallet
-│   │   │   ├── medal.css         ← badge medal, confetti, ribbon
-│   │   │   └── member-card.css   ← FEED membership card (Basic / Platinum)
-│   │   ├── utilities/
-│   │   │   ├── tones.css         ← .tone-* colour modifiers
-│   │   │   └── helpers.css       ← spacing / text helpers
+├── src/
+│   ├── main.jsx                  ← mounts <RouterProvider>, imports styles/main.css
+│   ├── router.jsx                ← routes: "/" → Home, "/screens/<id>" → AppShell + lazy screen
+│   │
+│   ├── data/
+│   │   └── screens.js            ← screen registry (order, stage, title, accent) — single source of truth
+│   │
+│   ├── pages/
+│   │   └── Home.jsx              ← launcher: hero, search, stage filter, every screen grouped by stage
+│   │
+│   ├── components/
+│   │   ├── RootLayout.jsx        ← top-level route; page-change scrolling
+│   │   ├── AppShell.jsx          ← layout for every screen: sidebar, top bar, pager, drawer, ← / → keys
+│   │   ├── HomeHero.jsx          ← landing header: copy, CTAs, stat cards, route map, port photo
+│   │   ├── ScreensHero.jsx       ← "All Screens" banner: title, search, stage filters, trade map
+│   │   ├── JourneyWheel.jsx      ← the 8-petal "KYJ Journey" wheel in that banner (decorative)
+│   │   ├── Sidebar.jsx  Topbar.jsx  Pager.jsx
+│   │   ├── PageStyles.jsx        ← mounts a page's stylesheet while that page is shown
+│   │   └── icons.jsx
+│   │
+│   ├── screens/                  ← the 30 screens, one component each
+│   │   ├── index.js              ← lazy loader per screen id (one chunk per screen)
+│   │   ├── Screen1.jsx … Screen27.jsx
+│   │   └── Screen8a.jsx  Screen11a.jsx  ScreenS18.jsx … (ids with letters)
+│   │
+│   ├── styles/
+│   │   ├── main.css              ← global entry point (imports the layers below in order)
+│   │   ├── base/                 ← tokens.css (colour, type, spacing, radius, shadow, motion), reset, typography
+│   │   ├── layout/               ← app-shell.css, page.css, grid.css
+│   │   ├── components/           ← card, button, badge, data-list, form, progress, stat, timeline,
+│   │   │                            message, coins, medal, member-card
+│   │   ├── utilities/            ← tones.css (.tone-* modifiers), helpers.css
 │   │   └── pages/
-│   │       ├── home.css          ← index.html only
+│   │       ├── home.css          ← Home only
 │   │       └── screen-<id>.css   ← one file per screen (theme colours + bespoke visuals)
 │   │
-│   ├── js/
-│   │   ├── data/screens.js       ← screen registry (order, stage, title, accent) — single source of truth
-│   │   ├── components/app-shell.js ← renders sidebar, top bar, pager; keyboard & drawer
-│   │   ├── pages/home.js         ← index search + stage filter
-│   │   └── main.js               ← entry for screen pages
-│   │
-│   ├── images/                   ← raster images (empty for now)
-│   ├── icons/                    ← favicon.svg, logo.svg
-│   └── fonts/                    ← self-hosted fonts go here (see below)
+│   └── assets/
+│       ├── icons/                ← favicon.svg, logo.svg
+│       ├── images/               ← hero-port.jpg (landing photo), world-dots.svg (dotted map)
+│       └── fonts/                ← self-hosted fonts go here (see below)
 │
 └── _archive/mobile-screens/      ← untouched original mobile screens (reference only)
 ```
 
 ### Why this structure
 
-- **`assets/` groups every static resource** (`css`, `js`, `images`, `icons`, `fonts`) — the most common
-  convention for static sites and what most hosts / CDNs and build tools expect.
+- **One registry drives everything.** `src/data/screens.js` defines the journey order; the router,
+  sidebar, top bar, pager and home launcher are all generated from it.
+- **Each screen is its own lazy-loaded chunk**, so the first load only ships the shell and the page you
+  open.
 - **CSS follows ITCSS layering** (tokens → base → layout → components → utilities → pages): low-specificity,
   generic rules first; specific, page-level rules last. Shared styles are written once; each screen only
   ships its own small `pages/screen-<id>.css`.
 - **BEM-style class names** (`.card__title`, `.btn--primary`, `.is-active`) keep components predictable.
-- **JS is split by role** (`data/`, `components/`, `pages/`) and uses classic scripts (no ES modules), so the
-  pages also work straight from the file system (`file://`).
 
 ---
 
 ## How a screen page is built
 
-```html
-<body class="screen" data-screen="4">            <!-- id must match screens.js -->
-  <div class="app">
-    <aside class="sidebar" data-sidebar></aside> <!-- rendered by app-shell.js -->
-    <div class="app__main">
-      <header class="topbar" data-topbar></header>
-      <main class="page" id="main">
-        <section class="page-head"> … </section>  <!-- hero: status chips, title, step pill, visual -->
-        <div class="grid">
-          <div class="span-8 col"> … cards … </div>
-          <div class="span-4 col col--sticky"> … summary cards … </div>
-        </div>
-        <div class="action-bar"> … primary CTA … </div>
-      </main>
-      <nav class="pager" data-pager></nav>
-    </div>
-  </div>
-</body>
+Each screen component renders only its page content; the shared shell comes from `AppShell`:
+
+```jsx
+// src/screens/Screen4.jsx (typical shape)
+import PageStyles from '../components/PageStyles.jsx'
+import css from '../styles/pages/screen-4.css?inline'
+
+export default function Screen4() {
+  return (
+    <>
+      <title>KYJ_Screen4_Export_Readiness_Score</title>
+      <PageStyles css={css} />
+
+      <section className="page-head"> … </section>   {/* hero: status chips, title, step pill, visual */}
+      <div className="grid">
+        <div className="span-8 col"> … cards … </div>
+        <div className="span-4 col col--sticky"> … summary cards … </div>
+      </div>
+      <div className="action-bar"> … primary CTA … </div>
+    </>
+  )
+}
 ```
 
-Each `assets/css/pages/screen-<id>.css` starts by setting that screen's theme:
+`AppShell` wraps it in `<aside class="sidebar">`, `<header class="topbar">`, `<main class="page">` and
+`<nav class="pager">`. Links between screens use React Router's `<Link to="/screens/5">`.
+
+### Page stylesheets
+
+Each `src/styles/pages/screen-<id>.css` starts by setting that screen's theme on `:root`:
 
 ```css
 :root {
@@ -131,7 +138,28 @@ Each `assets/css/pages/screen-<id>.css` starts by setting that screen's theme:
 }
 ```
 
-Every component reads these tokens, so one block re-themes the whole page (hero, buttons, focus rings, chips…).
+Every component reads these tokens, so one block re-themes the whole page (hero, buttons, focus rings,
+chips, sidebar…). Because these sheets re-theme `:root`, only the current page's sheet may be active: the
+page imports it with Vite's `?inline` suffix (the CSS as a string) and renders `<PageStyles css={css} />`,
+which adds it to `<head>` while the page is shown and removes it when you navigate away.
+`styles/main.css` (shared layers) is imported once, globally, in `main.jsx`.
+
+### Landing header
+
+`HomeHero.jsx` + the `.hero*` rules in `styles/pages/home.css` reproduce the 1808 × 870 landing design.
+Every size is written as `calc(N * var(--u))`, where `--u` is 1px at 1808px wide and scales with the
+viewport, so the layout stays proportional on any desktop width (1280px and up). Below 1280px it switches
+to a stacked layout (copy first, photo below with a wavy top edge).
+
+The curved divider is two smooth curves fitted to the design: the photo's S-shaped edge
+(`assets/images/hero-wave-mask.svg`, used as a CSS mask) and, offset from it by a smoothly varying width,
+the white edge where the blue "glass" band starts (clip path `#hero-glass`). Both live in a fixed
+968 × 870 (design units) box, so the curve keeps its exact shape at every width; the photo continues to
+the right edge on wide screens. The soft shapes along the left edge are an inline SVG (`.hero__blobs`).
+
+`world-dots.svg` is a dotted world map generated once from Natural Earth 1:110m land data (public domain,
+via the `world-atlas` package): a 190-column equirectangular dot grid, every dot on land kept. The route
+pins and arcs are drawn over it in `HomeHero.jsx` in design pixels inside the map box.
 
 ### Mobile → web mapping
 
@@ -148,24 +176,39 @@ Every component reads these tokens, so one block re-themes the whole page (hero,
 
 ## Adding a new screen
 
-1. Create `html/<id>.html` from any existing screen (keep the `<head>` and shell markup).
-2. Create `assets/css/pages/screen-<id>.css` with the `:root` theme block.
-3. Add an entry to `assets/js/data/screens.js` (array order = journey order).
-4. Add a button for it in `index.html` under its stage.
+1. Create `src/screens/Screen<Id>.jsx` from any existing screen.
+2. Create `src/styles/pages/screen-<id>.css` with the `:root` theme block, and import it in the
+   component with `?inline`.
+3. Add an entry to `src/data/screens.js` (array order = journey order).
+4. Add its lazy loader to `src/screens/index.js`.
+
+The route, sidebar link, prev/next links and home-page button are generated from the registry.
+
+---
+
+## Deployment
+
+`npm run build` outputs a static site in `dist/`. Routing uses real URLs (`/screens/4`), so the host must
+serve `index.html` for unknown paths (SPA fallback) — e.g. a Netlify `_redirects` rule
+`/* /index.html 200`, `"rewrites"` in `vercel.json`, or `try_files $uri /index.html` in nginx.
+`npm run preview` already does this.
+
+To serve from a sub-path (e.g. `https://example.com/kyj/`), set `base: '/kyj/'` in `vite.config.js`; the
+router picks it up automatically.
 
 ---
 
 ## Fonts
 
-Loaded from Google Fonts with system fallbacks:
+Loaded from Google Fonts (in `index.html`) with system fallbacks:
 
+- **Google Sans Flex** — landing header (title, copy, buttons, stats)
 - **Inter** — UI text
 - **Plus Jakarta Sans** — headings & big numbers
 - **Noto Sans Telugu** — Telugu script (falls back to *Nirmala UI* on Windows)
 - **JetBrains Mono** — IDs, file names, hashes
 
-To self-host (offline / production), download the `woff2` files into `assets/fonts/`, add `@font-face`
-rules to `assets/css/base/typography.css`, and remove the Google Fonts `<link>` tags.
+To self-host (offline / production), see `src/assets/fonts/README.md`.
 
 ## Browser support
 

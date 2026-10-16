@@ -1,0 +1,798 @@
+/* ==========================================================================
+   Stage 0 & Stage 1 Redesign Scoped Styles
+   Strictly scoped to .stage-redesign and its descendants.
+   ========================================================================== */
+
+.stage-redesign {
+  --sr-ink: #101A35;
+  --sr-text: #35527D;
+  --sr-muted: #64748B;
+  --sr-bg: #F5F9FD;
+  --sr-line: #E2E8F0;
+
+  position: relative;
+  width: 100%;
+  margin-top: 36px;
+  scroll-margin-top: 90px;
+}
+
+.stage-redesign__container-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* Subtle curved background wave lines along the left timeline */
+.stage-redesign__timeline-waves {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 160px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.85;
+}
+
+/* Section Rows */
+.stage-redesign__stage-row {
+  display: flex;
+  gap: 28px;
+  align-items: stretch;
+  position: relative;
+  z-index: 1;
+}
+
+/* 48px Desktop Gap Connector between Stage 0 and Stage 1 */
+.stage-redesign__gap-row {
+  height: 48px;
+  display: flex;
+  gap: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.stage-redesign__gap-cell {
+  width: 130px;
+  min-width: 130px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Continuous vertical connecting line */
+.stage-redesign__line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.5px;
+  background: #CBD5E1;
+  z-index: 1;
+}
+
+.stage-redesign__line--0 {
+  top: 10px;
+  bottom: 0;
+}
+
+.stage-redesign__line--gap {
+  top: 0;
+  bottom: 0;
+}
+
+.stage-redesign__line--1 {
+  top: 0;
+  bottom: 18px;
+}
+
+/* Timeline Markers */
+.stage-redesign__timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.stage-redesign__timeline-dot--top {
+  top: 0;
+  background: #E11D48;
+  box-shadow: 0 0 0 3px #FFE4E8;
+}
+
+.stage-redesign__timeline-dot--mid {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #F5A623;
+  box-shadow: 0 0 0 3px #FEF3C7;
+}
+
+.stage-redesign__timeline-dot--bot {
+  bottom: 10px;
+  background: #F5A623;
+  box-shadow: 0 0 0 3px #FEF3C7;
+}
+
+/* Timeline Left Cell (stretches with row) */
+.stage-redesign__timeline-cell {
+  width: 130px;
+  min-width: 130px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
+}
+
+/* Badge Circle (00 / 01) */
+.stage-redesign__badge-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display, "Google Sans", sans-serif);
+  font-size: 21px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  position: relative;
+  z-index: 3;
+}
+
+.stage-redesign__badge-circle--0 {
+  background: linear-gradient(135deg, #FF1744 0%, #D81B60 100%);
+  box-shadow: 0 0 0 5px #FFE4E8, 0 8px 18px rgba(225, 29, 72, 0.28);
+}
+
+.stage-redesign__badge-circle--1 {
+  background: linear-gradient(135deg, #F5A623 0%, #D97706 100%);
+  box-shadow: 0 0 0 5px #FEF3C7, 0 8px 18px rgba(245, 166, 35, 0.28);
+}
+
+.stage-redesign__badge-circle--2 {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  box-shadow: 0 0 0 5px #DCFCE7, 0 8px 18px rgba(5, 150, 105, 0.28);
+}
+
+.stage-redesign__badge-circle--3 {
+  background: linear-gradient(135deg, #FF6B35 0%, #EA580C 100%);
+  box-shadow: 0 0 0 5px #FFEDD5, 0 8px 18px rgba(234, 88, 12, 0.28);
+}
+
+.stage-redesign__badge-circle--4 {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  box-shadow: 0 0 0 5px #DCFCE7, 0 8px 18px rgba(5, 150, 105, 0.28);
+}
+
+.stage-redesign__badge-circle--5 {
+  background: linear-gradient(135deg, #FF6B35 0%, #EA580C 100%);
+  box-shadow: 0 0 0 5px #FFEDD5, 0 8px 18px rgba(234, 88, 12, 0.28);
+}
+
+/* Timeline Pill Box under Stage 0 & Stage 2 */
+.stage-redesign__pill-box {
+  margin-top: 12px;
+  width: 120px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF5F7 100%);
+  border: 1.5px solid #FBCFE8;
+  border-radius: 14px;
+  padding: 10px 8px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.08);
+  position: relative;
+  z-index: 3;
+}
+
+.stage-redesign__pill-box--2,
+.stage-redesign__pill-box--4 {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0FDF4 100%);
+  border-color: #A7F3D0;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.08);
+}
+
+.stage-redesign__pill-box--3 {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF7ED 100%);
+  border-color: #FED7AA;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.08);
+}
+
+.stage-redesign__pill-box--5 {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFF5F5 100%);
+  border-color: #FECDD3;
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.08);
+}
+
+.stage-redesign__pill-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #881337;
+  line-height: 1.25;
+}
+
+.stage-redesign__pill-meta {
+  margin-top: 4px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #9F1239;
+  opacity: 0.85;
+}
+
+/* Timeline Label under Stage 1 */
+.stage-redesign__label-box {
+  margin-top: 12px;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+
+.stage-redesign__label-title {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #0F172A;
+  line-height: 1.25;
+}
+
+.stage-redesign__label-meta {
+  margin-top: 3px;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #64748B;
+}
+
+/* Section Containers */
+.stage-redesign__container {
+  flex: 1;
+  min-width: 0;
+  border-radius: 24px;
+  padding: 26px 30px 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(16, 26, 53, 0.04);
+  scroll-margin-top: 90px;
+}
+
+/* Stage 2 Container Theme */
+.stage-redesign__container--2 {
+  background: linear-gradient(135deg, #F0FDF4 0%, #FFFFFF 42%, #F0FDF4 100%);
+  border: 1.5px solid #A7F3D0;
+}
+
+/* Stage 3 Container Theme */
+.stage-redesign__container--3 {
+  background: linear-gradient(135deg, #FFF7ED 0%, #FFFFFF 42%, #FFF7ED 100%);
+  border: 1.5px solid #FED7AA;
+}
+
+/* Stage 4 Container Theme */
+.stage-redesign__container--4 {
+  background: linear-gradient(135deg, #F0FDF4 0%, #FFFFFF 42%, #F0FDF4 100%);
+  border: 1.5px solid #BBF7D0;
+}
+
+/* Stage 5 Container Theme */
+.stage-redesign__container--5 {
+  background: linear-gradient(135deg, #FFF7F8 0%, #FFFFFF 42%, #FFF5F7 100%);
+  border: 1.5px solid #FECDD3;
+}
+
+.stage-redesign__pill-title--2,
+.stage-redesign__pill-title--4 {
+  color: #064E3B;
+}
+
+.stage-redesign__pill-meta--2,
+.stage-redesign__pill-meta--4 {
+  color: #047857;
+}
+
+.stage-redesign__pill-title--3 {
+  color: #9A3412;
+}
+
+.stage-redesign__pill-meta--3 {
+  color: #C2410C;
+}
+
+.stage-redesign__pill-title--5 {
+  color: #881337;
+}
+
+.stage-redesign__pill-meta--5 {
+  color: #9F1239;
+}
+
+.stage-redesign__timeline-dot--2,
+.stage-redesign__timeline-dot--4 {
+  background: #10B981;
+  box-shadow: 0 0 0 3px #DCFCE7;
+}
+
+.stage-redesign__timeline-dot--3,
+.stage-redesign__timeline-dot--5 {
+  background: #EA580C;
+  box-shadow: 0 0 0 3px #FFEDD5;
+}
+
+/* Dotted World Map in Stage 0 */
+.stage-redesign__map-bg {
+  position: absolute;
+  top: 4px;
+  left: 280px;
+  width: 440px;
+  height: 165px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.75;
+  -webkit-mask-image: radial-gradient(ellipse at 40% 40%, black 20%, transparent 75%);
+  mask-image: radial-gradient(ellipse at 40% 40%, black 20%, transparent 75%);
+}
+
+.stage-redesign__map-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Registration Banner in Stage 2 */
+.stage-redesign__registration-banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 56%;
+  max-width: 620px;
+  height: 215px;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 6%, black 25%),
+    linear-gradient(to bottom, black 65%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 6%, black 25%),
+    linear-gradient(to bottom, black 65%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.stage-redesign__registration-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 90% 20%;
+}
+
+/* Packhouse Banner in Stage 3 */
+.stage-redesign__packhouse-banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 56%;
+  max-width: 620px;
+  height: 215px;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 6%, black 25%),
+    linear-gradient(to bottom, black 65%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 6%, black 25%),
+    linear-gradient(to bottom, black 65%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.stage-redesign__packhouse-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 85% 20%;
+}
+
+/* Quality Laboratory Banner in Stage 4 */
+.stage-redesign__quality-banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 56%;
+  max-width: 620px;
+  height: 215px;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 6%, black 25%),
+    linear-gradient(to bottom, black 65%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 6%, black 25%),
+    linear-gradient(to bottom, black 65%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.stage-redesign__quality-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 85% 20%;
+}
+
+/* Buyer Trade Banner in Stage 5 */
+.stage-redesign__buyer-banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 56%;
+  max-width: 620px;
+  height: 215px;
+  pointer-events: none;
+  z-index: 0;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 6%, black 25%),
+    linear-gradient(to bottom, black 65%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.2) 6%, black 25%),
+    linear-gradient(to bottom, black 65%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.stage-redesign__buyer-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 85% 20%;
+}
+
+/* Container Content wrapper (above banners) */
+.stage-redesign__content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Stage Header Indicator Pill */
+.stage-redesign__indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.stage-redesign__indicator-bar {
+  width: 36px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.stage-redesign__indicator-bar--2,
+.stage-redesign__indicator-bar--4 {
+  background: #10B981;
+}
+
+.stage-redesign__indicator-bar--3,
+.stage-redesign__indicator-bar--5 {
+  background: #EA580C;
+}
+
+.stage-redesign__indicator-text {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.stage-redesign__indicator-text--2,
+.stage-redesign__indicator-text--4 {
+  color: #047857;
+}
+
+.stage-redesign__indicator-text--3,
+.stage-redesign__indicator-text--5 {
+  color: #C2410C;
+}
+
+.stage-redesign__indicator-fade {
+  width: 36px;
+  height: 1.5px;
+}
+
+.stage-redesign__indicator-fade--2,
+.stage-redesign__indicator-fade--4 {
+  background: linear-gradient(to right, rgba(16, 185, 129, 0.4), transparent);
+}
+
+.stage-redesign__indicator-fade--3,
+.stage-redesign__indicator-fade--5 {
+  background: linear-gradient(to right, rgba(234, 88, 12, 0.4), transparent);
+}
+
+/* Section Title */
+.stage-redesign__title {
+  font-family: var(--font-display, "Google Sans", sans-serif);
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.stage-redesign__title--2,
+.stage-redesign__title--4 {
+  color: #064E3B;
+}
+
+.stage-redesign__title--3 {
+  color: #0F172A;
+}
+
+.stage-redesign__title--5 {
+  color: #881337;
+}
+
+/* Section Subtitle */
+.stage-redesign__subtitle {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #35527D;
+  margin: 8px 0 24px;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+/* Cards Grids */
+.stage-redesign__grid {
+  display: grid;
+  gap: 16px;
+}
+
+.stage-redesign__grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.stage-redesign__grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Card Component */
+.stage-redesign__card {
+  --sr-accent: #E11D48;
+  --sr-pill-bg: #FFE4E8;
+  --sr-swoop: #FFE4E8;
+
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(130px 100px at 100% 100%, var(--sr-swoop) 0%, rgba(255, 255, 255, 0) 100%),
+    #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid #F1F5F9;
+  padding: 18px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  transition:
+    transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
+.stage-redesign__card:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--sr-accent) 40%, #E2E8F0);
+  box-shadow:
+    0 14px 28px -8px color-mix(in srgb, var(--sr-accent) 25%, rgba(0, 0, 0, 0.08)),
+    0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Bottom-Right Curved Swoop */
+.stage-redesign__card-swoop {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 90px;
+  height: 70px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stage-redesign__card-swoop path {
+  fill: var(--sr-swoop);
+  opacity: 0.55;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.stage-redesign__card:hover .stage-redesign__card-swoop path {
+  opacity: 0.85;
+}
+
+/* Card Content (above swoop) */
+.stage-redesign__card-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Card Header: Number + Icon + Arrow */
+.stage-redesign__card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+/* Number Badge Pill */
+.stage-redesign__card-num {
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: var(--sr-pill-bg);
+  color: var(--sr-accent);
+  font-family: var(--font-display, "Google Sans", sans-serif);
+  font-size: 13.5px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.stage-redesign__card-num--solid {
+  background: var(--sr-accent);
+  color: #FFFFFF;
+  padding: 5px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px color-mix(in srgb, var(--sr-accent) 30%, transparent);
+}
+
+/* Center Icon */
+.stage-redesign__card-icon {
+  width: 38px;
+  height: 38px;
+  color: var(--sr-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.stage-redesign__card:hover .stage-redesign__card-icon {
+  transform: scale(1.08);
+}
+
+/* Right Arrow Button */
+.stage-redesign__card-arrow {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--sr-pill-bg);
+  color: var(--sr-accent);
+  display: grid;
+  place-items: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.stage-redesign__card-arrow svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--sr-accent);
+}
+
+.stage-redesign__card:hover .stage-redesign__card-arrow {
+  transform: translateX(2px);
+  background: var(--sr-accent);
+  color: #FFFFFF;
+}
+
+.stage-redesign__card:hover .stage-redesign__card-arrow svg {
+  stroke: #FFFFFF;
+}
+
+/* Card Title */
+.stage-redesign__card-title {
+  font-family: var(--font-display, "Google Sans", sans-serif);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  min-height: 40px;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Short colored accent line under title */
+.stage-redesign__card-line {
+  width: 24px;
+  height: 2.5px;
+  border-radius: 2px;
+  background: var(--sr-accent);
+  margin-bottom: 10px;
+}
+
+/* Card Description */
+.stage-redesign__card-desc {
+  font-size: 12.5px;
+  color: #35527D;
+  line-height: 1.45;
+  margin: 0;
+  flex: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 1180px) {
+  .stage-redesign__grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stage-redesign__timeline-cell,
+  .stage-redesign__gap-cell {
+    width: 115px;
+    min-width: 115px;
+  }
+}
+
+@media (max-width: 960px) {
+  .stage-redesign__stage-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .stage-redesign__timeline-cell,
+  .stage-redesign__gap-row,
+  .stage-redesign__timeline-waves {
+    display: none;
+  }
+
+  .stage-redesign__mobile-timeline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .stage-redesign__registration-banner,
+  .stage-redesign__packhouse-banner,
+  .stage-redesign__quality-banner,
+  .stage-redesign__buyer-banner {
+    width: 80%;
+    opacity: 0.35;
+  }
+
+  .stage-redesign__map-bg {
+    display: none;
+  }
+
+  .stage-redesign__stage-row + .stage-redesign__stage-row {
+    margin-top: 32px;
+  }
+}
+
+@media (min-width: 961px) {
+  .stage-redesign__mobile-timeline {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .stage-redesign__container {
+    padding: 20px 18px 22px;
+    border-radius: 18px;
+  }
+
+  .stage-redesign__title {
+    font-size: 26px;
+  }
+
+  .stage-redesign__grid--3,
+  .stage-redesign__grid--4 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stage-redesign__card {
+    padding: 16px 14px 18px;
+  }
+
+  .stage-redesign__card-title {
+    min-height: unset;
+  }
+}
