@@ -6,7 +6,7 @@ import { ArrowRightIcon, BarsIcon, CrownIcon, ShieldCheckIcon, UsersIcon } from 
 
 const firstScreen = screens[0]
 const lastScreen = screens.at(-1)
-
+ 
 const stats = [
   { value: screens.length, label: 'Steps', tone: 'blue', Icon: UsersIcon },
   { value: stages.length, label: 'Stages', tone: 'amber', Icon: BarsIcon },
